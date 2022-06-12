@@ -1,0 +1,17 @@
+{
+  "parts": [
+    {
+      "item": "tinkersarsenal:ringpart"
+    },
+    {
+      "item": "tinkersarsenal:gem"
+    }
+  ],
+  "stats": {
+    "base": {}
+  },
+  "slots": {
+    "upgrades": 3,
+    "abilities": 1
+  }
+}

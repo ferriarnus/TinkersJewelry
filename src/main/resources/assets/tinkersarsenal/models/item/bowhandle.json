@@ -1,0 +1,8 @@
+{
+  "loader": "tconstruct:material",
+  "parent": "forge:item/default",
+  "textures": {
+    "texture": "tinkersarsenal:item/tool/bow/bowhandle"
+  },
+  "offset": [-1, 1]
+}
