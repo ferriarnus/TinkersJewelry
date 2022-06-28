@@ -2,8 +2,6 @@ package com.ferri.arnus.tinkersarsenal;
 
 import org.slf4j.Logger;
 
-import com.ferri.arnus.tinkersarsenal.blockentities.BlockEntityRegistry;
-import com.ferri.arnus.tinkersarsenal.blocks.BlockRegistry;
 import com.ferri.arnus.tinkersarsenal.data.ArsenalMaterialData;
 import com.ferri.arnus.tinkersarsenal.data.ArsenalMaterialRecipe;
 import com.ferri.arnus.tinkersarsenal.data.ArsenalMaterialStatsData;
@@ -34,7 +32,6 @@ import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(TinkersArsenal.MODID)
 public class TinkersArsenal
 {
@@ -49,8 +46,6 @@ public class TinkersArsenal
         modEventBus.addListener(this::sendImc);
 		
 		ItemRegistry.registerItems();
-		BlockRegistry.registerBlocks();
-		BlockEntityRegistry.registerBlockEntities();
 		ArsenalModifiers.registerModifiers();
 	}
 	

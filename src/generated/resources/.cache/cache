@@ -240,6 +240,8 @@ f540f2f4424047f30f8c88522a6abaed65a80a29 data/tconstruct/tinkering/materials/def
 1a09b02ebe0e239238a47c9823a342922c6c4d0b data/tconstruct/tinkering/materials/stats/gold.json
 3f37087568af945aac5f2ab2cc5679e78e199f21 data/tconstruct/tinkering/materials/stats/iron.json
 cebeea77f4ede51372ecaab927b7299b8cc228d1 data/tconstruct/tinkering/materials/stats/silver.json
+ee9589216e7dc36e4cec4239a34cacda1431f1ca data/tconstruct/tinkering/materials/traits/flint.json
+a53cfd62dd3b6181951aaefb98f6467ad4c30a93 data/tconstruct/tinkering/materials/traits/iron.json
 e1e96bc2c5de6cc121d991b15de583cee3141f46 data/tinkersarsenal/tinkering/materials/definition/redstone.json
 0c4a50d54c5e16310329aa37355b7dc5cecf5298 data/tinkersarsenal/tinkering/materials/stats/redstone.json
 337a59ad094cfe9efeeb086d5b46bd29b2cb364d data/tinkersarsenal/tinkering/materials/traits/redstone.json

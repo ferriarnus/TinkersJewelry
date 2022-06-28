@@ -13,14 +13,13 @@ import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinitionData;
 import slimeknights.tconstruct.library.tools.nbt.MaterialNBT;
 import slimeknights.tconstruct.library.tools.nbt.StatsNBT;
-import slimeknights.tconstruct.tools.MeleeHarvestToolStatsBuilder;
 
 public class ArsenalDefinitions {
 	
 	public static final IToolStatProvider JEWELRY = new IToolStatProvider() {
 		@Override
 		public StatsNBT buildStats(ToolDefinition definition, MaterialNBT materials) {
-			return MeleeHarvestToolStatsBuilder.from(definition, materials).buildStats();
+			return TrinketToolStatsBuilder.from(definition, materials).buildStats();
 		}
 		
 		@Override

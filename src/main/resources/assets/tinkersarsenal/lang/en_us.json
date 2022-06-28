@@ -1,0 +1,9 @@
+{
+  "item.tinkersarsenal.ring.description": "Rings are simple trinkets that grant effects based on the used gem.",
+  "item.tinkersarsenal.ring": "Ring",
+  
+  "modifier.tinkersarsenal.ragegem.description": "Gives an attack speed boost",
+  "modifier.tinkersarsenal.ragegem": "Rage",
+  
+  "tool_stat.tinkersarsenal.amplification": "Amplification: "
+}

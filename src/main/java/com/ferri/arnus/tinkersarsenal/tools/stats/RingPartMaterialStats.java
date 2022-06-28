@@ -19,7 +19,7 @@ public class RingPartMaterialStats extends BaseMaterialStats implements IRepaira
 	
 	public static final MaterialStatsId ID = new MaterialStatsId(new ResourceLocation(TinkersArsenal.MODID, "ringpart"));
 	private static final List<Component> DESCRIPTION = ImmutableList.of(ToolStats.DURABILITY.getDescription(), ArsenalToolStats.AMPLIFICATION.getDescription());
-	public static final RingPartMaterialStats DEFAULT = new RingPartMaterialStats(1, 1f);
+	public static final RingPartMaterialStats DEFAULT = new RingPartMaterialStats(100, 1f);
 
 	private float amplification;
 	private int durability;

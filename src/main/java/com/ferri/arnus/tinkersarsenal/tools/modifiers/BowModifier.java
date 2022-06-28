@@ -21,6 +21,10 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 public class BowModifier extends NoLevelsModifier{
+	
+	public BowModifier() {
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public InteractionResult onToolUse(IToolStackView tool, int level, Level world, Player player, InteractionHand hand,

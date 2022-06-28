@@ -5,16 +5,22 @@ import java.util.List;
 import java.util.UUID;
 
 import com.ferri.arnus.tinkersarsenal.tools.modifiers.AbstractGemModifier;
+import com.ferri.arnus.tinkersarsenal.tools.stats.ArsenalToolStats;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
+import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
+import slimeknights.tconstruct.library.utils.TooltipKey;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
@@ -109,6 +115,18 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 			}
 		}
 		return CuriosDamageTypes.NONE;
+	}
+	
+	@Override
+	public List<Component> getStatInformation(IToolStackView tool, Player player, List<Component> tooltips, TooltipKey key, TooltipFlag tooltipFlag) {
+		TooltipBuilder builder = new TooltipBuilder(tool, tooltips);
+		builder.addDurability();
+		builder.add(ArsenalToolStats.AMPLIFICATION);
+		builder.addAllFreeSlots();
+		for (ModifierEntry entry : tool.getModifierList()) {
+			entry.getModifier().addInformation(tool, entry.getLevel(), player, tooltips, key, tooltipFlag);
+		}
+		return builder.getTooltips();
 	}
 
 }
