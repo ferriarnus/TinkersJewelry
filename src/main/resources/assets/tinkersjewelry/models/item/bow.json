@@ -1,0 +1,37 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":          "tinkersjewelry:item/tool/bow/bowhandle",
+    "handle":        "tinkersjewelry:item/tool/bow/tool_handle",
+    "binding":       "tinkersjewelry:item/tool/bow/tool_binding"
+  },
+  "modifier_roots":  [ "tconstruct:item/tool/cleaver/modifiers/" ],
+  "parts": [
+    { "name": "handle", "index": 1 },
+    { "name": "head",   "index": 0 , "broken": "head"},
+    { "name": "binding", "index": 2}
+  ],
+  "overrides": [
+    {
+      "predicate": {
+        "pulling": 1
+      },
+      "model": "item/bow_pulling_0"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.65
+      },
+      "model": "item/bow_pulling_1"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.9
+      },
+      "model": "item/bow_pulling_2"
+    }
+  ]
+}

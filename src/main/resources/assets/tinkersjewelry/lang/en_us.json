@@ -1,0 +1,9 @@
+{
+  "item.tinkersjewelry.ring.description": "Rings are simple trinkets that grant effects based on the used gem.",
+  "item.tinkersjewelry.ring": "Ring",
+  
+  "modifier.tinkersjewelry.ragegem.description": "Gives an attack speed boost",
+  "modifier.tinkersjewelry.ragegem": "Rage",
+  
+  "tool_stat.tinkersjewelry.amplification": "Amplification: "
+}

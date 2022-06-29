@@ -3,6 +3,6 @@
   "pattern": "tconstruct:gem",
   "cost": 1,
   "result": {
-    "item": "tinkersarsenal:gem"
+    "item": "tinkersjewelry:gem"
   }
 }

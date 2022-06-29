@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "parts": [
+    {
+      "path": "tinkersjewelry:item/tool/bow/tool_binding",
+      "statType": "tconstruct:extra"
+    },
+    {
+      "path": "tinkersjewelry:item/tool/bow/tool_handle",
+      "statType": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersjewelry:item/tool/bow/bowhandle",
+      "statType": "tconstruct:head"
+    },
+    {
+      "path": "tinkersjewelry:item/tool/ring/ringpart",
+      "statType": "tconstruct:extra"
+    },
+    {
+      "path": "tinkersjewelry:item/tool/ring/gem",
+      "statType": "tinkersjewelry:gem"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "gem": "tinkersjewelry:item/tool/ring/gem",
+    "ringpart": "tinkersjewelry:item/tool/ring/ringpart"
+  },
+  "modifier_roots":  [ "tconstruct:item/tool/cleaver/modifiers/" ],
+  "parts": [
+    { "name": "ringpart", "index": 0 },
+    { "name": "gem",   "index": 1 , "broken": "gem"}
+  ]
+}
