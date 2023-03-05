@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-import com.ferri.arnus.tinkersjewelry.tools.modifiers.AbstractGemModifier;
+import com.ferri.arnus.tinkersjewelry.tools.modifiers.gem.AbstractGemModifier;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 

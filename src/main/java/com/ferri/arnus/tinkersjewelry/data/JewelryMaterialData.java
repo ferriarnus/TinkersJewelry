@@ -17,6 +17,7 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 	@Override
 	protected void addMaterials() {
 		addMaterial(JewelryMaterials.redstone, 1, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.bloodgem, 2, ORDER_SPECIAL, true);
 		
 	}
 

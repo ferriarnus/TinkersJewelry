@@ -1,4 +1,4 @@
-package com.ferri.arnus.tinkersjewelry.tools.modifiers;
+package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
 import java.util.UUID;
 
@@ -29,7 +29,7 @@ public class RageGemModifier extends AbstractGemModifier{
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid,
 			ItemStack stack) {
 		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
-		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:hastegem", 1.25D, AttributeModifier.Operation.MULTIPLY_BASE));
+		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:ragegem", 1.25D, AttributeModifier.Operation.MULTIPLY_BASE));
 		return attributeModifiers;
 	}
 	

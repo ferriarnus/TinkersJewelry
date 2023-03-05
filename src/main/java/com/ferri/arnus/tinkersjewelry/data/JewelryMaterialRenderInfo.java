@@ -19,6 +19,7 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 	protected void addMaterialRenderInfo() {
 		//TODO proper for redstone color.
 		buildRenderInfo(JewelryMaterials.redstone).color(0xE52323).build();
+		buildRenderInfo(JewelryMaterials.bloodgem).color(0x880808).build();
 	}
 
 }

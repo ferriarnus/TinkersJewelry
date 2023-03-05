@@ -28,6 +28,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		 
 		 addMaterialStats(MaterialIds.flint, new GemMaterialStats());
 		 addMaterialStats(JewelryMaterials.redstone, new GemMaterialStats());
+		 addMaterialStats(JewelryMaterials.bloodgem, new GemMaterialStats());
 	}
 
 }

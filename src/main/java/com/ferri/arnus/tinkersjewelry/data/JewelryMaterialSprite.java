@@ -20,6 +20,11 @@ public class JewelryMaterialSprite extends AbstractMaterialSpriteProvider{
 		buildMaterial(JewelryMaterials.redstone)
 		   .statType(GemMaterialStats.ID)
 		   .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
+		buildMaterial(JewelryMaterials.bloodgem)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
 	}
 	
 	protected void TinkersMaterials() {

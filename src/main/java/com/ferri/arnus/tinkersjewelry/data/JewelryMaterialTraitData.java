@@ -25,6 +25,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 	@Override
 	protected void addMaterialTraits() {
 		addTraits(JewelryMaterials.redstone, GemMaterialStats.ID, JewelryModifiers.RAGEGEM);
+		addTraits(JewelryMaterials.bloodgem, GemMaterialStats.ID, JewelryModifiers.LIFESTEALGEM);
 		addTraits(MaterialIds.flint, GemMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		
 		addTraits(MaterialIds.iron, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait

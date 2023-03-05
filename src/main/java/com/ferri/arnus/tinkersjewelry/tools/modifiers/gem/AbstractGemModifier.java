@@ -1,4 +1,4 @@
-package com.ferri.arnus.tinkersjewelry.tools.modifiers;
+package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
 import java.util.UUID;
 

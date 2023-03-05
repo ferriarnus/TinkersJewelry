@@ -1,5 +1,7 @@
 package com.ferri.arnus.tinkersjewelry;
 
+import com.ferri.arnus.playerattributes.PlayerAttributes;
+import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
 import org.slf4j.Logger;
 
 import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialData;
@@ -49,6 +51,8 @@ public class TinkersJewelry {
 		
 		ItemRegistry.registerItems();
 		JewelryModifiers.registerModifiers();
+
+		PlayerAttributes.register();
 	}
 	
 	public void sendImc(InterModEnqueueEvent evt) {
