@@ -38,13 +38,18 @@ public class CustomAttributeModifier extends AttributeModifier {
         return amount;
     }
 
+    public ModifierOperation getModifierOperation() {
+        return operation;
+    }
+
+
     @Override
     public CompoundTag save() {
         CompoundTag compoundtag = new CompoundTag();
         compoundtag.putString("Name", getName());
         compoundtag.putDouble("Amount", getAmount());
         compoundtag.putUUID("UUID", getId());
-        compoundtag.putString("Operation", operation.getRegistryName().toString());
+        compoundtag.putString("COperation", operation.getRegistryName().toString());
         return super.save();
     }
 
@@ -52,7 +57,7 @@ public class CustomAttributeModifier extends AttributeModifier {
         String name = pNbt.getString("Name");
         double amount = pNbt.getDouble("Amount");
         UUID id = pNbt.getUUID("UUID");
-        ResourceLocation rl = new ResourceLocation(pNbt.getString("Operation"));
+        ResourceLocation rl = new ResourceLocation(pNbt.getString("COperation"));
         Optional<Holder<ModifierOperation>> holder = OperationRegistry.OPERATIONS_REGISTRY.get().getHolder(rl);
         if (holder.isEmpty()) {
             throw new IllegalArgumentException("");

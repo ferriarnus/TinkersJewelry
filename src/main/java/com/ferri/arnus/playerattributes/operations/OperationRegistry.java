@@ -19,5 +19,6 @@ public class OperationRegistry {
         OPERATIONS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    public static RegistryObject<ModifierOperation> MAXVALUE = OPERATIONS.register("maxvalue", MaxLevelOperation::new);
+    public static RegistryObject<MaxLevelOperation> MAXVALUE = OPERATIONS.register("maxvalue", MaxLevelOperation::new);
+    public static RegistryObject<ModifierOperation> BOOLEAN = OPERATIONS.register("boolean", BooleanOperation::new);
 }

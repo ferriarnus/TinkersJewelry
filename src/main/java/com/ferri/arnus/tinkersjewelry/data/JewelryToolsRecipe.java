@@ -22,9 +22,9 @@ public class JewelryToolsRecipe extends BaseRecipeProvider implements IMaterialR
 	@Override
 	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 		 String folder = "tools/building/";
-		 toolBuilding(consumer, ItemRegistry.bow, folder);
-		 toolBuilding(consumer, ItemRegistry.ring, folder);
-		 partRecipes(consumer, ItemRegistry.gem.get(), 1, "tools/parts/");
+		 toolBuilding(consumer, ItemRegistry.BOW, folder);
+		 toolBuilding(consumer, ItemRegistry.RING, folder);
+		 partRecipes(consumer, ItemRegistry.GEM.get(), 1, "tools/parts/");
 		
 	}
 

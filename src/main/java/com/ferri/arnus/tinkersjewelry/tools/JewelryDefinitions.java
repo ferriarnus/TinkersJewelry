@@ -48,9 +48,9 @@ public class JewelryDefinitions {
 		}
 	};
 
-	public static final ToolDefinition BOW = ToolDefinition.builder(ItemRegistry.bow).meleeHarvest().build();
+	public static final ToolDefinition BOW = ToolDefinition.builder(ItemRegistry.BOW).meleeHarvest().build();
 	
-	public static final ToolDefinition RING = ToolDefinition.builder(ItemRegistry.ring).setStatsProvider(JEWELRY).build();
+	public static final ToolDefinition RING = ToolDefinition.builder(ItemRegistry.RING).setStatsProvider(JEWELRY).build();
 	
 	
 }

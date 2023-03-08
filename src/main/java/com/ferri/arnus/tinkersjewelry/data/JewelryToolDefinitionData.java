@@ -23,7 +23,7 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 	protected void addToolDefinitions() {
 		define(JewelryDefinitions.BOW)
 		// parts
-			.part(ItemRegistry.bowhandle)
+			.part(ItemRegistry.BOWHANDLE)
 			.part(TinkerToolParts.toolHandle)
 			.part(TinkerToolParts.toolBinding)
 		// stats
@@ -31,15 +31,15 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 			.stat(ToolStats.ATTACK_SPEED, 1.2f)
 			.smallToolStartingSlots()
 		// traits
-			.trait(JewelryModifiers.bow)
+			.trait(JewelryModifiers.BOW)
 		// harvest
 			.aoe(BoxAOEIterator.builder(0, 0, 0).addDepth(2).addHeight(1).direction(IBoxExpansion.PITCH)
 			.build());
 		
 		define(JewelryDefinitions.RING)
 		// parts
-			.part(ItemRegistry.ringpart)
-			.part(ItemRegistry.gem)
+			.part(ItemRegistry.RINGPART)
+			.part(ItemRegistry.GEM)
 		// stats
 			.smallToolStartingSlots()
 			.build();

@@ -26,7 +26,10 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 	protected void addMaterialTraits() {
 		addTraits(JewelryMaterials.redstone, GemMaterialStats.ID, JewelryModifiers.RAGEGEM);
 		addTraits(JewelryMaterials.bloodgem, GemMaterialStats.ID, JewelryModifiers.LIFESTEALGEM);
-		addTraits(MaterialIds.flint, GemMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(JewelryMaterials.lapis, GemMaterialStats.ID, JewelryModifiers.FORTUNEGEM);
+		addTraits(JewelryMaterials.netherstar, GemMaterialStats.ID, JewelryModifiers.FLYGEM);
+
+		addTraits(MaterialIds.flint, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCINGGEM, 1)); //add leveled trait
 		
 		addTraits(MaterialIds.iron, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		

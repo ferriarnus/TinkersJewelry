@@ -13,7 +13,7 @@ public class AddAttributeEvent {
     @SubscribeEvent
     static void addAttribute(EntityAttributeModificationEvent event) {
         for (EntityType<? extends LivingEntity> type: event.getTypes()) {
-            event.add(type, AttributeRegistry.LIFESTEAL.get());
+            AttributeRegistry.ATTRIBUTES.getEntries().forEach(c -> event.add(type, c.get()));
         }
     }
 }

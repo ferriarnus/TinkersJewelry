@@ -16,22 +16,30 @@ public class JewelryMaterialSprite extends AbstractMaterialSpriteProvider{
 	@Override
 	protected void addAllMaterials() {
 		TinkersMaterials();
-		//TODO colors for redstone, currently used from blood
+		//TODO colors for all materials, currently used from blood
 		buildMaterial(JewelryMaterials.redstone)
-		   .statType(GemMaterialStats.ID)
-		   .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
 		buildMaterial(JewelryMaterials.bloodgem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
+		buildMaterial(JewelryMaterials.lapis)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
+		buildMaterial(JewelryMaterials.netherstar)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
 	}
 	
 	protected void TinkersMaterials() {
 		 buildMaterial(MaterialIds.flint)
-	      .statType(GemMaterialStats.ID)
-	      .fallbacks("crystal", "rock", "stick")
-	      .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF0E0E0E).addARGB(102, 0xFF222020).addARGB(140, 0xFF2E2D2D).addARGB(178, 0xFF3D3C3C).addARGB(216, 0xFF565656).addARGB(255, 0xFF7F7F7F).build());
+				 .statType(GemMaterialStats.ID)
+				 .fallbacks("crystal", "rock", "stick")
+				 .colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF0E0E0E).addARGB(102, 0xFF222020).addARGB(140, 0xFF2E2D2D).addARGB(178, 0xFF3D3C3C).addARGB(216, 0xFF565656).addARGB(255, 0xFF7F7F7F).build());
 	}
 
 }

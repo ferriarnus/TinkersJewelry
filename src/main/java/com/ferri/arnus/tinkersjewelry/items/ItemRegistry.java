@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import slimeknights.mantle.item.TooltipItem;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.mantle.util.SupplierCreativeTab;
 import slimeknights.tconstruct.TConstruct;
@@ -27,9 +28,9 @@ public class ItemRegistry {
 	public static final CreativeModeTab TAB_TOOL_PARTS = new SupplierCreativeTab(TinkersJewelry.MODID, "tool_parts", () -> {
 		List<IMaterial> materials = new ArrayList<>(MaterialRegistry.getInstance().getVisibleMaterials());
 		if (materials.isEmpty()) {
-			return new ItemStack(ItemRegistry.bowhandle);
+			return new ItemStack(ItemRegistry.BOWHANDLE);
 		}
-		return ItemRegistry.bowhandle.get().withMaterial(materials.get(TConstruct.RANDOM.nextInt(materials.size())).getIdentifier());
+		return ItemRegistry.BOWHANDLE.get().withMaterial(materials.get(TConstruct.RANDOM.nextInt(materials.size())).getIdentifier());
 	});
 	private static final Item.Properties PARTS_PROPS = new Item.Properties().tab(TAB_TOOL_PARTS);
 	
@@ -39,13 +40,16 @@ public class ItemRegistry {
 	public static void registerItems() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
+
+	//Materials
+	public static final ItemObject<Item> BLOODGEM = ITEMS.register("bloodgem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
 	
 	//Toolparts
-	public static final ItemObject<ToolPartItem> bowhandle = ITEMS.register("bowhandle", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
-	public static final ItemObject<ToolPartItem> ringpart = ITEMS.register("ringpart", () -> new ToolPartItem(PARTS_PROPS, RingPartMaterialStats.ID));
-	public static final ItemObject<ToolPartItem> gem = ITEMS.register("gem", () -> new ToolPartItem(PARTS_PROPS, GemMaterialStats.ID));
+	public static final ItemObject<ToolPartItem> BOWHANDLE = ITEMS.register("bowhandle", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
+	public static final ItemObject<ToolPartItem> RINGPART = ITEMS.register("ringpart", () -> new ToolPartItem(PARTS_PROPS, RingPartMaterialStats.ID));
+	public static final ItemObject<ToolPartItem> GEM = ITEMS.register("gem", () -> new ToolPartItem(PARTS_PROPS, GemMaterialStats.ID));
 
 	//Tools
-	public static final ItemObject<ModifiableItem> bow = ITEMS.register("bow", () -> new ModifiableItem(PARTS_PROPS, JewelryDefinitions.BOW));
-	public static final ItemObject<CuriosRingItem> ring = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
+	public static final ItemObject<ModifiableItem> BOW = ITEMS.register("bow", () -> new ModifiableItem(PARTS_PROPS, JewelryDefinitions.BOW));
+	public static final ItemObject<CuriosRingItem> RING = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
 }

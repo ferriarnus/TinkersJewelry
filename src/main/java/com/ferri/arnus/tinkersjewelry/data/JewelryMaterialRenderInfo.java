@@ -20,6 +20,8 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		//TODO proper for redstone color.
 		buildRenderInfo(JewelryMaterials.redstone).color(0xE52323).build();
 		buildRenderInfo(JewelryMaterials.bloodgem).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.lapis).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.netherstar).color(0x880808).build();
 	}
 
 }

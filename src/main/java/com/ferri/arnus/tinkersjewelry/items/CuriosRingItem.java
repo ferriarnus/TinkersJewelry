@@ -51,7 +51,18 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 			}
 		}
 	}
-	
+
+	@Override
+	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.onUnequip(slotContext, newStack, stack);
+			}
+		}
+	}
+
 	@Override
 	public boolean canUnequip(SlotContext slotContext, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);

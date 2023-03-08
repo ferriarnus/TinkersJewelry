@@ -15,17 +15,17 @@ public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
 	
 	@Override
 	protected void addLayouts() {
-		defineModifiable(ItemRegistry.bow)
+		defineModifiable(ItemRegistry.BOW)
 		.sortIndex(SORT_HARVEST)
-		.addInputItem(ItemRegistry.bowhandle,    53, 22)
+		.addInputItem(ItemRegistry.BOWHANDLE,    53, 22)
 		.addInputItem(TinkerToolParts.toolHandle,  15, 60)
 		.addInputItem(TinkerToolParts.toolBinding, 33, 42)
 		.build();
 		
-		defineModifiable(ItemRegistry.ring)
+		defineModifiable(ItemRegistry.RING)
 		.sortIndex(SORT_HARVEST)
-		.addInputItem(ItemRegistry.ringpart,    53, 22)
-		.addInputItem(ItemRegistry.gem,  15, 60)
+		.addInputItem(ItemRegistry.RINGPART,    53, 22)
+		.addInputItem(ItemRegistry.GEM,  15, 60)
 		.build();
 		
 	}

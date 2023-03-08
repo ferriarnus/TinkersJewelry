@@ -7,6 +7,7 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7.+'
         classpath 'org.parchmentmc:librarian:1.+'
     }
 }
@@ -16,8 +17,15 @@ plugins {
     id 'maven-publish'
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
+mixin {
+    // MixinGradle Settings
+    config "mixins.tinkersjewelry.json"
+
+    add sourceSets.main, 'mixins.tinkersjewelry.refmap.json'
+}
 
 version = '1.0'
 group = 'com.ferri.arnus.tinkersjewelry' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -197,6 +205,8 @@ dependencies {
     
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.ferri.arnus.playerattributes.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.tinkersjewelry.refmap.json",
+  "mixins": [
+    "AttributeInstanceMixin",
+    "AttributeModiferMixin",
+    "ServerPlayerMixin",
+    "LivingEntityMixin"
+  ],
+  "minVersion": "0.8.4"
+}
