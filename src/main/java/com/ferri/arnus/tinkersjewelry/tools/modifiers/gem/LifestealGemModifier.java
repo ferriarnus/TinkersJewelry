@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.utils.TooltipKey;
@@ -29,7 +30,13 @@ public class LifestealGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        double effect = 0.1 * amp;
+        int level = 0;
+        for (ModifierEntry entry : toolStack.getModifiers().getModifiers()) {
+            if (entry.getModifier().equals(this)) {
+                level = entry.getLevel()-1;
+            }
+        }
+        double effect = (0.1 + level * 0.05) * amp;
         attributeModifiers.put(AttributeRegistry.LIFESTEAL.get(), new AttributeModifier(uuid, "tinkersjewelry:lifestealgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }

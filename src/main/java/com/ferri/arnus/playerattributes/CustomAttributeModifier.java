@@ -62,6 +62,6 @@ public class CustomAttributeModifier extends AttributeModifier {
         if (holder.isEmpty()) {
             throw new IllegalArgumentException("");
         }
-        return new CustomAttributeModifier(id, name, amount, holder.get().m_203334_());
+        return new CustomAttributeModifier(id, name, amount, holder.get().value());
     }
 }

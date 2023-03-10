@@ -49,12 +49,16 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 
 		addMaterialStats(MaterialIds.manyullyn, new RingPartMaterialStats(1250, 1.2f));
 
-		addMaterialStats(MaterialIds.flint, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.DEFAULT);
 
+		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.bloodgem, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.DEFAULT);
+		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.DEFAULT);
+
+		addMaterialStats(MaterialIds.rock, GemMaterialStats.DEFAULT);
+		addMaterialStats(MaterialIds.ichor, GemMaterialStats.DEFAULT);
+		addMaterialStats(MaterialIds.flint, GemMaterialStats.DEFAULT);
 	}
 
 }

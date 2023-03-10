@@ -3,12 +3,14 @@ package com.ferri.arnus.tinkersjewelry.items;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 import com.ferri.arnus.tinkersjewelry.tools.modifiers.gem.AbstractGemModifier;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -16,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
@@ -103,6 +106,9 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);
 		List<ModifierEntry> modifiers = tool.getModifierList();
+		if (tool.isBroken()) {
+			return ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
+		}
 		for (ModifierEntry entry : modifiers) {
 			if (entry.getModifier() instanceof AbstractGemModifier gem) {
 				return gem.getAttributeModifiers(slotContext, uuid, stack);
@@ -113,7 +119,6 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 	
 	@Override
 	public List<Component> getSlotsTooltip(List<Component> tooltips, ItemStack stack) {
-		
 		return Collections.emptyList();
 	}
 	
@@ -139,5 +144,4 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		}
 		return builder.getTooltips();
 	}
-
 }

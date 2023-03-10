@@ -43,7 +43,8 @@ public class ItemRegistry {
 
 	//Materials
 	public static final ItemObject<Item> BLOODGEM = ITEMS.register("bloodgem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
-	
+	public static final ItemObject<Item> BLAZINGGEM = ITEMS.register("blazinggem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+
 	//Toolparts
 	public static final ItemObject<ToolPartItem> BOWHANDLE = ITEMS.register("bowhandle", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID));
 	public static final ItemObject<ToolPartItem> RINGPART = ITEMS.register("ringpart", () -> new ToolPartItem(PARTS_PROPS, RingPartMaterialStats.ID));

@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
@@ -22,7 +23,13 @@ public class SpeedGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        double effect = 1.2 * amp;
+        int level = 0;
+        for (ModifierEntry entry : toolStack.getModifiers().getModifiers()) {
+            if (entry.getModifier().equals(this)) {
+                level = entry.getLevel() - 1;
+            }
+        }
+        double effect = (1.2 + level * 0.3 ) * amp;
         attributeModifiers.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(uuid, "tinkersjewelry:speedgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
         return attributeModifiers;
     }

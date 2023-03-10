@@ -10,6 +10,8 @@ public class JewelryMaterials {
 	public static final MaterialId bloodgem = id("bloodgem");
 	public static final MaterialId lapis = id("lapis");
 	public static final MaterialId netherstar = id("netherstar");
+	public static final MaterialId scute = id("scute");
+	public static final MaterialId blazinggem = id("blazinggem");
 	
 	private static MaterialId id(String name) {
 	    return new MaterialId(TinkersJewelry.MODID, name);

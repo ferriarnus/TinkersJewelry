@@ -25,7 +25,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 public class ModifiableBowItem extends ModifiableItem{
 	
 	public static final Predicate<ItemStack> ARROW_ONLY = (p_43017_) -> {
-		return p_43017_.m_204117_(ItemTags.ARROWS);
+		return p_43017_.is(ItemTags.ARROWS);
 	};
 	
 	public ModifiableBowItem(Properties properties, ToolDefinition toolDefinition) {

@@ -34,7 +34,6 @@ public class RageGemModifier extends AbstractGemModifier{
 			ItemStack stack) {
 		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
 		ToolStack toolStack = ToolStack.from(stack);
-		//Level will always be 1 for now
 		int level = 0;
 		for (ModifierEntry entry : toolStack.getModifiers().getModifiers()) {
 			if (entry.getModifier().equals(this)) {
