@@ -13,7 +13,7 @@ public class EnchantmentHelperMixin {
 
     @Inject(method = "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I", at = @At("RETURN"), cancellable = true)
     private static void playerattributes$enchantments(Enchantment pEnchantment, LivingEntity pEntity, CallbackInfoReturnable<Integer> cir) {
-        if (!cir.getReturnValueZ()) {
+        if (cir.getReturnValueI() > 1) {
 
         }
     }

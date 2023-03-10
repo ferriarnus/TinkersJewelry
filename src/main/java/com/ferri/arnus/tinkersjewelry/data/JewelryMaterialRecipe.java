@@ -2,10 +2,12 @@ package com.ferri.arnus.tinkersjewelry.data;
 
 import java.util.function.Consumer;
 
+import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -16,7 +18,7 @@ import slimeknights.tconstruct.common.data.BaseRecipeProvider;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
-public class JewelryMaterialRecipe extends BaseRecipeProvider implements IMaterialRecipeHelper{
+public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRecipeHelper{
 
 	public JewelryMaterialRecipe(DataGenerator generator) {
 		super(generator);
@@ -44,4 +46,8 @@ public class JewelryMaterialRecipe extends BaseRecipeProvider implements IMateri
 	}
 
 
+	@Override
+	public String getModId() {
+		return TinkersJewelry.MODID;
+	}
 }
