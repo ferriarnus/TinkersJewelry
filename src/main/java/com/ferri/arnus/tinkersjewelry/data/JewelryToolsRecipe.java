@@ -24,7 +24,6 @@ public class JewelryToolsRecipe extends RecipeProvider implements IMaterialRecip
 	@Override
 	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 		 String folder = "tools/building/";
-		 toolBuilding(consumer, ItemRegistry.BOW, folder);
 		 toolBuilding(consumer, ItemRegistry.RING, folder);
 		 partRecipes(consumer, ItemRegistry.GEM.get(), 1, "tools/parts/");
 		
@@ -39,7 +38,6 @@ public class JewelryToolsRecipe extends RecipeProvider implements IMaterialRecip
 	 * Adds a recipe to craft a material item
 	 * @param consumer Recipe consumer
 	 * @param part     Part to be crafted
-	 * @param cast     Part cast
 	 * @param cost     Part cost
 	 * @param partFolder   Folder for recipes
 	 */

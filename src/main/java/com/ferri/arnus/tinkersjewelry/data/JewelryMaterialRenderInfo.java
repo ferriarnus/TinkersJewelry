@@ -23,6 +23,7 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.lapis).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.netherstar).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.scute).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.poisongem).color(0x880808).build();
 
 	}
 

@@ -29,6 +29,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(JewelryMaterials.lapis, GemMaterialStats.ID, JewelryModifiers.FORTUNEGEM);
 		addTraits(JewelryMaterials.netherstar, GemMaterialStats.ID, JewelryModifiers.FLYGEM);
 		addTraits(JewelryMaterials.scute, GemMaterialStats.ID, JewelryModifiers.WATERBREATHINGGEM);
+		addTraits(JewelryMaterials.poisongem, GemMaterialStats.ID, JewelryModifiers.POISONGEM);
 
 		addTraits(MaterialIds.rock, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMORGEM, 1));
 		addTraits(MaterialIds.ichor, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCEGEM);

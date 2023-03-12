@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:diamond"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:blood",
+    "amount": 1000
+  },
+  "result": "tinkersjewelry:bloodgem",
+  "cooling_time": 100
+}

@@ -15,12 +15,6 @@ public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
 	
 	@Override
 	protected void addLayouts() {
-		defineModifiable(ItemRegistry.BOW)
-		.sortIndex(SORT_HARVEST)
-		.addInputItem(ItemRegistry.BOWHANDLE,    53, 22)
-		.addInputItem(TinkerToolParts.toolHandle,  15, 60)
-		.addInputItem(TinkerToolParts.toolBinding, 33, 42)
-		.build();
 		
 		defineModifiable(ItemRegistry.RING)
 		.sortIndex(SORT_HARVEST)

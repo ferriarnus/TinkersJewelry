@@ -20,5 +20,5 @@ public class OperationRegistry {
     }
 
     public static RegistryObject<MaxLevelOperation> MAXVALUE = OPERATIONS.register("maxvalue", MaxLevelOperation::new);
-    public static RegistryObject<ModifierOperation> BOOLEAN = OPERATIONS.register("boolean", BooleanOperation::new);
+    public static RegistryObject<ModifierOperation> OR = OPERATIONS.register("boolean", BooleanOROperation::new);
 }

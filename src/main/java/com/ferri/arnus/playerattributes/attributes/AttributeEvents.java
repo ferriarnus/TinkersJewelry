@@ -2,6 +2,8 @@ package com.ferri.arnus.playerattributes.attributes;
 
 import com.ferri.arnus.playerattributes.PlayerAttributes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
@@ -9,6 +11,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent;
@@ -23,6 +26,14 @@ public class AttributeEvents {
         if (event.getSource().getEntity() instanceof LivingEntity living && living.getAttributes().hasAttribute(AttributeRegistry.LIFESTEAL.get())) {
             double lifesteal = living.getAttribute(AttributeRegistry.LIFESTEAL.get()).getValue();
             living.heal((float) (lifesteal * event.getAmount()));
+        }
+    }
+
+    @SubscribeEvent
+    static void poison(LivingAttackEvent event) {
+        if (event.getSource().getEntity() instanceof LivingEntity living && !living.hasEffect(MobEffects.POISON)) {
+            double poison = living.getAttribute(AttributeRegistry.POISON.get()).getValue();
+            event.getEntityLiving().addEffect(new MobEffectInstance(MobEffects.POISON, (int) (poison*60)));
         }
     }
 

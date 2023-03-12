@@ -7,11 +7,18 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
+import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
+
+import javax.annotation.Nullable;
 
 public abstract class AbstractGemModifier extends NoLevelsModifier{
 
@@ -35,7 +42,7 @@ public abstract class AbstractGemModifier extends NoLevelsModifier{
 		return true;
 	}
 	
-	public boolean canRightClickEquip(ItemStack stack) {
+	public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
 		return true;
 	}
 	
@@ -45,11 +52,19 @@ public abstract class AbstractGemModifier extends NoLevelsModifier{
 
 	public abstract CuriosDamageTypes getDamageType();
 
-	public void damageTool(ItemStack stack, DamageSource source, double damage) {
-
+	public void damageTool(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity entity) {
+		damageTool(stack, 1, entity);
 	}
 
-	public void damageTool(ItemStack stack) {
-		
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity) {
+		ToolDamageUtil.damage(ToolStack.from(stack), amount, entity, stack);
+	}
+
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, MobEffect effect) {
+		ToolDamageUtil.damage(ToolStack.from(stack), amount, entity, stack);
+	}
+
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, Enchantment enchantment) {
+		ToolDamageUtil.damage(ToolStack.from(stack), amount, entity, stack);
 	}
 }

@@ -21,20 +21,6 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 	
 	@Override
 	protected void addToolDefinitions() {
-		define(JewelryDefinitions.BOW)
-		// parts
-			.part(ItemRegistry.BOWHANDLE)
-			.part(TinkerToolParts.toolHandle)
-			.part(TinkerToolParts.toolBinding)
-		// stats
-			.stat(ToolStats.ATTACK_DAMAGE, 0.5f) // gains +0.5 damage from tool piercing, hence being lower than vanilla
-			.stat(ToolStats.ATTACK_SPEED, 1.2f)
-			.smallToolStartingSlots()
-		// traits
-			.trait(JewelryModifiers.BOW)
-		// harvest
-			.aoe(BoxAOEIterator.builder(0, 0, 0).addDepth(2).addHeight(1).direction(IBoxExpansion.PITCH)
-			.build());
 		
 		define(JewelryDefinitions.RING)
 		// parts

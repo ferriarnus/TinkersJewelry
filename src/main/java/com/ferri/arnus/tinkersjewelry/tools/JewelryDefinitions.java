@@ -48,8 +48,6 @@ public class JewelryDefinitions {
 		}
 	};
 
-	public static final ToolDefinition BOW = ToolDefinition.builder(ItemRegistry.BOW).meleeHarvest().build();
-	
 	public static final ToolDefinition RING = ToolDefinition.builder(ItemRegistry.RING).setStatsProvider(JEWELRY).build();
 	
 	

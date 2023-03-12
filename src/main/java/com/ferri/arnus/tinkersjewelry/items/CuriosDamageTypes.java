@@ -1,11 +1,14 @@
 package com.ferri.arnus.tinkersjewelry.items;
 
 public enum CuriosDamageTypes {
-	
+
+	NONE("none"),
 	HURT_ENTITY("hurt_entity"),
 	HURT_PLAYER("hurt_player"),
 	BLOCK_BREAK("block_break"),
-	NONE("none");
+	MOB_EFFECT("mob_effect"),
+	ENCHANTMENT("enchantment");
+
 
 	private final String name;
 

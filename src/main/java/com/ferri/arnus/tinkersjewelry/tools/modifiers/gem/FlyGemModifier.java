@@ -36,7 +36,7 @@ public class FlyGemModifier extends AbstractGemModifier {
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
-        attributeModifiers.put(AttributeRegistry.FLIGHT.get(), new CustomAttributeModifier(uuid, "tinkersjewelry:flygem", 1, OperationRegistry.BOOLEAN.get()));
+        attributeModifiers.put(AttributeRegistry.FLIGHT.get(), new CustomAttributeModifier(uuid, "tinkersjewelry:flygem", 1, OperationRegistry.OR.get()));
         return attributeModifiers;
     }
 

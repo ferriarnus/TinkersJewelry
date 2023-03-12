@@ -2,18 +2,9 @@ package com.ferri.arnus.tinkersjewelry;
 
 import com.ferri.arnus.playerattributes.PlayerAttributes;
 import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
+import com.ferri.arnus.tinkersjewelry.data.*;
 import org.slf4j.Logger;
 
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialData;
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialRecipe;
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialRenderInfo;
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialSprite;
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialStatsData;
-import com.ferri.arnus.tinkersjewelry.data.JewelryMaterialTraitData;
-import com.ferri.arnus.tinkersjewelry.data.JewelryPartSprite;
-import com.ferri.arnus.tinkersjewelry.data.JewelryStationSlotLayout;
-import com.ferri.arnus.tinkersjewelry.data.JewelryToolDefinitionData;
-import com.ferri.arnus.tinkersjewelry.data.JewelryToolsRecipe;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
@@ -72,6 +63,7 @@ public class TinkersJewelry {
 		if (event.includeServer()) {
         	generator.addProvider(new JewelryToolsRecipe(generator));
         	generator.addProvider(new JewelryMaterialRecipe(generator));
+			generator.addProvider(new JewelrySmeltryRecipe(generator));
 			MaterialDataProvider materials = new MaterialDataProvider(generator);
 			JewelryMaterialData newMaterials = new JewelryMaterialData(generator);
         	generator.addProvider(materials);
@@ -87,8 +79,8 @@ public class TinkersJewelry {
         	JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
         	JewelryPartSprite partSprites = new JewelryPartSprite();
         	ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-        	 generator.addProvider(new JewelryMaterialRenderInfo(generator, materialSprites));
-             generator.addProvider(new GeneratorPartTextureJsonGenerator(generator, TinkersJewelry.MODID, partSprites));
+			generator.addProvider(new JewelryMaterialRenderInfo(generator, materialSprites));
+			generator.addProvider(new GeneratorPartTextureJsonGenerator(generator, TinkersJewelry.MODID, partSprites));
 			generator.addProvider(new MaterialPartTextureGenerator(generator, existingFileHelper, partSprites, materialSprites, newMaterialSprites));
 			
 		}

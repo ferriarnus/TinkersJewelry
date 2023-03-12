@@ -37,6 +37,10 @@ public class JewelryMaterialSprite extends AbstractMaterialSpriteProvider{
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
+		buildMaterial(JewelryMaterials.poisongem)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
 	}
 	
 	protected void TinkersMaterials() {

@@ -10,12 +10,15 @@ import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.Enchantment;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
@@ -26,6 +29,8 @@ import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.utils.TooltipKey;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
+
+import javax.annotation.Nullable;
 
 public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 
@@ -89,17 +94,17 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		}
 		return ICurioItem.super.canEquip(slotContext, stack);
 	}
-	
+
 	@Override
-	public boolean canRightClickEquip(ItemStack stack) {
+	public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);
 		List<ModifierEntry> modifiers = tool.getModifierList();
 		for (ModifierEntry entry : modifiers) {
 			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.canRightClickEquip(stack);
+				return gem.canEquipFromUse(slotContext, stack);
 			}
 		}
-		return ICurioItem.super.canRightClickEquip(stack);
+		return ICurioItem.super.canEquipFromUse(slotContext, stack);
 	}
 	
 	@Override
@@ -143,5 +148,45 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 			entry.getModifier().addInformation(tool, entry.getLevel(), player, tooltips, key, tooltipFlag);
 		}
 		return builder.getTooltips();
+	}
+
+	public void damageTool(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity entity) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.damageTool(stack, source, damage, entity);
+			}
+		}
+	}
+
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.damageTool(stack, amount, entity);
+			}
+		}
+	}
+
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, MobEffect effect) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.damageTool(stack, amount, entity, effect);
+			}
+		}
+	}
+
+	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, Enchantment enchantment) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.damageTool(stack, amount, entity, enchantment);
+			}
+		}
 	}
 }
