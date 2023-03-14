@@ -56,6 +56,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.poisongem, GemMaterialStats.DEFAULT);
+		addMaterialStats(JewelryMaterials.blazinggem, GemMaterialStats.DEFAULT);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.DEFAULT);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.DEFAULT);

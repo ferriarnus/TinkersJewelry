@@ -32,11 +32,11 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLAZINGGEM)
                 .setFluidAndTime(TinkerFluids.blazingBlood, false, FluidAttributes.BUCKET_VOLUME)
-                .setCast(Items.GLOWSTONE, true)
+                .setCast(Items.GLOWSTONE_DUST, true)
                 .save(consumer, modResource(folder + "blazingblood/blazinggem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.SPIDERGEM)
-                .setFluidAndTime(TinkerFluids.venom, false, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(TinkerFluids.venom, false, 250)
                 .setCast(Items.EMERALD, true)
                 .save(consumer, modResource(folder + "venom/spidergem"));
     }

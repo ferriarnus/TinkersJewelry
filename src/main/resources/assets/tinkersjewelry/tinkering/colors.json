@@ -1,5 +1,16 @@
 {
   "modifier.tinkersjewelry": {
-    "ragegem": "#B30000"
+    "ragegem": "#B30000",
+    "flygem": "#B30000",
+    "lifestealgem": "#B30000",
+    "poisongem": "#B30000",
+    "flamegem": "#B30000",
+    "armorgem": "#B30000",
+    "piercinggem": "#B30000",
+    "speedgem": "#B30000",
+    "fortunegem": "#B30000",
+    "fireresistancegem": "#B30000",
+    "silkgem": "#B30000",
+    "watherbreatiggem": "#B30000"
   }
 }

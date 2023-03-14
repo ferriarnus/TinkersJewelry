@@ -38,7 +38,8 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, JewelryMaterials.lapis, Ingredient.of(Items.LAPIS_LAZULI), 1, 1, folder + "gems/lapis");
 		materialRecipe(consumer, JewelryMaterials.netherstar, Ingredient.of(Items.NETHER_STAR), 1, 1, folder + "gems/netherstar");
 		materialRecipe(consumer, JewelryMaterials.scute, Ingredient.of(Items.SCUTE), 1, 1, folder + "gems/scute");
-		materialRecipe(consumer, JewelryMaterials.poisongem, Ingredient.of(Items.SPIDER_EYE), 1, 1, folder + "gems/poison");
+		materialRecipe(consumer, JewelryMaterials.poisongem, Ingredient.of(ItemRegistry.SPIDERGEM), 1, 1, folder + "gems/poison");
+		materialRecipe(consumer, JewelryMaterials.blazinggem, Ingredient.of(ItemRegistry.BLAZINGGEM), 1, 1, folder + "gems/blaze");
 
 		materialRecipe(consumer, MaterialIds.rock, Ingredient.of(Tags.Items.STONE), 1, 1, folder + "gems/stone");
 		materialRecipe(consumer, MaterialIds.ichor, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");

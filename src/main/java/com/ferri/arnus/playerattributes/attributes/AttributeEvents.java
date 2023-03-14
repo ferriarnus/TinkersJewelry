@@ -38,6 +38,14 @@ public class AttributeEvents {
     }
 
     @SubscribeEvent
+    static void flame(LivingAttackEvent event) {
+        if (event.getSource().getEntity() instanceof LivingEntity living && !living.isOnFire()) {
+            double flame = living.getAttribute(AttributeRegistry.FLAME.get()).getValue();
+            event.getEntityLiving().setSecondsOnFire((int) flame*3);
+        }
+    }
+
+    @SubscribeEvent
     static void fortune(BlockEvent.BreakEvent event) {
         int itemLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLOCK_FORTUNE, event.getPlayer().getMainHandItem());
         double playerLevel = event.getPlayer().getAttribute(AttributeRegistry.FORTUNE.get()).getValue();

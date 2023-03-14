@@ -15,6 +15,7 @@ public class JewelryModifiers {
 	public static final StaticModifier<FlyGemModifier> FLYGEM = MODIFIERS.register("flygem", FlyGemModifier::new);
 	public static final StaticModifier<LifestealGemModifier> LIFESTEALGEM = MODIFIERS.register("lifestealgem", LifestealGemModifier::new);
 	public static final StaticModifier<PoisonGemModifier> POISONGEM = MODIFIERS.register("poisongem", PoisonGemModifier::new);
+	public static final StaticModifier<FlameGemModifier> FLAMEGEM = MODIFIERS.register("flamegem", FlameGemModifier::new);
 	public static final StaticModifier<ArmorGemModifier> ARMORGEM = MODIFIERS.register("armorgem", ArmorGemModifier::new);
 	public static final StaticModifier<PiercingGemModifier> PIERCINGGEM = MODIFIERS.register("piercinggem", PiercingGemModifier::new);
 	public static final StaticModifier<SpeedGemModifier> SPEEDGEM = MODIFIERS.register("speedgem", SpeedGemModifier::new);

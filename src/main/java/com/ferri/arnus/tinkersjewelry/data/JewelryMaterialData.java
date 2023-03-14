@@ -22,7 +22,7 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.netherstar, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.scute, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.poisongem, 2, ORDER_SPECIAL, true);
-
+		addMaterial(JewelryMaterials.blazinggem, 2, ORDER_SPECIAL, true);
 
 	}
 

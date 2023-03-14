@@ -19,6 +19,7 @@ public class AttributeRegistry {
     public static final RegistryObject<Attribute> LIFESTEAL = ATTRIBUTES.register("lifesteal", () -> (new RangedAttribute("lifesteal", 0, 0, 1)).setSyncable(true));
     public static final RegistryObject<Attribute> PIERCING = ATTRIBUTES.register("piercing", () -> new RangedAttribute("piercing", 0, 0, 1).setSyncable(true));
     public static final RegistryObject<Attribute> POISON = ATTRIBUTES.register("poison", () -> new Attribute("poison", 0).setSyncable(true));
+    public static final RegistryObject<Attribute> FLAME = ATTRIBUTES.register("flame", () -> new Attribute("flame", 0).setSyncable(true));
     public static final RegistryObject<Attribute> FORTUNE = ATTRIBUTES.register("fortune", () -> new IntAttribute("fortune", 0, 0, 5).setSyncable(true));
     public static final RegistryObject<Attribute> SILK = ATTRIBUTES.register("silk", () -> new IntAttribute("silk", 0, 0, 5).setSyncable(true));
     public static final RegistryObject<Attribute> FIRERESISTANCE = ATTRIBUTES.register("fireresistance", () -> new IntAttribute("silk", 0, 0, 5).setSyncable(true));
