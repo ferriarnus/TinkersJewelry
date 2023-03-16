@@ -19,9 +19,7 @@ import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
-import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
-import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 public class ItemRegistry {
 	
@@ -44,7 +42,10 @@ public class ItemRegistry {
 	//Materials
 	public static final ItemObject<Item> BLOODGEM = ITEMS.register("bloodgem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
 	public static final ItemObject<Item> BLAZINGGEM = ITEMS.register("blazinggem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
-	public static final ItemObject<Item> SPIDERGEM = ITEMS.register("spidergem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+	public static final ItemObject<Item> POISONGEM = ITEMS.register("poisongem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+	public static final ItemObject<Item> SPEEDGEM = ITEMS.register("speedgem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+	public static final ItemObject<Item> CLEANSEGEM = ITEMS.register("cleansegem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+
 
 	//Toolparts
 	public static final ItemObject<ToolPartItem> RINGPART = ITEMS.register("ringpart", () -> new ToolPartItem(PARTS_PROPS, RingPartMaterialStats.ID));

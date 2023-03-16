@@ -1,34 +1,51 @@
 {
   "item.tinkersjewelry.bloodgem": "Blood Gem",
   "item.tinkersjewelry.blazinggem": "Blazing Gem",
+  "item.tinkersjewelry.poisongem": "Poison Gem",
 
   "item.tinkersjewelry.ring.description": "Rings are simple trinkets that grant effects based on the used gem.",
   "item.tinkersjewelry.ring": "Ring",
 
   "item.tinkersjewelry.gem.description": "Gems hold the traits",
   "item.tinkersjewelry.gem": "Gem",
+
+  "item.tinkersjewelry.ringpart.description": "Rings are simple trinkets that grant effects based on the used gem.",
+  "item.tinkersjewelry.ringpart": "Ring Part",
+
+  "stat.tinkersjewelry.gem": "Gem",
+  "stat.tinkersjewelry.ringpart": "Ring Part",
   
   "modifier.tinkersjewelry.ragegem.description": "Gives an attack speed boost",
   "modifier.tinkersjewelry.ragegem": "Rage",
 
+  "modifier.tinkersjewelry.lifestealgem.description": "Heals based on damage dealt",
   "modifier.tinkersjewelry.lifestealgem": "Lifesteal",
 
+  "modifier.tinkersjewelry.flygem.description": "Allows creative flight",
   "modifier.tinkersjewelry.flygem": "Flight",
 
+  "modifier.tinkersjewelry.armorgem.description": "Adds additional armor",
   "modifier.tinkersjewelry.armorgem": "Armor",
 
+  "modifier.tinkersjewelry.piercinggem.description": "Ignores part of the target's armor",
   "modifier.tinkersjewelry.piercinggem": "Piercing",
 
+  "modifier.tinkersjewelry.speedgem.description": "Increases movement speed",
   "modifier.tinkersjewelry.speedgem": "Speed",
 
-  "modifier.tinkersjewelry.fireresistance": "Fire Resistance",
+  "modifier.tinkersjewelry.fireresistancegem.description": "Gives Fire Resistance",
+  "modifier.tinkersjewelry.fireresistancegem": "Fire Resistance",
 
+  "modifier.tinkersjewelry.silkgem.description": "Grants Silk Touch",
   "modifier.tinkersjewelry.silkgem": "Silk Touch",
 
-  "modifier.tinkersjewelry.waterbreatinggem": "Water Breathing",
+  "modifier.tinkersjewelry.waterbreathinggem.description": "Gives Water Breathing",
+  "modifier.tinkersjewelry.waterbreathinggem": "Water Breathing",
 
+  "modifier.tinkersjewelry.poisongem.description": "Applies Poison to the target",
   "modifier.tinkersjewelry.poisongem": "Poison",
 
+  "modifier.tinkersjewelry.flamegem.description": "Lights the target on fire",
   "modifier.tinkersjewelry.flamegem": "Flame",
   
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
@@ -37,6 +54,26 @@
   "material.tinkersjewelry.lapis": "Lapis",
   "material.tinkersjewelry.netherstar": "Netherstar",
   "material.tinkersjewelry.scute": "Scute",
+  "material.tinkersjewelry.diamond": "Diamond",
+
   "material.tinkersjewelry.bloodgem": "Blood Gem",
-  "material.tinkersjewelry.blazinggem": "Blazing Gem"
+  "material.tinkersjewelry.blazinggem": "Blazing Gem",
+  "material.tinkersjewelry.poison": "Poison Gem",
+
+  "stats.playerattributes.armor": "Armor",
+  "stats.playerattributes.fireresistance": "Fire Resistance",
+  "stats.playerattributes.flame": "Flame",
+  "stats.playerattributes.flight": "Flight",
+  "stats.playerattributes.fortune": "Fortune",
+  "stats.playerattributes.health": "Health",
+  "stats.playerattributes.lifesteal": "Life Steal",
+  "stats.playerattributes.piercing": "Piercing",
+  "stats.playerattributes.poison": "Poison",
+  "stats.playerattributes.rage": "Rage",
+  "stats.playerattributes.reach": "Reach",
+  "stats.playerattributes.silktouch": "Silk Touch",
+  "stats.playerattributes.speed": "Speed",
+  "stats.playerattributes.waterbreathing": "Water Breathing",
+
+  "stats.tinkersjewelry.cleanse": "Cleanse"
 }

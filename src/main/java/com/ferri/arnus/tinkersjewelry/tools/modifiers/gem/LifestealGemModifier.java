@@ -1,5 +1,6 @@
 package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
+import com.ferri.arnus.playerattributes.TranslationKeys;
 import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
 import com.ferri.arnus.tinkersjewelry.items.CuriosDamageTypes;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
@@ -49,7 +50,7 @@ public class LifestealGemModifier extends AbstractGemModifier{
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int effect = (int) (0.1 * amp*100);
-        tooltip.add(new TextComponent("Lifesteal:").append(" ").append(effect +"%").withStyle(ChatFormatting.DARK_RED));
+        long effect = Math.round((0.1 + (level-1) * 0.05) * amp *100);
+        tooltip.add(new TranslatableComponent(TranslationKeys.LIFESTEAL).append(" ").append(effect +"%").withStyle(ChatFormatting.DARK_RED));
     }
 }

@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
+import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
@@ -20,7 +21,7 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import javax.annotation.Nullable;
 
-public abstract class AbstractGemModifier extends NoLevelsModifier{
+public abstract class AbstractGemModifier extends Modifier {
 
 	public void curioTick(SlotContext slotContext, ItemStack stack) {
 		

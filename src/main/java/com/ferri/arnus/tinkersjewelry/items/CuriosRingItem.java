@@ -137,19 +137,6 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		}
 		return CuriosDamageTypes.NONE;
 	}
-	
-	@Override
-	public List<Component> getStatInformation(IToolStackView tool, Player player, List<Component> tooltips, TooltipKey key, TooltipFlag tooltipFlag) {
-		TooltipBuilder builder = new TooltipBuilder(tool, tooltips);
-		builder.addDurability();
-		builder.add(JewelryToolStats.AMPLIFICATION);
-		builder.addAllFreeSlots();
-		for (ModifierEntry entry : tool.getModifierList()) {
-			entry.getModifier().addInformation(tool, entry.getLevel(), player, tooltips, key, tooltipFlag);
-		}
-		return builder.getTooltips();
-	}
-
 	public void damageTool(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity entity) {
 		ToolStack tool = ToolStack.from(stack);
 		List<ModifierEntry> modifiers = tool.getModifierList();
