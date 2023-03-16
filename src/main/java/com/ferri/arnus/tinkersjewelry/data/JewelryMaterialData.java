@@ -21,8 +21,12 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.bloodgem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.netherstar, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.scute, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.diamond, 2, ORDER_SPECIAL, true);
+
 		addMaterial(JewelryMaterials.poisongem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.blazinggem, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.speedgem, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.cleansegem, 2, ORDER_SPECIAL, true);
 
 	}
 

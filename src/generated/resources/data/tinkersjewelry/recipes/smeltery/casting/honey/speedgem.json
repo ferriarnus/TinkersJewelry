@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:sugar"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:honey",
+    "amount": 250
+  },
+  "result": "tinkersjewelry:speedgem",
+  "cooling_time": 47
+}

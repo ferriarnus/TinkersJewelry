@@ -4,7 +4,6 @@ import java.util.function.Consumer;
 
 import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
-import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -14,7 +13,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 import slimeknights.tconstruct.TConstruct;
-import slimeknights.tconstruct.common.data.BaseRecipeProvider;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
@@ -38,8 +36,12 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, JewelryMaterials.lapis, Ingredient.of(Items.LAPIS_LAZULI), 1, 1, folder + "gems/lapis");
 		materialRecipe(consumer, JewelryMaterials.netherstar, Ingredient.of(Items.NETHER_STAR), 1, 1, folder + "gems/netherstar");
 		materialRecipe(consumer, JewelryMaterials.scute, Ingredient.of(Items.SCUTE), 1, 1, folder + "gems/scute");
-		materialRecipe(consumer, JewelryMaterials.poisongem, Ingredient.of(ItemRegistry.SPIDERGEM), 1, 1, folder + "gems/poison");
+		materialRecipe(consumer, JewelryMaterials.diamond, Ingredient.of(Items.DIAMOND), 1, 1, folder + "gems/diamond");
+
+		materialRecipe(consumer, JewelryMaterials.poisongem, Ingredient.of(ItemRegistry.POISONGEM), 1, 1, folder + "gems/poison");
 		materialRecipe(consumer, JewelryMaterials.blazinggem, Ingredient.of(ItemRegistry.BLAZINGGEM), 1, 1, folder + "gems/blaze");
+		materialRecipe(consumer, JewelryMaterials.speedgem, Ingredient.of(ItemRegistry.SPEEDGEM), 1, 1, folder + "gems/speed");
+		materialRecipe(consumer, JewelryMaterials.cleansegem, Ingredient.of(ItemRegistry.CLEANSEGEM), 1, 1, folder + "gems/cleanse");
 
 		materialRecipe(consumer, MaterialIds.rock, Ingredient.of(Tags.Items.STONE), 1, 1, folder + "gems/stone");
 		materialRecipe(consumer, MaterialIds.ichor, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");

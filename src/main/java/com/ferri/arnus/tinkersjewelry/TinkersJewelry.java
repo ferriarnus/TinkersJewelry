@@ -3,6 +3,7 @@ package com.ferri.arnus.tinkersjewelry;
 import com.ferri.arnus.playerattributes.PlayerAttributes;
 import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
 import com.ferri.arnus.tinkersjewelry.data.*;
+import net.minecraftforge.common.ForgeMod;
 import org.slf4j.Logger;
 
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
@@ -44,6 +45,8 @@ public class TinkersJewelry {
 		JewelryModifiers.registerModifiers();
 
 		PlayerAttributes.register();
+
+		ForgeMod.enableMilkFluid();
 	}
 	
 	public void sendImc(InterModEnqueueEvent evt) {
@@ -79,7 +82,7 @@ public class TinkersJewelry {
         	JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
         	JewelryPartSprite partSprites = new JewelryPartSprite();
         	ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-			generator.addProvider(new JewelryMaterialRenderInfo(generator, materialSprites));
+			generator.addProvider(new JewelryMaterialRenderInfo(generator, newMaterialSprites));
 			generator.addProvider(new GeneratorPartTextureJsonGenerator(generator, TinkersJewelry.MODID, partSprites));
 			generator.addProvider(new MaterialPartTextureGenerator(generator, existingFileHelper, partSprites, materialSprites, newMaterialSprites));
 			
