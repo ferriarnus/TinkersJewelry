@@ -11,6 +11,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.fluids.FluidAttributes;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
+import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 
 import java.util.function.Consumer;
@@ -28,27 +29,27 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
     public void castingRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "smeltery/casting/";
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLOODGEM)
-                .setFluidAndTime(TinkerFluids.blood, false, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(TinkerFluids.blood, false, FluidValues.GEM)
                 .setCast(Items.DIAMOND, true)
                 .save(consumer, modResource(folder + "blood/bloodgem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLAZINGGEM)
-                .setFluidAndTime(TinkerFluids.blazingBlood, false, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(TinkerFluids.blazingBlood, false, FluidValues.GEM)
                 .setCast(Items.GLOWSTONE_DUST, true)
                 .save(consumer, modResource(folder + "blazingblood/blazinggem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.POISONGEM)
-                .setFluidAndTime(TinkerFluids.venom, false, 250)
+                .setFluidAndTime(TinkerFluids.venom, false, FluidValues.GEM)
                 .setCast(Items.EMERALD, true)
                 .save(consumer, modResource(folder + "venom/spidergem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.SPEEDGEM)
-                .setFluidAndTime(TinkerFluids.honey, false, 250)
+                .setFluidAndTime(TinkerFluids.honey, false, FluidValues.GEM)
                 .setCast(Items.SUGAR, true)
                 .save(consumer, modResource(folder + "honey/speedgem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.CLEANSEGEM)
-                .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidValues.GEM)
                 .setCast(Items.GLASS, true)
                 .save(consumer, modResource(folder + "milk/cleansegem"));
     }

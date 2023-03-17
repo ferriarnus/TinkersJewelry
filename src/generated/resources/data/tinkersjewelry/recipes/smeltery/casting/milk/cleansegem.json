@@ -6,8 +6,8 @@
   "cast_consumed": true,
   "fluid": {
     "tag": "forge:milk",
-    "amount": 1000
+    "amount": 100
   },
   "result": "tinkersjewelry:cleansegem",
-  "cooling_time": 94
+  "cooling_time": 30
 }

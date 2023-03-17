@@ -12,5 +12,19 @@
     "fireresistancegem": "#B30000",
     "silkgem": "#B30000",
     "waterbreathinggem": "#B30000"
+  },
+
+  "material.tinkersjewelry": {
+    "redstone": "#B30000",
+    "lapis": "#B30000",
+    "netherstar": "#B30000",
+    "scute": "#B30000",
+    "diamond": "#B30000",
+
+    "bloodgem": "#B30000",
+    "blazinggem": "#B30000",
+    "poisongem": "#B30000",
+    "speedgem": "#B30000",
+    "cleansegem": "#B30000"
   }
 }

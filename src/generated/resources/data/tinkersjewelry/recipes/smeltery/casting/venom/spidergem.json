@@ -6,8 +6,8 @@
   "cast_consumed": true,
   "fluid": {
     "tag": "tconstruct:venom",
-    "amount": 250
+    "amount": 100
   },
   "result": "tinkersjewelry:poisongem",
-  "cooling_time": 48
+  "cooling_time": 30
 }

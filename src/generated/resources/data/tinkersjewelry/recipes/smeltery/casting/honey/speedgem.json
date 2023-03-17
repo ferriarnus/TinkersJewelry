@@ -6,8 +6,8 @@
   "cast_consumed": true,
   "fluid": {
     "tag": "tconstruct:honey",
-    "amount": 250
+    "amount": 100
   },
   "result": "tinkersjewelry:speedgem",
-  "cooling_time": 47
+  "cooling_time": 30
 }

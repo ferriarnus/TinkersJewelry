@@ -6,8 +6,8 @@
   "cast_consumed": true,
   "fluid": {
     "tag": "tconstruct:blazing_blood",
-    "amount": 1000
+    "amount": 100
   },
   "result": "tinkersjewelry:blazinggem",
-  "cooling_time": 267
+  "cooling_time": 85
 }
