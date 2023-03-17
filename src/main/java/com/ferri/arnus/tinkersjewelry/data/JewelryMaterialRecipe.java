@@ -37,6 +37,8 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, JewelryMaterials.netherstar, Ingredient.of(Items.NETHER_STAR), 1, 1, folder + "gems/netherstar");
 		materialRecipe(consumer, JewelryMaterials.scute, Ingredient.of(Items.SCUTE), 1, 1, folder + "gems/scute");
 		materialRecipe(consumer, JewelryMaterials.diamond, Ingredient.of(Items.DIAMOND), 1, 1, folder + "gems/diamond");
+		materialRecipe(consumer, JewelryMaterials.quartz, Ingredient.of(Items.QUARTZ), 1, 1, folder + "gems/quartz");
+		materialRecipe(consumer, JewelryMaterials.amethyst, Ingredient.of(Items.AMETHYST_SHARD), 1, 1, folder + "gems/amethyst");
 
 		materialRecipe(consumer, JewelryMaterials.poisongem, Ingredient.of(ItemRegistry.POISONGEM), 1, 1, folder + "gems/poison");
 		materialRecipe(consumer, JewelryMaterials.blazinggem, Ingredient.of(ItemRegistry.BLAZINGGEM), 1, 1, folder + "gems/blaze");
@@ -46,7 +48,6 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, MaterialIds.rock, Ingredient.of(Tags.Items.STONE), 1, 1, folder + "gems/stone");
 		materialRecipe(consumer, MaterialIds.ichor, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");
 		materialRecipe(consumer, MaterialIds.flint, Ingredient.of(Items.FLINT), 1, 1, folder + "gems/flint");
-
 	}
 
 

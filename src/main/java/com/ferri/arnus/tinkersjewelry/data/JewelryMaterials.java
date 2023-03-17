@@ -11,6 +11,8 @@ public class JewelryMaterials {
 	public static final MaterialId netherstar = id("netherstar");
 	public static final MaterialId scute = id("scute");
 	public static final MaterialId diamond = id("diamond");
+	public static final MaterialId quartz = id("quartz");
+	public static final MaterialId amethyst = id("amethyst");
 
 	public static final MaterialId bloodgem = id("bloodgem");
 	public static final MaterialId blazinggem = id("blazinggem");

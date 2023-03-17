@@ -45,6 +45,6 @@ public class SilkGemModifier extends AbstractGemModifier {
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         double effect = level * amp;
-        tooltip.add(new TranslatableComponent(TranslationKeys.SILK).append(" ").append(effect +"").withStyle(ChatFormatting.DARK_BLUE));
+        tooltip.add(new TranslatableComponent(TranslationKeys.SILK).append(": ").append(effect +"").withStyle(ChatFormatting.DARK_BLUE));
     }
 }

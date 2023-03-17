@@ -55,7 +55,7 @@ public class WaterBreathingGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         double effect = level * amp;
-        tooltip.add(new TranslatableComponent(TranslationKeys.WATERBREATHING).append(" ").append(effect +"").withStyle(ChatFormatting.DARK_AQUA));
+        tooltip.add(new TranslatableComponent(TranslationKeys.WATERBREATHING).append(": ").append(effect +"").withStyle(ChatFormatting.DARK_AQUA));
     }
 
 }

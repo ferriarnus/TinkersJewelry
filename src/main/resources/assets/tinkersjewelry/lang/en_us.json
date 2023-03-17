@@ -56,9 +56,11 @@
   "material.tinkersjewelry.scute": "Scute",
   "material.tinkersjewelry.diamond": "Diamond",
 
-  "material.tinkersjewelry.bloodgem": "Blood Gem",
-  "material.tinkersjewelry.blazinggem": "Blazing Gem",
-  "material.tinkersjewelry.poison": "Poison Gem",
+  "material.tinkersjewelry.bloodgem": "Eudialyte",
+  "material.tinkersjewelry.blazinggem": "Fire Opal",
+  "material.tinkersjewelry.poison": "Malachite",
+  "material.tinkersjewelry.speed": "Calcite",
+  "material.tinkersjewelry.cleanse": "Milky Quartz",
 
   "stats.playerattributes.armor": "Armor",
   "stats.playerattributes.fireresistance": "Fire Resistance",

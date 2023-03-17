@@ -24,6 +24,8 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.netherstar).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.scute).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.diamond).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.quartz).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.amethyst).color(0x880808).build();
 
 		buildRenderInfo(JewelryMaterials.poisongem).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.blazinggem).color(0x880808).build();

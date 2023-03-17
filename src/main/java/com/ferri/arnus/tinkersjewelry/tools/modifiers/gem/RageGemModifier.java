@@ -66,7 +66,7 @@ public class RageGemModifier extends AbstractGemModifier{
 	public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
 		float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
 		double effect = (1.25D + 0.25 * level) * amp;
-		tooltip.add(new TranslatableComponent(TranslationKeys.RAGE).append(" ").append(effect +"").withStyle(ChatFormatting.RED));
+		tooltip.add(new TranslatableComponent(TranslationKeys.RAGE).append(": ").append(effect +"").withStyle(ChatFormatting.RED));
 	}
 
 }

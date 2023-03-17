@@ -49,8 +49,8 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
                 .save(consumer, modResource(folder + "honey/speedgem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.CLEANSEGEM)
-                .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidValues.GEM)
-                .setCast(Items.GLASS, true)
+                .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidAttributes.BUCKET_VOLUME)
+                .setCast(Items.QUARTZ, true)
                 .save(consumer, modResource(folder + "milk/cleansegem"));
     }
 
