@@ -13,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.Nullable;
-import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.List;
@@ -25,19 +24,17 @@ public class CleanseGemModifier extends AbstractGemModifier{
     }
 
     @Override
-    public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, MobEffect effect) {
+    public void damageTool(ItemStack stack, int amount, LivingEntity entity, MobEffect effect) {
         if (!effect.isBeneficial()) {
             MobEffectInstance instance = entity.getEffect(effect);
+            if (instance == null) {
+                return;
+            }
             int level = instance.getAmplifier();
             int duration = instance.getDuration();
             entity.removeEffect(effect);
-            super.damageTool(stack, 5*level*duration/20, entity, effect);
+            super.damageTool(stack, 5*level* (duration/100), entity, effect);
         }
-    }
-
-    @Override
-    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
-        super.addInformation(tool, level, player, tooltip, tooltipKey, tooltipFlag);
     }
 
     @Override

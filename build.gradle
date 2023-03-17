@@ -23,6 +23,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 mixin {
     // MixinGradle Settings
     config "mixins.tinkersjewelry.json"
+    config "mixins.playerattributes.json"
 
     add sourceSets.main, 'mixins.tinkersjewelry.refmap.json'
 }

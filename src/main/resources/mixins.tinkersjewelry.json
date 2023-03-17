@@ -1,14 +1,10 @@
 {
   "required": true,
-  "package": "com.ferri.arnus.playerattributes.mixin",
+  "package": "com.ferri.arnus.tinkersjewelry.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.tinkersjewelry.refmap.json",
   "mixins": [
-    "AttributeInstanceMixin",
-    "AttributeModiferMixin",
-    "ServerPlayerMixin",
-    "LivingEntityMixin",
-    "EnchantmentHelperMixin"
+    "MobEffectInstanceMixin"
   ],
   "minVersion": "0.8.4"
 }
