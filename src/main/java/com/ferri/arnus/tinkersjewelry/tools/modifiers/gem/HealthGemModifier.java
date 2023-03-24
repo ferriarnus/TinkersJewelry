@@ -50,6 +50,6 @@ public class HealthGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         int effect = (int) ((level) * amp);
-        tooltip.add(new TranslatableComponent(TranslationKeys.ARMOR).append(": ").append(effect + "").withStyle(ChatFormatting.DARK_RED));
+        tooltip.add(addDiscription(TranslationKeys.ARMOR, effect));
     }
 }

@@ -41,7 +41,7 @@ public class CleanseGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, slimeknights.tconstruct.library.utils.TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         int effect = (int) (1 * amp);
-        tooltip.add(new TranslatableComponent("stats.tinkersjewelry.cleanse").append(" ").withStyle(ChatFormatting.GRAY));
+        tooltip.add(addDiscription("stats.tinkersjewelry.clensegem", ""));
     }
 
     @Override

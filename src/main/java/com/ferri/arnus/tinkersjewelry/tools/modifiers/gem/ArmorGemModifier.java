@@ -51,6 +51,6 @@ public class ArmorGemModifier extends AbstractGemModifier {
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         double effect =  (1.25D + 0.25 * level) * amp;
-        tooltip.add(applyStyle(new TranslatableComponent(TranslationKeys.ARMOR).append(": ").append(effect + "")));
+        tooltip.add(addDiscription(TranslationKeys.ARMOR, effect));
     }
 }

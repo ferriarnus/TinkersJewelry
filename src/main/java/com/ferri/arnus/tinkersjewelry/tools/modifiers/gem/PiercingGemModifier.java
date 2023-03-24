@@ -53,7 +53,7 @@ public class PiercingGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         long effect = Math.round((0.1 + (level-1) * 0.05) * amp *100);
-        tooltip.add(new TranslatableComponent(TranslationKeys.PIERCING).append(": ").append(effect +"%").withStyle(ChatFormatting.GRAY));
+        tooltip.add(addDiscription(TranslationKeys.PIERCING, effect+"%"));
     }
 
 }

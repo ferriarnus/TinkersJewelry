@@ -43,6 +43,6 @@ public class FlameGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         int effect = (int) (1 * amp * 3);
-        tooltip.add(new TranslatableComponent(TranslationKeys.FLAME).append(": ").append(effect + "s").withStyle(ChatFormatting.RED));
+        tooltip.add(addDiscription(TranslationKeys.FLAME, effect + "s"));
     }
 }

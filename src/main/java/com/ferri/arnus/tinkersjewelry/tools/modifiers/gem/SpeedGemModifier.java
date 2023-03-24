@@ -53,7 +53,7 @@ public class SpeedGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         double effect = (1.2 + (level-1) * 0.3 ) * amp;
-        tooltip.add(new TranslatableComponent(TranslationKeys.SPEED).append(": ").append(effect +"").withStyle(ChatFormatting.GOLD));
+        tooltip.add(addDiscription(TranslationKeys.SPEED, effect));
     }
 
 }

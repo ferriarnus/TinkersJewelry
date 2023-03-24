@@ -45,6 +45,6 @@ public class PoisonGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         double effect = 1 * amp * 3;
-        tooltip.add(new TranslatableComponent(TranslationKeys.POISON).append(": ").append(effect +"s").withStyle(ChatFormatting.DARK_GREEN));
+        tooltip.add(addDiscription(TranslationKeys.POISON, effect+"s"));
     }
 }

@@ -57,7 +57,7 @@ public class FireResistanceGemModifier extends AbstractGemModifier{
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         int effect = (int) (1 * amp);
-        tooltip.add(new TranslatableComponent(TranslationKeys.FIRERESISTANCE).append(": ").append(effect + "").withStyle(ChatFormatting.RED));
+        tooltip.add(addDiscription(TranslationKeys.FIRERESISTANCE, effect));
     }
 
 }

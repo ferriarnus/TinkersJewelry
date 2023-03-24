@@ -1,11 +1,15 @@
 package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
+import java.awt.*;
 import java.util.UUID;
 
 import com.ferri.arnus.tinkersjewelry.items.CuriosDamageTypes;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
@@ -67,5 +71,13 @@ public abstract class AbstractGemModifier extends Modifier {
 
 	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, Enchantment enchantment) {
 		ToolDamageUtil.damage(ToolStack.from(stack), amount, entity, stack);
+	}
+
+	public MutableComponent addDiscription(String key, String effect) {
+		return applyStyle(new TextComponent(" +" + effect +" ").append(new TranslatableComponent(key)));
+	}
+
+	public MutableComponent addDiscription(String key, Number effect) {
+		return addDiscription(key, String.valueOf(effect));
 	}
 }

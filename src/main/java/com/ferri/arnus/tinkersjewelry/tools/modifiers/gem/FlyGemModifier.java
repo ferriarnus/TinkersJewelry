@@ -60,7 +60,7 @@ public class FlyGemModifier extends AbstractGemModifier {
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
         int effect = (int) (1 * amp);
-        tooltip.add(new TranslatableComponent(TranslationKeys.FLIGHT).append(" ").withStyle(ChatFormatting.GRAY));
+        tooltip.add(addDiscription(TranslationKeys.FLIGHT, ""));
     }
 
     @Override

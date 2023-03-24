@@ -1,25 +1,25 @@
 {
   "modifier.tinkersjewelry": {
     "ragegem": "#B30000",
-    "flygem": "#B30000",
-    "lifestealgem": "#B30000",
+    "flygem": "#EDEDED",
+    "lifestealgem": "#4D4D4D",
     "poisongem": "#B30000",
-    "flamegem": "#B30000",
-    "armorgem": "#B30000",
-    "piercinggem": "#B30000",
-    "speedgem": "#B30000",
-    "fortunegem": "#B30000",
-    "fireresistancegem": "#B30000",
-    "silkgem": "#B30000",
-    "waterbreathinggem": "#B30000"
+    "flamegem": "#953300",
+    "armorgem": "#EAA727",
+    "piercinggem": "#D1D37A",
+    "speedgem": "#7F0901",
+    "fortunegem": "#7E6059",
+    "fireresistancegem": "#C35F01",
+    "silkgem": "#F7CDBB",
+    "waterbreathinggem": "#7CB3A4"
   },
 
   "material.tinkersjewelry": {
-    "redstone": "#B30000",
-    "lapis": "#B30000",
+    "redstone": "#7F0901",
+    "lapis": "#7E6059",
     "netherstar": "#B30000",
     "scute": "#B30000",
-    "diamond": "#B30000",
+    "diamond": "#8cf4e2",
 
     "bloodgem": "#B30000",
     "blazinggem": "#B30000",
