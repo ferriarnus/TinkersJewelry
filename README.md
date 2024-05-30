@@ -27,6 +27,7 @@ Gems are the most important part of any Jewelry. They determine what effect the 
 | Scute | Water Breathing | Gives the water breathing effect | Damaging the user |
 | Netherstar | Flight | Grants creative flight | On usage |
 | Calcite | Speed | Increases movement speed | On usage |
+| Merlinite | Night Vision | Grants night vision | On usage |
 | Lapis | Fortune | Gives the fortune effect | Mining a block |
 | Amethyst | Silk Touch | Gives the silk touch effect | Mining a block |
 | Milky Quartz | Cleanse | Cleares negative effects from the user | Clearing an effect |

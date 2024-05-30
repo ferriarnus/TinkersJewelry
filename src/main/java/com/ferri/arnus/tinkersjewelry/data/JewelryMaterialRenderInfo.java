@@ -31,6 +31,7 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.blazinggem).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.speedgem).color(0x880808).build();
 		buildRenderInfo(JewelryMaterials.cleansegem).color(0x880808).build();
+		buildRenderInfo(JewelryMaterials.nightvisiongem).color(0x880808).build();
 
 	}
 

@@ -22,8 +22,10 @@ public class AttributeRegistry {
     public static final RegistryObject<Attribute> FLAME = ATTRIBUTES.register("flame", () -> new Attribute("flame", 0).setSyncable(true));
     public static final RegistryObject<Attribute> FORTUNE = ATTRIBUTES.register("fortune", () -> new IntAttribute("fortune", 0, 0, 5).setSyncable(true));
     public static final RegistryObject<Attribute> SILK = ATTRIBUTES.register("silk", () -> new IntAttribute("silk", 0, 0, 5).setSyncable(true));
-    public static final RegistryObject<Attribute> FIRERESISTANCE = ATTRIBUTES.register("fireresistance", () -> new IntAttribute("silk", 0, 0, 5).setSyncable(true));
-    public static final RegistryObject<Attribute> WATERBREATHING = ATTRIBUTES.register("waterbreathing", () -> new IntAttribute("silk", 0, 0, 5).setSyncable(true));
+    public static final RegistryObject<Attribute> FIRERESISTANCE = ATTRIBUTES.register("fireresistance", () -> new IntAttribute("fireresistance", 0, 0, 5).setSyncable(true));
+    public static final RegistryObject<Attribute> WATERBREATHING = ATTRIBUTES.register("waterbreathing", () -> new IntAttribute("waterbreathing", 0, 0, 5).setSyncable(true));
     public static final RegistryObject<Attribute> FLIGHT = ATTRIBUTES.register("flight", () -> new BooleanAttribute("flight", false).setSyncable(true));
+    public static final RegistryObject<Attribute> NIGHTVISION = ATTRIBUTES.register("nightvision", () -> new BooleanAttribute("nightvision", false).setSyncable(true));
+
 
 }

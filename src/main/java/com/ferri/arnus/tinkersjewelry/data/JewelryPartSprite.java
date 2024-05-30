@@ -21,7 +21,7 @@ public class JewelryPartSprite extends AbstractPartSpriteProvider{
 		
 		buildTool("ring")
 		    .addPart("gem", GemMaterialStats.ID)
-		    .addPart("ringpart", ExtraMaterialStats.ID); //TODO Use extra for compatibility (for now, till I get all metals separated out)
+		    .addPart("blank_band", ExtraMaterialStats.ID); //TODO Use extra for compatibility (for now, till I get all metals separated out)
 		
 	}
 

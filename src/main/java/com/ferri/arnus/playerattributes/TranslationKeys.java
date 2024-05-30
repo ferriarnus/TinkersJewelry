@@ -19,4 +19,6 @@ public class TranslationKeys {
     public static final String SILK = "stats.playerattributes.silktouch";
     public static final String SPEED = "stats.playerattributes.speed";
     public static final String WATERBREATHING = "stats.playerattributes.waterbreathing";
+    public static final String NIGHTVISION = "stats.playerattributes.nightvision";
+
 }

@@ -1,7 +1,7 @@
 package com.ferri.arnus.tinkersjewelry.data;
 
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
@@ -22,32 +22,32 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 	@Override
 	protected void addMaterialStats() {
 
-		addMaterialStats(MaterialIds.copper, new RingPartMaterialStats(130, 0.9f));
+		addMaterialStats(MaterialIds.copper, new BlankBandMaterialStats(130, 0.9f));
 
-		addMaterialStats(MaterialIds.iron, new RingPartMaterialStats(250, 1.2f));
-		addMaterialStats(MaterialIds.gold, new RingPartMaterialStats(200, 1.4f));
+		addMaterialStats(MaterialIds.iron, new BlankBandMaterialStats(250, 1.2f));
+		addMaterialStats(MaterialIds.gold, new BlankBandMaterialStats(200, 1.4f));
 
-		addMaterialStats(MaterialIds.osmium, new RingPartMaterialStats(500, 1f));
-		addMaterialStats(MaterialIds.tungsten, new RingPartMaterialStats(350, 1.3f));
-		addMaterialStats(MaterialIds.platinum, new RingPartMaterialStats(400, 1.4f));
-		addMaterialStats(MaterialIds.silver, new RingPartMaterialStats(300, 1.1f));
-		addMaterialStats(MaterialIds.lead, new RingPartMaterialStats(200, 1f));
+		addMaterialStats(MaterialIds.osmium, new BlankBandMaterialStats(500, 1f));
+		addMaterialStats(MaterialIds.tungsten, new BlankBandMaterialStats(350, 1.3f));
+		addMaterialStats(MaterialIds.platinum, new BlankBandMaterialStats(400, 1.4f));
+		addMaterialStats(MaterialIds.silver, new BlankBandMaterialStats(300, 1.1f));
+		addMaterialStats(MaterialIds.lead, new BlankBandMaterialStats(200, 1f));
 
-		addMaterialStats(MaterialIds.slimesteel, new RingPartMaterialStats(1040, 1.2f));
-		addMaterialStats(MaterialIds.amethystBronze, new RingPartMaterialStats(720, 1.3f));
-		addMaterialStats(MaterialIds.nahuatl, new RingPartMaterialStats(350, 0.8f));
-		addMaterialStats(MaterialIds.pigIron, new RingPartMaterialStats(580, 1.2f));
-		addMaterialStats(MaterialIds.roseGold, new RingPartMaterialStats(175, 1.6f));
+		addMaterialStats(MaterialIds.slimesteel, new BlankBandMaterialStats(1040, 1.2f));
+		addMaterialStats(MaterialIds.amethystBronze, new BlankBandMaterialStats(720, 1.3f));
+		addMaterialStats(MaterialIds.nahuatl, new BlankBandMaterialStats(350, 0.8f));
+		addMaterialStats(MaterialIds.pigIron, new BlankBandMaterialStats(580, 1.2f));
+		addMaterialStats(MaterialIds.roseGold, new BlankBandMaterialStats(175, 1.6f));
 
-		addMaterialStats(MaterialIds.steel, new RingPartMaterialStats(775, 1.2f));
-		addMaterialStats(MaterialIds.bronze, new RingPartMaterialStats(760, 1.3f));
-		addMaterialStats(MaterialIds.constantan, new RingPartMaterialStats(675, 1.4f));
-		addMaterialStats(MaterialIds.invar, new RingPartMaterialStats(630, 1.1f));
-		addMaterialStats(MaterialIds.necronium, new RingPartMaterialStats(357, 0.9f));
-		addMaterialStats(MaterialIds.electrum, new RingPartMaterialStats(225, 1.5f));
-		addMaterialStats(MaterialIds.platedSlimewood, new RingPartMaterialStats(595, 0.9f));
+		addMaterialStats(MaterialIds.steel, new BlankBandMaterialStats(775, 1.2f));
+		addMaterialStats(MaterialIds.bronze, new BlankBandMaterialStats(760, 1.3f));
+		addMaterialStats(MaterialIds.constantan, new BlankBandMaterialStats(675, 1.4f));
+		addMaterialStats(MaterialIds.invar, new BlankBandMaterialStats(630, 1.1f));
+		addMaterialStats(MaterialIds.necronium, new BlankBandMaterialStats(357, 0.9f));
+		addMaterialStats(MaterialIds.electrum, new BlankBandMaterialStats(225, 1.5f));
+		addMaterialStats(MaterialIds.platedSlimewood, new BlankBandMaterialStats(595, 0.9f));
 
-		addMaterialStats(MaterialIds.manyullyn, new RingPartMaterialStats(1250, 1.2f));
+		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
 
 
 		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.DEFAULT);
@@ -63,6 +63,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(JewelryMaterials.blazinggem, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.speedgem, GemMaterialStats.DEFAULT);
 		addMaterialStats(JewelryMaterials.cleansegem, GemMaterialStats.DEFAULT);
+		addMaterialStats(JewelryMaterials.nightvisiongem, GemMaterialStats.DEFAULT);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.DEFAULT);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.DEFAULT);

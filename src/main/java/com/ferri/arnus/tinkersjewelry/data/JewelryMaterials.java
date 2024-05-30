@@ -19,7 +19,8 @@ public class JewelryMaterials {
 	public static final MaterialId poisongem = id("poisongem");
 	public static final MaterialId speedgem = id("speedgem");
 	public static final MaterialId cleansegem = id("cleansegem");
-	
+	public static final MaterialId nightvisiongem = id("nightvisiongem");
+
 	private static MaterialId id(String name) {
 	    return new MaterialId(TinkersJewelry.MODID, name);
 	  }

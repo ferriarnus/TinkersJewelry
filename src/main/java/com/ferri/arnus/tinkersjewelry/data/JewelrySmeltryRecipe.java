@@ -52,6 +52,11 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
                 .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidAttributes.BUCKET_VOLUME)
                 .setCast(Items.QUARTZ, true)
                 .save(consumer, modResource(folder + "milk/cleansegem"));
+
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.NIGHTVISIONGEM)
+                .setFluidAndTime(TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME)
+                .setCast(Items.GLOWSTONE_DUST, true)
+                .save(consumer, modResource(folder + "obsidian/nightvisiongem"));
     }
 
     @Override

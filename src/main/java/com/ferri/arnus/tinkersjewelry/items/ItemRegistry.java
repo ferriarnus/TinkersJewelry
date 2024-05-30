@@ -6,7 +6,7 @@ import java.util.List;
 import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.ferri.arnus.tinkersjewelry.tools.JewelryDefinitions;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -45,10 +45,12 @@ public class ItemRegistry {
 	public static final ItemObject<Item> POISONGEM = ITEMS.register("poisongem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
 	public static final ItemObject<Item> SPEEDGEM = ITEMS.register("speedgem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
 	public static final ItemObject<Item> CLEANSEGEM = ITEMS.register("cleansegem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+	public static final ItemObject<Item> NIGHTVISIONGEM = ITEMS.register("nightvisiongem", () -> new TooltipItem(new Item.Properties().tab(TAB_TOOL_PARTS)));
+
 
 
 	//Toolparts
-	public static final ItemObject<ToolPartItem> RINGPART = ITEMS.register("ringpart", () -> new ToolPartItem(PARTS_PROPS, RingPartMaterialStats.ID));
+	public static final ItemObject<ToolPartItem> BLANK_BAND = ITEMS.register("blank_band", () -> new ToolPartItem(PARTS_PROPS, BlankBandMaterialStats.ID));
 	public static final ItemObject<ToolPartItem> GEM = ITEMS.register("gem", () -> new ToolPartItem(PARTS_PROPS, GemMaterialStats.ID));
 
 	//Tools

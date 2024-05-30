@@ -2,7 +2,7 @@ package com.ferri.arnus.tinkersjewelry.data;
 
 import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
@@ -37,6 +37,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(JewelryMaterials.blazinggem, GemMaterialStats.ID, JewelryModifiers.FLAMEGEM);
 		addTraits(JewelryMaterials.speedgem, GemMaterialStats.ID, JewelryModifiers.SPEEDGEM);
 		addTraits(JewelryMaterials.cleansegem, GemMaterialStats.ID, JewelryModifiers.CLEANSEGEM);
+		addTraits(JewelryMaterials.nightvisiongem, GemMaterialStats.ID, JewelryModifiers.NIGHTVISIONGEM);
 
 		addTraits(MaterialIds.rock, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMORGEM, 1));
 		addTraits(MaterialIds.ichor, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCEGEM);
@@ -44,32 +45,32 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(MaterialIds.obsidian, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCINGGEM, 2));
 
 
-		addTraits(MaterialIds.copper, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.iron, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.gold, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.iron, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.gold, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.osmium, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.tungsten, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.platinum, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.silver, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.lead, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.osmium, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.tungsten, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.platinum, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.silver, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.lead, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.slimesteel, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.amethystBronze, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.nahuatl, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.pigIron, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.roseGold, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.slimesteel, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.amethystBronze, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.nahuatl, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.pigIron, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.roseGold, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.steel, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.bronze, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.constantan, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.invar, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.necronium, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.electrum, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.platedSlimewood, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.steel, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.bronze, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.constantan, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.invar, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.necronium, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.electrum, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.platedSlimewood, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.manyullyn, RingPartMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.manyullyn, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
 	}
 

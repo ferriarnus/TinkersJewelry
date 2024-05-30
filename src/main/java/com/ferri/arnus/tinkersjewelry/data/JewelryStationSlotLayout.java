@@ -4,7 +4,6 @@ import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 
 import net.minecraft.data.DataGenerator;
 import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutProvider;
-import slimeknights.tconstruct.tools.TinkerToolParts;
 
 public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
 
@@ -18,8 +17,8 @@ public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
 		
 		defineModifiable(ItemRegistry.RING)
 		.sortIndex(SORT_HARVEST)
-		.addInputItem(ItemRegistry.RINGPART,    53, 22)
-		.addInputItem(ItemRegistry.GEM,  15, 60)
+		.addInputItem(ItemRegistry.BLANK_BAND, 15   , 60)
+		.addInputItem(ItemRegistry.GEM,  53, 22)
 		.build();
 		
 	}

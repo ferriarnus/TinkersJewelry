@@ -1,7 +1,6 @@
 package com.ferri.arnus.tinkersjewelry;
 
 import com.ferri.arnus.playerattributes.PlayerAttributes;
-import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
 import com.ferri.arnus.tinkersjewelry.data.*;
 import net.minecraftforge.common.ForgeMod;
 import org.slf4j.Logger;
@@ -9,7 +8,7 @@ import org.slf4j.Logger;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.data.DataGenerator;
@@ -57,7 +56,7 @@ public class TinkersJewelry {
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.NECKLACE.getMessageBuilder().build());
 		
-		MaterialRegistry.getInstance().registerStatType(RingPartMaterialStats.DEFAULT, RingPartMaterialStats.class, RingPartMaterialStats::new);
+		MaterialRegistry.getInstance().registerStatType(BlankBandMaterialStats.DEFAULT, BlankBandMaterialStats.class, BlankBandMaterialStats::new);
 		MaterialRegistry.getInstance().registerStatType(GemMaterialStats.DEFAULT, GemMaterialStats.class, GemMaterialStats::new);
 	}
 	

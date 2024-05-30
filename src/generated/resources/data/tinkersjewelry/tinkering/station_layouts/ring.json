@@ -7,19 +7,19 @@
   "sortIndex": 6,
   "input_slots": [
     {
-      "icon": "tinkersjewelry:ringpart",
-      "translation_key": "item.tinkersjewelry.ringpart",
-      "x": 53,
-      "y": 22,
+      "icon": "tinkersjewelry:blank_band",
+      "translation_key": "item.tinkersjewelry.blank_band",
+      "x": 15,
+      "y": 60,
       "filter": {
-        "item": "tinkersjewelry:ringpart"
+        "item": "tinkersjewelry:blank_band"
       }
     },
     {
       "icon": "tinkersjewelry:gem",
       "translation_key": "item.tinkersjewelry.gem",
-      "x": 15,
-      "y": 60,
+      "x": 53,
+      "y": 22,
       "filter": {
         "item": "tinkersjewelry:gem"
       }

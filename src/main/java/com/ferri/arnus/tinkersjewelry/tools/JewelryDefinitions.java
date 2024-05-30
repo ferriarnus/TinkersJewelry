@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 import slimeknights.tconstruct.library.tools.definition.IToolStatProvider;
@@ -36,7 +36,7 @@ public class JewelryDefinitions {
 			boolean foundHead = false;
 			for (PartRequirement req : requirements) {
 				MaterialStatsId statType = req.getStatType();
-				if (statType.equals(RingPartMaterialStats.ID)) {
+				if (statType.equals(BlankBandMaterialStats.ID)) {
 					foundHead = true;
 				} else if (!statType.equals(GemMaterialStats.ID)) {
 					throw new IllegalStateException("Invalid jewelry tool part type, only support ring and gem part types");

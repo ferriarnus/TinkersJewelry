@@ -29,6 +29,7 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.blazinggem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.speedgem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.cleansegem, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.nightvisiongem, 2, ORDER_SPECIAL, true);
 
 	}
 

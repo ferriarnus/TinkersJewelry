@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
-import com.ferri.arnus.tinkersjewelry.tools.stats.RingPartMaterialStats;
+import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import slimeknights.tconstruct.library.tools.definition.PartRequirement;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
@@ -16,9 +16,9 @@ import slimeknights.tconstruct.library.tools.stat.ToolStatsBuilder;
 
 public class TrinketToolStatsBuilder extends ToolStatsBuilder{
 	private final List<GemMaterialStats> gems;
-	private final List<RingPartMaterialStats> part;
+	private final List<BlankBandMaterialStats> part;
 	
-	public TrinketToolStatsBuilder(ToolDefinitionData toolData, List<GemMaterialStats> gems, List<RingPartMaterialStats> part) {
+	public TrinketToolStatsBuilder(ToolDefinitionData toolData, List<GemMaterialStats> gems, List<BlankBandMaterialStats> part) {
 		super(toolData);
 		this.gems = gems;
 		this.part = part;
@@ -30,7 +30,7 @@ public class TrinketToolStatsBuilder extends ToolStatsBuilder{
 		if (materials.size() != requiredComponents.size()) {
 			return ToolStatsBuilder.noParts(toolDefinition);
 		}
-		return new TrinketToolStatsBuilder(data, listOfCompatibleWith(GemMaterialStats.ID, materials, requiredComponents),listOfCompatibleWith(RingPartMaterialStats.ID, materials, requiredComponents));
+		return new TrinketToolStatsBuilder(data, listOfCompatibleWith(GemMaterialStats.ID, materials, requiredComponents),listOfCompatibleWith(BlankBandMaterialStats.ID, materials, requiredComponents));
 	}
 	
 	@Override
@@ -40,12 +40,12 @@ public class TrinketToolStatsBuilder extends ToolStatsBuilder{
 	}
 
 	private float buildDurability() {
-		double averageHeadDurability = getAverageValue(part, RingPartMaterialStats::getDurability) + getStatOrDefault(ToolStats.DURABILITY, 0f);
+		double averageHeadDurability = getAverageValue(part, BlankBandMaterialStats::getDurability) + getStatOrDefault(ToolStats.DURABILITY, 0f);
 		return Math.max(1, (int)(averageHeadDurability));
 	}
 
 	private float buildAmplification() {
-		double averageAmplification = getAverageValue(part, RingPartMaterialStats::getAmplification) + getStatOrDefault(JewelryToolStats.AMPLIFICATION, 0f);
+		double averageAmplification = getAverageValue(part, BlankBandMaterialStats::getAmplification) + getStatOrDefault(JewelryToolStats.AMPLIFICATION, 0f);
 		return (float) Math.max(0.1d , averageAmplification);
 	}
 

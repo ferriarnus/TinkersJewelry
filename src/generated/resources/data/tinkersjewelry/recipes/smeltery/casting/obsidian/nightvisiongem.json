@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tconstruct:molten_obsidian",
+    "amount": 1000
+  },
+  "result": "tinkersjewelry:nightvisiongem",
+  "cooling_time": 221
+}
