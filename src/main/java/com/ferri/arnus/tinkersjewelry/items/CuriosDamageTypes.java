@@ -5,9 +5,7 @@ public enum CuriosDamageTypes {
 	NONE("none"),
 	HURT_ENTITY("hurt_entity"),
 	HURT_PLAYER("hurt_player"),
-	BLOCK_BREAK("block_break"),
-	MOB_EFFECT("mob_effect"),
-	ENCHANTMENT("enchantment");
+	BLOCK_BREAK("block_break");
 
 
 	private final String name;

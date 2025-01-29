@@ -2,8 +2,8 @@
   "perStat": {
     "tinkersjewelry:gem": [
       {
-        "name": "tinkersjewelry:piercinggem",
-        "level": 3
+        "level": 3,
+        "name": "tinkersjewelry:piercinggem"
       }
     ]
   }

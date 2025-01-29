@@ -1,7 +1,10 @@
 {
   "type": "tconstruct:part_builder",
-  "pattern": "tinkersjewelry:gem",
   "cost": 1,
+  "pattern": "tinkersjewelry:gem",
+  "pattern_item": {
+    "tag": "tconstruct:patterns/default"
+  },
   "result": {
     "item": "tinkersjewelry:gem"
   }

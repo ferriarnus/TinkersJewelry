@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:nether_star"
   },
-  "value": 1,
+  "material": "tinkersjewelry:netherstar",
   "needed": 1,
-  "material": "tinkersjewelry:netherstar"
+  "value": 1
 }

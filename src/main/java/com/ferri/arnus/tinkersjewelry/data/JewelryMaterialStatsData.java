@@ -4,14 +4,15 @@ import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
 import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
 public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 
-	public JewelryMaterialStatsData(DataGenerator gen, AbstractMaterialDataProvider materials) {
-		super(gen, materials);
+	public JewelryMaterialStatsData(PackOutput packOutput, AbstractMaterialDataProvider materials) {
+		super(packOutput, materials);
 	}
 
 	@Override
@@ -50,24 +51,24 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
 
 
-		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.bloodgem, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.diamond, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.quartz, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.amethyst, GemMaterialStats.DEFAULT);
+		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.bloodgem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.diamond, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.quartz, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.amethyst, GemMaterialStats.INSTANCE);
 
-		addMaterialStats(JewelryMaterials.poisongem, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.blazinggem, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.speedgem, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.cleansegem, GemMaterialStats.DEFAULT);
-		addMaterialStats(JewelryMaterials.nightvisiongem, GemMaterialStats.DEFAULT);
+		addMaterialStats(JewelryMaterials.poisongem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.blazinggem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.speedgem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.cleansegem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.nightvisiongem, GemMaterialStats.INSTANCE);
 
-		addMaterialStats(MaterialIds.rock, GemMaterialStats.DEFAULT);
-		addMaterialStats(MaterialIds.ichor, GemMaterialStats.DEFAULT);
-		addMaterialStats(MaterialIds.flint, GemMaterialStats.DEFAULT);
+		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.flint, GemMaterialStats.INSTANCE);
 	}
 
 }

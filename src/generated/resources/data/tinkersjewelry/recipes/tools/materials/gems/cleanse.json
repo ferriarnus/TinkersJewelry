@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "tinkersjewelry:cleansegem"
   },
-  "value": 1,
+  "material": "tinkersjewelry:cleansegem",
   "needed": 1,
-  "material": "tinkersjewelry:cleansegem"
+  "value": 1
 }

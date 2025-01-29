@@ -4,10 +4,10 @@
     "item": "minecraft:diamond"
   },
   "cast_consumed": true,
+  "cooling_time": 55,
   "fluid": {
-    "tag": "tconstruct:blood",
-    "amount": 100
+    "amount": 250,
+    "tag": "tconstruct:meat_soup"
   },
-  "result": "tinkersjewelry:bloodgem",
-  "cooling_time": 32
+  "result": "tinkersjewelry:bloodgem"
 }

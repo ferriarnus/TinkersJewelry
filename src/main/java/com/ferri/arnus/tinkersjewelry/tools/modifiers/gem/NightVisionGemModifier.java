@@ -1,45 +1,41 @@
 package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
-import com.ferri.arnus.playerattributes.CustomAttributeModifier;
-import com.ferri.arnus.playerattributes.TranslationKeys;
-import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
-import com.ferri.arnus.playerattributes.operations.OperationRegistry;
 import com.ferri.arnus.tinkersjewelry.items.CuriosDamageTypes;
-import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
-import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import org.jetbrains.annotations.Nullable;
+import slimeknights.mantle.client.TooltipKey;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.utils.TooltipKey;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.List;
-import java.util.UUID;
 
 public class NightVisionGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
-        attributeModifiers.put(AttributeRegistry.NIGHTVISION.get(), new CustomAttributeModifier(uuid, "tinkersjewelry:nightvision", 1, OperationRegistry.OR.get()));
-        return attributeModifiers;
-    }
-
-    @Override
     public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.MOB_EFFECT;
+        return CuriosDamageTypes.NONE;
     }
 
     @Override
-    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
-        float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int effect = (int) (1 * amp);
-        tooltip.add(addDiscription(TranslationKeys.NIGHTVISION, ""));
+    public void curioTick(SlotContext slotContext, ItemStack stack) {
+        LivingEntity entity = slotContext.entity();
+        if (!entity.hasEffect(MobEffects.NIGHT_VISION) && entity.getEffect(MobEffects.NIGHT_VISION).getDuration() < 220) {
+            entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400));
+            damageTool(stack, 1, entity, MobEffects.NIGHT_VISION);
+        }
+    }
+
+    @Override
+    public void addTooltip(IToolStackView iToolStackView, ModifierEntry modifierEntry, @javax.annotation.Nullable Player player, List<Component> list, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+//        float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
+//        int effect = (int) (1 * amp);
+//        tooltip.add(addDiscription(TranslationKeys.NIGHTVISION, ""));
     }
 
     @Override

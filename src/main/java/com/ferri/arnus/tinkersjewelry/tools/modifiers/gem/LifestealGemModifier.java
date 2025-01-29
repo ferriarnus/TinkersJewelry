@@ -1,24 +1,20 @@
 package com.ferri.arnus.tinkersjewelry.tools.modifiers.gem;
 
-import com.ferri.arnus.playerattributes.TranslationKeys;
-import com.ferri.arnus.playerattributes.attributes.AttributeRegistry;
 import com.ferri.arnus.tinkersjewelry.items.CuriosDamageTypes;
+import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
-import net.minecraft.ChatFormatting;
+import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import org.jetbrains.annotations.Nullable;
+import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
-import slimeknights.tconstruct.library.utils.TooltipKey;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.List;
@@ -31,14 +27,9 @@ public class LifestealGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = 0;
-        for (ModifierEntry entry : toolStack.getModifiers().getModifiers()) {
-            if (entry.getModifier().equals(this)) {
-                level = entry.getLevel()-1;
-            }
-        }
+        int level = toolStack.getModifierLevel(JewelryModifiers.LIFESTEALGEM.getId()) - 1;
         double effect = (0.1 + level * 0.05) * amp;
-        attributeModifiers.put(AttributeRegistry.LIFESTEAL.get(), new AttributeModifier(uuid, "tinkersjewelry:lifestealgem", effect, AttributeModifier.Operation.ADDITION));
+        attributeModifiers.put(ALObjects.Attributes.LIFE_STEAL.get(), new AttributeModifier(uuid, "tinkersjewelry:lifestealgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
@@ -48,9 +39,9 @@ public class LifestealGemModifier extends AbstractGemModifier{
     }
 
     @Override
-    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
-        float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        long effect = Math.round((0.1 + (level-1) * 0.05) * amp *100);
-        tooltip.add(addDiscription(TranslationKeys.LIFESTEAL, effect+"%"));
+    public void addTooltip(IToolStackView iToolStackView, ModifierEntry modifierEntry, @javax.annotation.Nullable Player player, List<Component> list, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+//        float amp = iToolStackView.getMultiplier(JewelryToolStats.AMPLIFICATION);
+//        long effect = Math.round((0.1 + (modifierEntry.getLevel()-1) * 0.05) * amp *100);
+//        list.add(addDiscription(TranslationKeys.LIFESTEAL, effect+"%"));
     }
 }

@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -18,9 +19,8 @@ import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
 public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRecipeHelper{
 
-	public JewelryMaterialRecipe(DataGenerator generator) {
-		super(generator);
-		// TODO Auto-generated constructor stub
+	public JewelryMaterialRecipe(PackOutput output) {
+		super(output);
 	}
 	
 	@Override
@@ -29,7 +29,7 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 	}
 
 	@Override
-	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+	protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 		String folder = "tools/materials/";
 		materialRecipe(consumer, JewelryMaterials.redstone, Ingredient.of(Items.REDSTONE), 1, 1, folder + "gems/redstone");
 		materialRecipe(consumer, JewelryMaterials.bloodgem, Ingredient.of(ItemRegistry.BLOODGEM), 1, 1, folder + "gems/blood");
@@ -50,7 +50,6 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, MaterialIds.ichor, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");
 		materialRecipe(consumer, MaterialIds.flint, Ingredient.of(Items.FLINT), 1, 1, folder + "gems/flint");
 	}
-
 
 	@Override
 	public String getModId() {

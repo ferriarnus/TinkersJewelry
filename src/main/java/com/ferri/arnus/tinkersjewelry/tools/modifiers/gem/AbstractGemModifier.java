@@ -7,9 +7,8 @@ import com.ferri.arnus.tinkersjewelry.items.CuriosDamageTypes;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,14 +17,14 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import slimeknights.tconstruct.library.modifiers.Modifier;
-import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
 import javax.annotation.Nullable;
 
-public abstract class AbstractGemModifier extends Modifier {
+public abstract class AbstractGemModifier extends Modifier implements TooltipModifierHook {
 
 	public void curioTick(SlotContext slotContext, ItemStack stack) {
 		
@@ -74,7 +73,7 @@ public abstract class AbstractGemModifier extends Modifier {
 	}
 
 	public MutableComponent addDiscription(String key, String effect) {
-		return applyStyle(new TextComponent(" +" + effect +" ").append(new TranslatableComponent(key)));
+		return applyStyle(Component.literal(" +" + effect +" ").append(Component.translatable(key)));
 	}
 
 	public MutableComponent addDiscription(String key, Number effect) {

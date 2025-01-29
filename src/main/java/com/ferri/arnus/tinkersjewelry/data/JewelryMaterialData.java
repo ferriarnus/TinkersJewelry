@@ -1,12 +1,14 @@
 package com.ferri.arnus.tinkersjewelry.data;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
+import slimeknights.tconstruct.library.materials.definition.MaterialManager;
 
 public class JewelryMaterialData extends AbstractMaterialDataProvider{
 
-	public JewelryMaterialData(DataGenerator gen) {
-		super(gen);
+	public JewelryMaterialData(PackOutput packOutput) {
+		super(packOutput);
 	}
 
 	@Override

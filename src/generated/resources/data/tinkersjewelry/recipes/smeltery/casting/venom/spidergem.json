@@ -4,10 +4,10 @@
     "item": "minecraft:emerald"
   },
   "cast_consumed": true,
+  "cooling_time": 30,
   "fluid": {
-    "tag": "tconstruct:venom",
-    "amount": 100
+    "amount": 100,
+    "tag": "tconstruct:venom"
   },
-  "result": "tinkersjewelry:poisongem",
-  "cooling_time": 30
+  "result": "tinkersjewelry:poisongem"
 }

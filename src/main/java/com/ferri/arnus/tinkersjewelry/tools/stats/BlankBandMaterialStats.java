@@ -7,33 +7,33 @@ import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import slimeknights.tconstruct.library.materials.stats.BaseMaterialStats;
+import slimeknights.mantle.data.loadable.primitive.FloatLoadable;
+import slimeknights.mantle.data.loadable.record.RecordLoadable;
 import slimeknights.tconstruct.library.materials.stats.IRepairableMaterialStats;
+import slimeknights.tconstruct.library.materials.stats.MaterialStatType;
 import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
+import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
-public class BlankBandMaterialStats extends BaseMaterialStats implements IRepairableMaterialStats{
+public record BlankBandMaterialStats(int durability, float amplification) implements IRepairableMaterialStats{
 	
 	public static final MaterialStatsId ID = new MaterialStatsId(new ResourceLocation(TinkersJewelry.MODID, "blank_band"));
+	public static final MaterialStatType<BlankBandMaterialStats> TYPE = new MaterialStatType<>(ID, new BlankBandMaterialStats(100, 1f),
+			RecordLoadable.create(IRepairableMaterialStats.DURABILITY_FIELD, FloatLoadable.FROM_ZERO.requiredField("amplification", BlankBandMaterialStats::amplification), BlankBandMaterialStats::new));
 	private static final List<Component> DESCRIPTION = ImmutableList.of(ToolStats.DURABILITY.getDescription(), JewelryToolStats.AMPLIFICATION.getDescription());
-	public static final BlankBandMaterialStats DEFAULT = new BlankBandMaterialStats(100, 1f);
 
-	private float amplification;
-	private int durability;
-	
 	public BlankBandMaterialStats(int durability, float amplification) {
-		this.amplification = amplification;
 		this.durability = durability;
+		this.amplification = amplification;
 	}
-	
-	public BlankBandMaterialStats(FriendlyByteBuf buffer) {
-		this.durability = buffer.readInt();
-		this.amplification = buffer.readFloat();
+
+	@Override
+	public MaterialStatType<?> getType() {
+		return TYPE;
 	}
-	
+
 	@Override
 	public MaterialStatsId getIdentifier() {
 		return ID;
@@ -53,26 +53,17 @@ public class BlankBandMaterialStats extends BaseMaterialStats implements IRepair
 	}
 
 	@Override
-	public void encode(FriendlyByteBuf buffer) {
-		buffer.writeInt(durability);
-		buffer.writeFloat(amplification);
+	public void apply(ModifierStatsBuilder modifierStatsBuilder, float scale) {
+		ToolStats.DURABILITY.update(modifierStatsBuilder, this.durability * scale);
+		JewelryToolStats.AMPLIFICATION.update(modifierStatsBuilder, this.amplification);
 	}
 
-	@Override
-	public int getDurability() {
-		return this.durability;
-	}
-	
-	public float getAmplification() {
-		return amplification;
-	}
-	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		BlankBandMaterialStats that = (BlankBandMaterialStats)o;
-		return this.durability == that.getDurability() && this.amplification == that.getAmplification();
+		return this.durability == that.durability && this.amplification == that.amplification;
 	}
 	
 	@Override

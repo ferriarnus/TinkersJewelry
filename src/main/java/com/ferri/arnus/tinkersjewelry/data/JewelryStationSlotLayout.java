@@ -3,13 +3,13 @@ package com.ferri.arnus.tinkersjewelry.data;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutProvider;
 
 public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
 
-	public JewelryStationSlotLayout(DataGenerator generator) {
-		super(generator);
-		// TODO Auto-generated constructor stub
+	public JewelryStationSlotLayout(PackOutput packOutput) {
+		super(packOutput);
 	}
 	
 	@Override

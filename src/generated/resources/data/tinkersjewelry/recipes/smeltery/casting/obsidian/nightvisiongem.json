@@ -4,10 +4,10 @@
     "item": "minecraft:glowstone_dust"
   },
   "cast_consumed": true,
+  "cooling_time": 221,
   "fluid": {
-    "tag": "tconstruct:molten_obsidian",
-    "amount": 1000
+    "amount": 1000,
+    "tag": "tconstruct:molten_obsidian"
   },
-  "result": "tinkersjewelry:nightvisiongem",
-  "cooling_time": 221
+  "result": "tinkersjewelry:nightvisiongem"
 }

@@ -1,46 +1,44 @@
 {
-  "color": "880808",
-  "luminosity": 0,
+  "color": "FF12408B",
   "generator": {
+    "supported_stats": [
+      "tinkersjewelry:gem"
+    ],
     "transformer": {
       "type": "tconstruct:recolor_sprite",
       "color_mapping": {
         "type": "tconstruct:grey_to_color",
         "palette": [
           {
-            "grey": 0,
-            "color": "FF000000"
+            "color": "FF000000",
+            "grey": 0
           },
           {
-            "grey": 63,
-            "color": "0015317E"
+            "color": "FF052463",
+            "grey": 63
           },
           {
-            "grey": 102,
-            "color": "FF750000"
+            "color": "FF12408B",
+            "grey": 102
           },
           {
-            "grey": 140,
-            "color": "FF820000"
+            "color": "FF1A3D8F",
+            "grey": 140
           },
           {
-            "grey": 178,
-            "color": "FFA00000"
+            "color": "FF1C53A8",
+            "grey": 178
           },
           {
-            "grey": 216,
-            "color": "FFB80000"
+            "color": "FF345EC3",
+            "grey": 216
           },
           {
-            "grey": 255,
-            "color": "FFE82323"
+            "color": "FF5A82E2",
+            "grey": 255
           }
         ]
       }
-    },
-    "supportedStats": [
-      "tinkersjewelry:gem"
-    ],
-    "ignoreMaterialStats": false
+    }
   }
 }

@@ -4,10 +4,10 @@
     "item": "minecraft:glowstone_dust"
   },
   "cast_consumed": true,
+  "cooling_time": 85,
   "fluid": {
-    "tag": "tconstruct:blazing_blood",
-    "amount": 100
+    "amount": 100,
+    "tag": "tconstruct:blazing_blood"
   },
-  "result": "tinkersjewelry:blazinggem",
-  "cooling_time": 85
+  "result": "tinkersjewelry:blazinggem"
 }

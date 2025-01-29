@@ -5,6 +5,7 @@ import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
 import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataProvider;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -12,9 +13,8 @@ import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
 public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 
-	public JewelryMaterialTraitData(DataGenerator gen, AbstractMaterialDataProvider materials) {
-		super(gen, materials);
-		// TODO Auto-generated constructor stub
+	public JewelryMaterialTraitData(PackOutput packOutput, AbstractMaterialDataProvider materials) {
+		super(packOutput, materials);
 	}
 
 	@Override

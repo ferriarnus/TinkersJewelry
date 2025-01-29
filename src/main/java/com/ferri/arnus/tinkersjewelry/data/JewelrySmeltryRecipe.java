@@ -3,12 +3,14 @@ package com.ferri.arnus.tinkersjewelry.data;
 import com.ferri.arnus.tinkersjewelry.TinkersJewelry;
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidType;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
@@ -17,46 +19,45 @@ import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 import java.util.function.Consumer;
 
 public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRecipeHelper {
-    public JewelrySmeltryRecipe(DataGenerator pGenerator) {
-        super(pGenerator);
+    public JewelrySmeltryRecipe(PackOutput output) {
+        super(output);
     }
 
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         castingRecipes(consumer);
-
     }
 
     public void castingRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "smeltery/casting/";
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLOODGEM)
-                .setFluidAndTime(TinkerFluids.blood, false, FluidValues.GEM)
+                .setFluidAndTime(TinkerFluids.meatSoup, FluidValues.BOWL)
                 .setCast(Items.DIAMOND, true)
-                .save(consumer, modResource(folder + "blood/bloodgem"));
+                .save(consumer, location(folder + "blood/bloodgem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLAZINGGEM)
-                .setFluidAndTime(TinkerFluids.blazingBlood, false, FluidValues.GEM)
+                .setFluidAndTime(TinkerFluids.blazingBlood, FluidValues.GEM)
                 .setCast(Items.GLOWSTONE_DUST, true)
-                .save(consumer, modResource(folder + "blazingblood/blazinggem"));
+                .save(consumer, location(folder + "blazingblood/blazinggem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.POISONGEM)
-                .setFluidAndTime(TinkerFluids.venom, false, FluidValues.GEM)
+                .setFluidAndTime(TinkerFluids.venom, FluidValues.GEM)
                 .setCast(Items.EMERALD, true)
-                .save(consumer, modResource(folder + "venom/spidergem"));
+                .save(consumer, location(folder + "venom/spidergem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.SPEEDGEM)
-                .setFluidAndTime(TinkerFluids.honey, false, FluidValues.GEM)
+                .setFluidAndTime(TinkerFluids.honey, FluidValues.GEM)
                 .setCast(Items.SUGAR, true)
-                .save(consumer, modResource(folder + "honey/speedgem"));
+                .save(consumer, location(folder + "honey/speedgem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.CLEANSEGEM)
-                .setFluidAndTime(ForgeMod.MILK.get(), Tags.Fluids.MILK, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(new FluidStack(ForgeMod.MILK.get(), FluidType.BUCKET_VOLUME))
                 .setCast(Items.QUARTZ, true)
-                .save(consumer, modResource(folder + "milk/cleansegem"));
+                .save(consumer, location(folder + "milk/cleansegem"));
 
         ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.NIGHTVISIONGEM)
-                .setFluidAndTime(TinkerFluids.moltenObsidian, false, FluidAttributes.BUCKET_VOLUME)
+                .setFluidAndTime(TinkerFluids.moltenObsidian, FluidValues.GLASS_BLOCK)
                 .setCast(Items.GLOWSTONE_DUST, true)
-                .save(consumer, modResource(folder + "obsidian/nightvisiongem"));
+                .save(consumer, location(folder + "obsidian/nightvisiongem"));
     }
 
     @Override

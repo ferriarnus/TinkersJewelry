@@ -3,7 +3,7 @@
   "ingredient": {
     "tag": "forge:stone"
   },
-  "value": 1,
+  "material": "tconstruct:rock",
   "needed": 1,
-  "material": "tconstruct:rock"
+  "value": 1
 }

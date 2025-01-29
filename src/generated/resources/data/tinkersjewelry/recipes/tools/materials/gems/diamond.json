@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:diamond"
   },
-  "value": 1,
+  "material": "tinkersjewelry:diamond",
   "needed": 1,
-  "material": "tinkersjewelry:diamond"
+  "value": 1
 }

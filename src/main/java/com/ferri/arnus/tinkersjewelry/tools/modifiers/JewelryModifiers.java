@@ -25,6 +25,8 @@ public class JewelryModifiers {
 	public static final StaticModifier<CleanseGemModifier> CLEANSEGEM = MODIFIERS.register("cleansegem", CleanseGemModifier::new);
 	public static final StaticModifier<WaterBreathingGemModifier> WATERBREATHINGGEM = MODIFIERS.register("waterbreathinggem", WaterBreathingGemModifier::new);
 	public static final StaticModifier<NightVisionGemModifier> NIGHTVISIONGEM = MODIFIERS.register("nightvisiongem", NightVisionGemModifier::new);
+	public static final StaticModifier<HealthGemModifier> HEALTHGEM = MODIFIERS.register("healthgem", HealthGemModifier::new);
+	public static final StaticModifier<ReachGemModifier> REACHGEM = MODIFIERS.register("reachgem", ReachGemModifier::new);
 
 	public static void registerModifiers() {
 		MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());

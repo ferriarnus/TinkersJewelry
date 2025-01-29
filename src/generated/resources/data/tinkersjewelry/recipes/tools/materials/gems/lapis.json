@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:lapis_lazuli"
   },
-  "value": 1,
+  "material": "tinkersjewelry:lapis",
   "needed": 1,
-  "material": "tinkersjewelry:lapis"
+  "value": 1
 }

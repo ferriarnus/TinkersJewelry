@@ -1,8 +1,8 @@
 package com.ferri.arnus.tinkersjewelry;
 
-import com.ferri.arnus.playerattributes.PlayerAttributes;
 import com.ferri.arnus.tinkersjewelry.data.*;
 import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
 
 import com.ferri.arnus.tinkersjewelry.items.ItemRegistry;
@@ -19,7 +19,6 @@ import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import slimeknights.tconstruct.library.client.data.material.GeneratorPartTextureJsonGenerator;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
@@ -43,8 +42,6 @@ public class TinkersJewelry {
 		ItemRegistry.registerItems();
 		JewelryModifiers.registerModifiers();
 
-		PlayerAttributes.register();
-
 		ForgeMod.enableMilkFluid();
 	}
 	
@@ -56,36 +53,34 @@ public class TinkersJewelry {
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.NECKLACE.getMessageBuilder().build());
 		
-		MaterialRegistry.getInstance().registerStatType(BlankBandMaterialStats.DEFAULT, BlankBandMaterialStats.class, BlankBandMaterialStats::new);
-		MaterialRegistry.getInstance().registerStatType(GemMaterialStats.DEFAULT, GemMaterialStats.class, GemMaterialStats::new);
+		MaterialRegistry.getInstance().registerStatType(BlankBandMaterialStats.TYPE);
+		MaterialRegistry.getInstance().registerStatType(GemMaterialStats.TYPE);
 	}
 	
-	public void gatherData(final GatherDataEvent event) { 
+	public void gatherData(final GatherDataEvent event) {
 		DataGenerator generator = event.getGenerator();
-		if (event.includeServer()) {
-        	generator.addProvider(new JewelryToolsRecipe(generator));
-        	generator.addProvider(new JewelryMaterialRecipe(generator));
-			generator.addProvider(new JewelrySmeltryRecipe(generator));
-			MaterialDataProvider materials = new MaterialDataProvider(generator);
-			JewelryMaterialData newMaterials = new JewelryMaterialData(generator);
-        	generator.addProvider(materials);
-        	generator.addProvider(newMaterials);
-        	//generator.addProvider(new MaterialStatsDataProvider(generator, materials));
-        	generator.addProvider(new JewelryMaterialStatsData(generator, newMaterials));
-        	generator.addProvider(new JewelryMaterialTraitData(generator, newMaterials));
-			generator.addProvider(new JewelryToolDefinitionData(generator));
-			generator.addProvider(new JewelryStationSlotLayout(generator));
-		}
-		if (event.includeClient()) {
-        	TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
-        	JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
-        	JewelryPartSprite partSprites = new JewelryPartSprite();
-        	ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-			generator.addProvider(new JewelryMaterialRenderInfo(generator, newMaterialSprites));
-			generator.addProvider(new GeneratorPartTextureJsonGenerator(generator, TinkersJewelry.MODID, partSprites));
-			generator.addProvider(new MaterialPartTextureGenerator(generator, existingFileHelper, partSprites, materialSprites, newMaterialSprites));
-			
-		}
+		boolean server = event.includeServer();
+		boolean client = event.includeClient();
+		generator.addProvider(server, new JewelryToolsRecipe(generator.getPackOutput()));
+		generator.addProvider(server, new JewelryMaterialRecipe(generator.getPackOutput()));
+		generator.addProvider(server, new JewelrySmeltryRecipe(generator.getPackOutput()));
+		MaterialDataProvider materials = new MaterialDataProvider(generator.getPackOutput());
+		JewelryMaterialData newMaterials = new JewelryMaterialData(generator.getPackOutput());
+		generator.addProvider(server, materials);
+		generator.addProvider(server, newMaterials);
+		//generator.addProvider(new MaterialStatsDataProvider(generator, materials));
+		generator.addProvider(server, new JewelryMaterialStatsData(generator.getPackOutput(), newMaterials));
+		generator.addProvider(server, new JewelryMaterialTraitData(generator.getPackOutput(), newMaterials));
+		generator.addProvider(server, new JewelryToolDefinitionData(generator.getPackOutput()));
+		generator.addProvider(server, new JewelryStationSlotLayout(generator.getPackOutput()));
+
+		TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
+		JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
+		JewelryPartSprite partSprites = new JewelryPartSprite();
+		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+		generator.addProvider(client, new JewelryMaterialRenderInfo(generator.getPackOutput(), newMaterialSprites, existingFileHelper));
+		generator.addProvider(client, new GeneratorPartTextureJsonGenerator(generator.getPackOutput(), TinkersJewelry.MODID, partSprites));
+		generator.addProvider(client, new MaterialPartTextureGenerator(generator.getPackOutput(), existingFileHelper, partSprites, materialSprites, newMaterialSprites));
 	}
 	
 }

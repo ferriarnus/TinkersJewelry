@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "tinkersjewelry:bloodgem"
   },
-  "value": 1,
+  "material": "tinkersjewelry:bloodgem",
   "needed": 1,
-  "material": "tinkersjewelry:bloodgem"
+  "value": 1
 }

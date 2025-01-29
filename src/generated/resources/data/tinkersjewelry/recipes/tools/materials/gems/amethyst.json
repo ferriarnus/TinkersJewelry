@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "minecraft:amethyst_shard"
   },
-  "value": 1,
+  "material": "tinkersjewelry:amethyst",
   "needed": 1,
-  "material": "tinkersjewelry:amethyst"
+  "value": 1
 }

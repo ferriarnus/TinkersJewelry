@@ -4,10 +4,10 @@
     "item": "minecraft:quartz"
   },
   "cast_consumed": true,
+  "cooling_time": 94,
   "fluid": {
-    "tag": "forge:milk",
-    "amount": 1000
+    "amount": 1000,
+    "fluid": "minecraft:milk"
   },
-  "result": "tinkersjewelry:cleansegem",
-  "cooling_time": 94
+  "result": "tinkersjewelry:cleansegem"
 }

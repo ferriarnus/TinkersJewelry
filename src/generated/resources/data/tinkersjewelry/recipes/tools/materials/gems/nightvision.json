@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "tinkersjewelry:nightvisiongem"
   },
-  "value": 1,
+  "material": "tinkersjewelry:nightvisiongem",
   "needed": 1,
-  "material": "tinkersjewelry:nightvisiongem"
+  "value": 1
 }

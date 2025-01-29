@@ -4,10 +4,10 @@
     "item": "minecraft:sugar"
   },
   "cast_consumed": true,
+  "cooling_time": 30,
   "fluid": {
-    "tag": "tconstruct:honey",
-    "amount": 100
+    "amount": 100,
+    "tag": "forge:honey"
   },
-  "result": "tinkersjewelry:speedgem",
-  "cooling_time": 30
+  "result": "tinkersjewelry:speedgem"
 }

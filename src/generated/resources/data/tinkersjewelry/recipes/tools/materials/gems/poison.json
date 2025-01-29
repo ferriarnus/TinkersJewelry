@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "tinkersjewelry:poisongem"
   },
-  "value": 1,
+  "material": "tinkersjewelry:poisongem",
   "needed": 1,
-  "material": "tinkersjewelry:poisongem"
+  "value": 1
 }

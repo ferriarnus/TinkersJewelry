@@ -12,6 +12,8 @@
   "item.tinkersjewelry.ringpart.description": "Rings are simple trinkets that grant effects based on the used gem.",
   "item.tinkersjewelry.ringpart": "Ring Part",
 
+  "itemGroup.tinkersjewelry.all": "Tinker's Jewelry",
+
   "stat.tinkersjewelry.gem": "Gem",
   "stat.tinkersjewelry.ringpart": "Ring Part",
   
@@ -60,22 +62,5 @@
   "material.tinkersjewelry.blazinggem": "Fire Opal",
   "material.tinkersjewelry.poison": "Malachite",
   "material.tinkersjewelry.speed": "Calcite",
-  "material.tinkersjewelry.cleanse": "Milky Quartz",
-
-  "stats.playerattributes.armor": "Armor",
-  "stats.playerattributes.fireresistance": "Fire Resistance",
-  "stats.playerattributes.flame": "Flame",
-  "stats.playerattributes.flight": "Flight",
-  "stats.playerattributes.fortune": "Fortune",
-  "stats.playerattributes.health": "Health",
-  "stats.playerattributes.lifesteal": "Life Steal",
-  "stats.playerattributes.piercing": "Piercing",
-  "stats.playerattributes.poison": "Poison",
-  "stats.playerattributes.rage": "Rage",
-  "stats.playerattributes.reach": "Reach",
-  "stats.playerattributes.silktouch": "Silk Touch",
-  "stats.playerattributes.speed": "Speed",
-  "stats.playerattributes.waterbreathing": "Water Breathing",
-
-  "stats.tinkersjewelry.cleanse": "Cleanse"
+  "material.tinkersjewelry.cleanse": "Milky Quartz"
 }

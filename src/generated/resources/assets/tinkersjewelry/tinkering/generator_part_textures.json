@@ -1,25 +1,13 @@
 {
-  "replace": false,
   "parts": [
     {
-      "path": "tinkersjewelry:item/tool/bow/tool_binding",
-      "statType": "tconstruct:extra"
-    },
-    {
-      "path": "tinkersjewelry:item/tool/bow/tool_handle",
-      "statType": "tconstruct:handle"
-    },
-    {
-      "path": "tinkersjewelry:item/tool/bow/bowhandle",
-      "statType": "tconstruct:head"
+      "path": "tinkersjewelry:item/tool/ring/gem",
+      "stat_type": "tinkersjewelry:gem"
     },
     {
       "path": "tinkersjewelry:item/tool/ring/blank_band",
-      "statType": "tconstruct:extra"
-    },
-    {
-      "path": "tinkersjewelry:item/tool/ring/gem",
-      "statType": "tinkersjewelry:gem"
+      "stat_type": "tinkersjewelry:blank_band"
     }
-  ]
+  ],
+  "replace": false
 }
