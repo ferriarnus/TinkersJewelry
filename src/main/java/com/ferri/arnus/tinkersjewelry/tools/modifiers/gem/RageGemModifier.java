@@ -8,6 +8,9 @@ import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -20,20 +23,10 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
+import javax.annotation.Nullable;
+
 public class RageGemModifier extends AbstractGemModifier{
 
-	@Override
-	public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
-		// TODO Auto-generated method stub
-		super.onEquip(slotContext, prevStack, stack);
-	}
-	
-	@Override
-	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
-		// TODO Auto-generated method stub
-		super.onUnequip(slotContext, newStack, stack);
-	}
-	
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid,
 			ItemStack stack) {

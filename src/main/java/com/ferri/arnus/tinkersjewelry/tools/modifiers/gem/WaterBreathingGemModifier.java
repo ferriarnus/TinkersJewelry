@@ -29,14 +29,7 @@ public class WaterBreathingGemModifier extends AbstractGemModifier{
         LivingEntity entity = slotContext.entity();
         if (entity.isUnderWater() && !entity.hasEffect(MobEffects.WATER_BREATHING)) {
             entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200));
-            damageTool(stack, 1, entity, MobEffects.WATER_BREATHING);
-        }
-    }
-
-    @Override
-    public void damageTool(ItemStack stack, int amount, LivingEntity entity, MobEffect effect) {
-        if (effect == MobEffects.WATER_BREATHING) {
-            super.damageTool(stack, amount, entity, effect);
+            damageTool(stack, 1, entity);
         }
     }
 

@@ -37,7 +37,7 @@ public class DamageItemEvents {
 			for (int i=0; i < curios.getSlots(); i++) {
 				ItemStack stackInSlot = curios.getStackInSlot(i);
 				if (stackInSlot.getItem() instanceof CuriosRingItem item && item.getDamageType(stackInSlot) == CuriosDamageTypes.HURT_PLAYER) {
-					item.damageTool(stackInSlot, event.getSource(), event.getAmount(), event.getEntity());
+					item.hurtUser(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), event.getSource().getEntity());
 				}
 			}
 		});
@@ -47,7 +47,7 @@ public class DamageItemEvents {
 				for (int i=0; i < curios.getSlots(); i++) {
 					ItemStack stackInSlot = curios.getStackInSlot(i);
 					if (stackInSlot.getItem() instanceof CuriosRingItem item && item.getDamageType(stackInSlot) == CuriosDamageTypes.HURT_ENTITY) {
-						item.damageTool(stackInSlot, event.getSource(), event.getAmount(), entity);
+						item.hurtEnemy(stackInSlot, event.getSource(), event.getAmount(), entity, event.getEntity());
 					}
 				}
 			});

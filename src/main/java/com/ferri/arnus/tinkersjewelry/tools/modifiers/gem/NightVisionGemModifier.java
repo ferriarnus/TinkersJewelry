@@ -25,9 +25,9 @@ public class NightVisionGemModifier extends AbstractGemModifier{
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity entity = slotContext.entity();
-        if (!entity.hasEffect(MobEffects.NIGHT_VISION) && entity.getEffect(MobEffects.NIGHT_VISION).getDuration() < 220) {
+        if (!entity.hasEffect(MobEffects.NIGHT_VISION) || entity.getEffect(MobEffects.NIGHT_VISION).getDuration() < 220) {
             entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400));
-            damageTool(stack, 1, entity, MobEffects.NIGHT_VISION);
+            damageTool(stack, 10, entity);
         }
     }
 

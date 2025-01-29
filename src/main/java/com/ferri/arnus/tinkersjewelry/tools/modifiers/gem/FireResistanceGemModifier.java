@@ -28,14 +28,7 @@ public class FireResistanceGemModifier extends AbstractGemModifier{
         LivingEntity entity = slotContext.entity();
         if (entity.isOnFire() && !entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
             entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200));
-            damageTool(stack, 1, entity, MobEffects.FIRE_RESISTANCE);
-        }
-    }
-
-    @Override
-    public void damageTool(ItemStack stack, int amount, LivingEntity entity, MobEffect effect) {
-        if (effect == MobEffects.FIRE_RESISTANCE) {
-            super.damageTool(stack, amount, entity, effect);
+            damageTool(stack, 1, entity);
         }
     }
 

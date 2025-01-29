@@ -24,7 +24,6 @@ public class CleanseGemModifier extends AbstractGemModifier{
         return CuriosDamageTypes.NONE;
     }
 
-    @Override
     public void damageTool(ItemStack stack, int amount, LivingEntity entity, MobEffect effect) {
         if (!effect.isBeneficial()) {
             MobEffectInstance instance = entity.getEffect(effect);
@@ -34,7 +33,7 @@ public class CleanseGemModifier extends AbstractGemModifier{
             int level = instance.getAmplifier();
             int duration = instance.getDuration();
             entity.removeEffect(effect);
-            super.damageTool(stack, 5*level* (duration/100), entity, effect);
+            damageTool(stack, 5*level* (duration/100), entity);
         }
     }
 
@@ -49,7 +48,7 @@ public class CleanseGemModifier extends AbstractGemModifier{
                 int level = effect.getAmplifier();
                 int duration = effect.getDuration();
                 entity.removeEffect(effect.getEffect());
-                super.damageTool(stack, 5*level* (duration/100), entity, effect.getEffect());
+                damageTool(stack, 5*level* (duration/100), entity, effect.getEffect());
             }
         }
     }

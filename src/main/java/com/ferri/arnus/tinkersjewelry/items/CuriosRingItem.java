@@ -10,6 +10,7 @@ import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -129,12 +130,23 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		}
 		return CuriosDamageTypes.NONE;
 	}
-	public void damageTool(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity entity) {
+
+	public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
 		ToolStack tool = ToolStack.from(stack);
 		List<ModifierEntry> modifiers = tool.getModifierList();
 		for (ModifierEntry entry : modifiers) {
 			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.damageTool(stack, source, damage, entity);
+				gem.hurtUser(stack, source, damage, defender, attacker);
+			}
+		}
+	}
+
+	public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+		ToolStack tool = ToolStack.from(stack);
+		List<ModifierEntry> modifiers = tool.getModifierList();
+		for (ModifierEntry entry : modifiers) {
+			if (entry.getModifier() instanceof AbstractGemModifier gem) {
+				gem.hurtEnemy(stack, source, damage, defender, attacker);
 			}
 		}
 	}
@@ -145,26 +157,6 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		for (ModifierEntry entry : modifiers) {
 			if (entry.getModifier() instanceof AbstractGemModifier gem) {
 				gem.damageTool(stack, amount, entity);
-			}
-		}
-	}
-
-	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, MobEffect effect) {
-		ToolStack tool = ToolStack.from(stack);
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.damageTool(stack, amount, entity, effect);
-			}
-		}
-	}
-
-	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity, Enchantment enchantment) {
-		ToolStack tool = ToolStack.from(stack);
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.damageTool(stack, amount, entity, enchantment);
 			}
 		}
 	}
