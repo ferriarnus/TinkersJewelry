@@ -43,12 +43,13 @@ public class ItemRegistry {
 	}
 
 	//Materials
-	public static final ItemObject<Item> BLOODGEM = ITEMS.register("bloodgem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> BLAZINGGEM = ITEMS.register("blazinggem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> POISONGEM = ITEMS.register("poisongem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> SPEEDGEM = ITEMS.register("speedgem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> CLEANSEGEM = ITEMS.register("cleansegem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> NIGHTVISIONGEM = ITEMS.register("nightvisiongem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> BLOOD_GEM = ITEMS.register("blood_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> BLAZING_GEM = ITEMS.register("blazing_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> POISON_GEM = ITEMS.register("poison_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> SPEED_GEM = ITEMS.register("speed_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> CLEANSE_GEM = ITEMS.register("cleanse_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> NIGHTVISION_GEM = ITEMS.register("nightvision_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> EXP_GEM = ITEMS.register("exp_gem", () -> new TooltipItem(new Item.Properties()));
 
 	//Toolparts
 	public static final ItemObject<ToolPartItem> BLANK_BAND = ITEMS.register("blank_band", () -> new ToolPartItem(PARTS_PROPS, BlankBandMaterialStats.ID));
@@ -77,6 +78,13 @@ public class ItemRegistry {
 		acceptTool(output, RING);
 		accept(output, BLANK_BAND);
 		accept(output, GEM);
+		output.accept(new ItemStack(BLOOD_GEM.get()));
+		output.accept(new ItemStack(BLAZING_GEM.get()));
+		output.accept(new ItemStack(POISON_GEM.get()));
+		output.accept(new ItemStack(SPEED_GEM.get()));
+		output.accept(new ItemStack(CLEANSE_GEM.get()));
+		output.accept(new ItemStack(NIGHTVISION_GEM.get()));
+		output.accept(new ItemStack(EXP_GEM.get()));
 	}
 
 	private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {

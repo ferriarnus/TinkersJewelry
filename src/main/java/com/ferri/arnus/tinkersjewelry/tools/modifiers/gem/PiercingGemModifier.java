@@ -6,9 +6,6 @@ import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -20,7 +17,6 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.UUID;
 
@@ -31,7 +27,7 @@ public class PiercingGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.PIERCINGGEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(JewelryModifiers.PIERCING_GEM.getId()) - 1;
         double effect = (0.1 + level * 0.05)* amp;
         attributeModifiers.put(ALObjects.Attributes.ARMOR_PIERCE.get(), new AttributeModifier(uuid, "tinkersjewelry:fireresistancegem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;

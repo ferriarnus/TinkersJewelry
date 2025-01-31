@@ -12,6 +12,7 @@ import net.minecraft.world.item.TooltipFlag;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
 import javax.annotation.Nullable;
@@ -24,31 +25,20 @@ public class CleanseGemModifier extends AbstractGemModifier{
         return CuriosDamageTypes.NONE;
     }
 
-    public void damageTool(ItemStack stack, int amount, LivingEntity entity, MobEffect effect) {
-        if (!effect.isBeneficial()) {
-            MobEffectInstance instance = entity.getEffect(effect);
-            if (instance == null) {
-                return;
-            }
-            int level = instance.getAmplifier();
-            int duration = instance.getDuration();
-            entity.removeEffect(effect);
-            damageTool(stack, 5*level* (duration/100), entity);
-        }
-    }
-
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity entity = slotContext.entity();
         if (entity == null) {
             return;
         }
-        for (MobEffectInstance effect : entity.getActiveEffects()) {
-            if (!effect.getEffect().isBeneficial()) {
-                int level = effect.getAmplifier();
-                int duration = effect.getDuration();
-                entity.removeEffect(effect.getEffect());
-                damageTool(stack, 5*level* (duration/100), entity, effect.getEffect());
+        List<MobEffectInstance> badEffects = entity.getActiveEffects().stream().filter(e -> !e.getEffect().isBeneficial()).toList();
+        for (MobEffectInstance effect : badEffects) {
+            int level = effect.getAmplifier();
+            int duration = effect.getDuration();
+            entity.removeEffect(effect.getEffect());
+            damageTool(stack, 5*level* (duration/100), entity);
+            if (ToolStack.from(stack).isBroken()) {
+                break;
             }
         }
     }

@@ -45,28 +45,36 @@ public class JewelryMaterialSprite extends AbstractMaterialSpriteProvider{
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF54398a).addARGB(102, 0xFF6f4fab).addARGB(140, 0xFF8d6acc).addARGB(178, 0xFFb38ef3).addARGB(216, 0xFFcfa0f3).addARGB(255, 0xFFfecbe6).build());
 
+		buildMaterial(JewelryMaterials.emerald)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF005300).addARGB(102, 0xFF009529).addARGB(140, 0xFF00aa2c).addARGB(178, 0xFF17dd62).addARGB(216, 0xFF41f384).addARGB(255, 0xFFaffdcd).build());
 
-		buildMaterial(JewelryMaterials.bloodgem)
+
+		buildMaterial(JewelryMaterials.blood_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF5D0000).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
-		buildMaterial(JewelryMaterials.poisongem)
+		buildMaterial(JewelryMaterials.poison_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
-		buildMaterial(JewelryMaterials.blazinggem)
+		buildMaterial(JewelryMaterials.blazing_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
-		buildMaterial(JewelryMaterials.speedgem)
+		buildMaterial(JewelryMaterials.speed_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
-		buildMaterial(JewelryMaterials.cleansegem)
+		buildMaterial(JewelryMaterials.cleanse_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 
-		buildMaterial(JewelryMaterials.nightvisiongem)
+		buildMaterial(JewelryMaterials.nightvision_gem)
+				.statType(GemMaterialStats.ID)
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
+
+		buildMaterial(JewelryMaterials.exp_gem)
 				.statType(GemMaterialStats.ID)
 				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0x15317E).addARGB(102, 0xFF750000).addARGB(140, 0xFF820000).addARGB(178, 0xFFA00000).addARGB(216, 0xFFB80000).addARGB(255, 0xFFE82323).build());
 

@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:bloodgem"
+    "item": "tinkersjewelry:blood_gem"
   },
-  "material": "tinkersjewelry:bloodgem",
+  "material": "tinkersjewelry:blood_gem",
   "needed": 1,
   "value": 1
 }

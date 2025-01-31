@@ -1,6 +1,14 @@
 {
   "parts": [
     {
+      "path": "tinkersjewelry:item/tool/parts/gem",
+      "stat_type": "tinkersjewelry:gem"
+    },
+    {
+      "path": "tinkersjewelry:item/tool/parts/blank_band",
+      "stat_type": "tinkersjewelry:blank_band"
+    },
+    {
       "path": "tinkersjewelry:item/tool/ring/gem",
       "stat_type": "tinkersjewelry:gem"
     },

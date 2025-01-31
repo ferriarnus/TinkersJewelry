@@ -1,7 +1,7 @@
 {
-  "item.tinkersjewelry.bloodgem": "Blood Gem",
-  "item.tinkersjewelry.blazinggem": "Blazing Gem",
-  "item.tinkersjewelry.poisongem": "Poison Gem",
+  "item.tinkersjewelry.blood_gem": "Blood Gem",
+  "item.tinkersjewelry.blazing_gem": "Blazing Gem",
+  "item.tinkersjewelry.poison_gem": "Poison Gem",
 
   "item.tinkersjewelry.ring.description": "Rings are simple trinkets that grant effects based on the used gem.",
   "item.tinkersjewelry.ring": "Ring",
@@ -9,46 +9,46 @@
   "item.tinkersjewelry.gem.description": "Gems hold the traits",
   "item.tinkersjewelry.gem": "Gem",
 
-  "item.tinkersjewelry.ringpart.description": "Rings are simple trinkets that grant effects based on the used gem.",
-  "item.tinkersjewelry.ringpart": "Ring Part",
+  "item.tinkersjewelry.blank_band.description": "Rings are simple trinkets that grant effects based on the used gem.",
+  "item.tinkersjewelry.blank_band": "Plain Ring",
 
   "itemGroup.tinkersjewelry.all": "Tinker's Jewelry",
 
   "stat.tinkersjewelry.gem": "Gem",
   "stat.tinkersjewelry.ringpart": "Ring Part",
   
-  "modifier.tinkersjewelry.ragegem.description": "Gives an attack speed boost",
-  "modifier.tinkersjewelry.ragegem": "Rage",
+  "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
+  "modifier.tinkersjewelry.rage_gem": "Rage",
 
-  "modifier.tinkersjewelry.lifestealgem.description": "Heals based on damage dealt",
-  "modifier.tinkersjewelry.lifestealgem": "Lifesteal",
+  "modifier.tinkersjewelry.lifesteal_gem.description": "Heals based on damage dealt",
+  "modifier.tinkersjewelry.lifesteal_gem": "Lifesteal",
 
-  "modifier.tinkersjewelry.flygem.description": "Allows creative flight",
-  "modifier.tinkersjewelry.flygem": "Flight",
+  "modifier.tinkersjewelry.fly_gem.description": "Allows creative flight",
+  "modifier.tinkersjewelry.fly_gem": "Flight",
 
-  "modifier.tinkersjewelry.armorgem.description": "Adds additional armor",
-  "modifier.tinkersjewelry.armorgem": "Armor",
+  "modifier.tinkersjewelry.armor_gem.description": "Adds additional armor",
+  "modifier.tinkersjewelry.armor_gem": "Armor",
 
-  "modifier.tinkersjewelry.piercinggem.description": "Ignores part of the target's armor",
-  "modifier.tinkersjewelry.piercinggem": "Piercing",
+  "modifier.tinkersjewelry.piercing_gem.description": "Ignores part of the target's armor",
+  "modifier.tinkersjewelry.piercing_gem": "Piercing",
 
-  "modifier.tinkersjewelry.speedgem.description": "Increases movement speed",
-  "modifier.tinkersjewelry.speedgem": "Speed",
+  "modifier.tinkersjewelry.speed_gem.description": "Increases movement speed",
+  "modifier.tinkersjewelry.speed_gem": "Speed",
 
-  "modifier.tinkersjewelry.fireresistancegem.description": "Gives Fire Resistance",
-  "modifier.tinkersjewelry.fireresistancegem": "Fire Resistance",
+  "modifier.tinkersjewelry.fireresistance_gem.description": "Gives Fire Resistance",
+  "modifier.tinkersjewelry.fireresistance_gem": "Fire Resistance",
 
-  "modifier.tinkersjewelry.silkgem.description": "Grants Silk Touch",
-  "modifier.tinkersjewelry.silkgem": "Silk Touch",
+  "modifier.tinkersjewelry.silk_gem.description": "Grants Silk Touch",
+  "modifier.tinkersjewelry.silk_gem": "Silk Touch",
 
-  "modifier.tinkersjewelry.waterbreathinggem.description": "Gives Water Breathing",
-  "modifier.tinkersjewelry.waterbreathinggem": "Water Breathing",
+  "modifier.tinkersjewelry.waterbreathing_gem.description": "Gives Water Breathing",
+  "modifier.tinkersjewelry.waterbreathing_gem": "Water Breathing",
 
-  "modifier.tinkersjewelry.poisongem.description": "Applies Poison to the target",
-  "modifier.tinkersjewelry.poisongem": "Poison",
+  "modifier.tinkersjewelry.poison_gem.description": "Applies Poison to the target",
+  "modifier.tinkersjewelry.poison_gem": "Poison",
 
-  "modifier.tinkersjewelry.flamegem.description": "Lights the target on fire",
-  "modifier.tinkersjewelry.flamegem": "Flame",
+  "modifier.tinkersjewelry.flame_gem.description": "Lights the target on fire",
+  "modifier.tinkersjewelry.flame_gem": "Flame",
   
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
 
@@ -57,10 +57,13 @@
   "material.tinkersjewelry.netherstar": "Netherstar",
   "material.tinkersjewelry.scute": "Scute",
   "material.tinkersjewelry.diamond": "Diamond",
+  "material.tinkersjewelry.quartz": "Quartz",
+  "material.tinkersjewelry.amethyst": "Amethyst",
+  "material.tinkersjewelry.emerald": "Emerald",
 
-  "material.tinkersjewelry.bloodgem": "Eudialyte",
-  "material.tinkersjewelry.blazinggem": "Fire Opal",
-  "material.tinkersjewelry.poison": "Malachite",
-  "material.tinkersjewelry.speed": "Calcite",
-  "material.tinkersjewelry.cleanse": "Milky Quartz"
+  "material.tinkersjewelry.blood_gem": "Eudialyte",
+  "material.tinkersjewelry.blazing_gem": "Fire Opal",
+  "material.tinkersjewelry.poison_gem": "Malachite",
+  "material.tinkersjewelry.speed_gem": "Calcite",
+  "material.tinkersjewelry.cleanse_gem": "Milky Quartz"
 }

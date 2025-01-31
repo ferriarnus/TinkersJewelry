@@ -8,9 +8,6 @@ import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -23,8 +20,6 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 
-import javax.annotation.Nullable;
-
 public class RageGemModifier extends AbstractGemModifier{
 
 	@Override
@@ -32,7 +27,7 @@ public class RageGemModifier extends AbstractGemModifier{
 			ItemStack stack) {
 		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
 		ToolStack toolStack = ToolStack.from(stack);
-		int level = toolStack.getModifierLevel(JewelryModifiers.RAGEGEM.getId()) - 1;
+		int level = toolStack.getModifierLevel(JewelryModifiers.RAGE_GEM.getId()) - 1;
 		float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
 		double effect = (1.25D + 0.25 * level) * amp;
 		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:ragegem", effect, AttributeModifier.Operation.MULTIPLY_BASE));

@@ -64,23 +64,19 @@ public class TinkersJewelry {
 		generator.addProvider(server, new JewelryToolsRecipe(generator.getPackOutput()));
 		generator.addProvider(server, new JewelryMaterialRecipe(generator.getPackOutput()));
 		generator.addProvider(server, new JewelrySmeltryRecipe(generator.getPackOutput()));
-		MaterialDataProvider materials = new MaterialDataProvider(generator.getPackOutput());
 		JewelryMaterialData newMaterials = new JewelryMaterialData(generator.getPackOutput());
-		generator.addProvider(server, materials);
 		generator.addProvider(server, newMaterials);
-		//generator.addProvider(new MaterialStatsDataProvider(generator, materials));
 		generator.addProvider(server, new JewelryMaterialStatsData(generator.getPackOutput(), newMaterials));
 		generator.addProvider(server, new JewelryMaterialTraitData(generator.getPackOutput(), newMaterials));
 		generator.addProvider(server, new JewelryToolDefinitionData(generator.getPackOutput()));
 		generator.addProvider(server, new JewelryStationSlotLayout(generator.getPackOutput()));
 
-		TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
 		JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
 		JewelryPartSprite partSprites = new JewelryPartSprite();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 		generator.addProvider(client, new JewelryMaterialRenderInfo(generator.getPackOutput(), newMaterialSprites, existingFileHelper));
 		generator.addProvider(client, new GeneratorPartTextureJsonGenerator(generator.getPackOutput(), TinkersJewelry.MODID, partSprites));
-		generator.addProvider(client, new MaterialPartTextureGenerator(generator.getPackOutput(), existingFileHelper, partSprites, materialSprites, newMaterialSprites));
+		generator.addProvider(client, new MaterialPartTextureGenerator(generator.getPackOutput(), existingFileHelper, partSprites, newMaterialSprites));
 	}
 	
 }

@@ -3,7 +3,6 @@ package com.ferri.arnus.tinkersjewelry.data;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
 import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
@@ -52,23 +51,28 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 
 
 		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.bloodgem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.blood_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.diamond, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.quartz, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.amethyst, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.emerald, GemMaterialStats.INSTANCE);
 
-		addMaterialStats(JewelryMaterials.poisongem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.blazinggem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.speedgem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.cleansegem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.nightvisiongem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.poison_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.blazing_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.speed_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.cleanse_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.nightvision_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.exp_gem, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.flint, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.obsidian, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.enderslime, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.skyslime, GemMaterialStats.INSTANCE);
 	}
 
 }

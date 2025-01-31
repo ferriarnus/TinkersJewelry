@@ -7,7 +7,6 @@ import com.google.common.collect.Multimap;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -31,7 +30,7 @@ public class LifestealGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.LIFESTEALGEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(JewelryModifiers.LIFESTEAL_GEM.getId()) - 1;
         double effect = (0.1 + level * 0.05) * amp;
         attributeModifiers.put(ALObjects.Attributes.LIFE_STEAL.get(), new AttributeModifier(uuid, "tinkersjewelry:lifestealgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;

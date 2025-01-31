@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:nightvisiongem"
+    "item": "tinkersjewelry:nightvision_gem"
   },
-  "material": "tinkersjewelry:nightvisiongem",
+  "material": "tinkersjewelry:nightvision_gem",
   "needed": 1,
   "value": 1
 }

@@ -32,13 +32,15 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.diamond).color(0x1aaaa7);
 		buildRenderInfo(JewelryMaterials.quartz).color(0xf7f5f2);
 		buildRenderInfo(JewelryMaterials.amethyst).color(0x6f4fab);
+		buildRenderInfo(JewelryMaterials.emerald).color(0x00aa2c);
 
-		buildRenderInfo(JewelryMaterials.bloodgem).color(0x880808);
-		buildRenderInfo(JewelryMaterials.poisongem).color(0x880808);
-		buildRenderInfo(JewelryMaterials.blazinggem).color(0x880808);
-		buildRenderInfo(JewelryMaterials.speedgem).color(0x880808);
-		buildRenderInfo(JewelryMaterials.cleansegem).color(0x880808);
-		buildRenderInfo(JewelryMaterials.nightvisiongem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.blood_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.poison_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.blazing_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.speed_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.cleanse_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.nightvision_gem).color(0x880808);
+		buildRenderInfo(JewelryMaterials.exp_gem).color(0x880808);
 	}
 
 }

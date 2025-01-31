@@ -30,7 +30,6 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 				.part(ItemRegistry.BLANK_BAND)
 				.part(ItemRegistry.GEM).build())
 			.module(defaultTwoParts)
-			.smallToolStartingSlots()
 			.build();
 		
 	}

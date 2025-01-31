@@ -3,6 +3,5 @@
   "parent": "forge:item/default",
   "textures": {
     "texture": "tinkersjewelry:item/tool/ring/blank_band"
-  },
-  "offset": [-1, 1]
+  }
 }

@@ -4,7 +4,6 @@ import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.GemMaterialStats;
 import com.ferri.arnus.tinkersjewelry.tools.stats.BlankBandMaterialStats;
 
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataProvider;
@@ -24,26 +23,29 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 
 	@Override
 	protected void addMaterialTraits() {
-		addTraits(JewelryMaterials.redstone, GemMaterialStats.ID, JewelryModifiers.RAGEGEM);
-		addTraits(JewelryMaterials.bloodgem, GemMaterialStats.ID, JewelryModifiers.LIFESTEALGEM);
-		addTraits(JewelryMaterials.lapis, GemMaterialStats.ID, JewelryModifiers.FORTUNEGEM);
-		addTraits(JewelryMaterials.netherstar, GemMaterialStats.ID, JewelryModifiers.FLYGEM);
-		addTraits(JewelryMaterials.scute, GemMaterialStats.ID, JewelryModifiers.WATERBREATHINGGEM);
-		addTraits(JewelryMaterials.diamond, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMORGEM, 3));
-		addTraits(JewelryMaterials.quartz, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCINGGEM, 3));
-		addTraits(JewelryMaterials.amethyst, GemMaterialStats.ID, JewelryModifiers.SILKGEM);
+		addTraits(JewelryMaterials.redstone, GemMaterialStats.ID, JewelryModifiers.RAGE_GEM);
+		addTraits(JewelryMaterials.blood_gem, GemMaterialStats.ID, JewelryModifiers.LIFESTEAL_GEM);
+		addTraits(JewelryMaterials.lapis, GemMaterialStats.ID, JewelryModifiers.FORTUNE_GEM);
+		addTraits(JewelryMaterials.netherstar, GemMaterialStats.ID, JewelryModifiers.FLY_GEM);
+		addTraits(JewelryMaterials.scute, GemMaterialStats.ID, JewelryModifiers.WATERBREATHING_GEM);
+		addTraits(JewelryMaterials.diamond, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMOR_GEM, 3));
+		addTraits(JewelryMaterials.quartz, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCING_GEM, 3));
+		addTraits(JewelryMaterials.amethyst, GemMaterialStats.ID, JewelryModifiers.SILK_GEM);
+		addTraits(JewelryMaterials.emerald, GemMaterialStats.ID, JewelryModifiers.TRADE_GEM);
 
-		addTraits(JewelryMaterials.poisongem, GemMaterialStats.ID, JewelryModifiers.POISONGEM);
-		addTraits(JewelryMaterials.blazinggem, GemMaterialStats.ID, JewelryModifiers.FLAMEGEM);
-		addTraits(JewelryMaterials.speedgem, GemMaterialStats.ID, JewelryModifiers.SPEEDGEM);
-		addTraits(JewelryMaterials.cleansegem, GemMaterialStats.ID, JewelryModifiers.CLEANSEGEM);
-		addTraits(JewelryMaterials.nightvisiongem, GemMaterialStats.ID, JewelryModifiers.NIGHTVISIONGEM);
+		addTraits(JewelryMaterials.poison_gem, GemMaterialStats.ID, JewelryModifiers.POISON_GEM);
+		addTraits(JewelryMaterials.blazing_gem, GemMaterialStats.ID, JewelryModifiers.FLAME_GEM);
+		addTraits(JewelryMaterials.speed_gem, GemMaterialStats.ID, JewelryModifiers.SPEED_GEM);
+		addTraits(JewelryMaterials.cleanse_gem, GemMaterialStats.ID, JewelryModifiers.CLEANSE_GEM);
+		addTraits(JewelryMaterials.nightvision_gem, GemMaterialStats.ID, JewelryModifiers.NIGHTVISION_GEM);
+		addTraits(JewelryMaterials.exp_gem, GemMaterialStats.ID, JewelryModifiers.EXP_GEM);
 
-		addTraits(MaterialIds.rock, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMORGEM, 1));
-		addTraits(MaterialIds.ichor, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCEGEM);
-		addTraits(MaterialIds.flint, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCINGGEM, 1));
-		addTraits(MaterialIds.obsidian, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCINGGEM, 2));
-
+		addTraits(MaterialIds.rock, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMOR_GEM, 1));
+		addTraits(MaterialIds.ichor, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCE_GEM);
+		addTraits(MaterialIds.flint, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCING_GEM, 1));
+		addTraits(MaterialIds.obsidian, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCING_GEM, 2));
+		addTraits(MaterialIds.enderslime, GemMaterialStats.ID, JewelryModifiers.REACH_GEM);
+		addTraits(MaterialIds.skyslime, GemMaterialStats.ID, JewelryModifiers.GRAVITY_GEM);
 
 		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 

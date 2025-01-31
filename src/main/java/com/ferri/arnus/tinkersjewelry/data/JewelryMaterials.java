@@ -13,13 +13,15 @@ public class JewelryMaterials {
 	public static final MaterialId diamond = id("diamond");
 	public static final MaterialId quartz = id("quartz");
 	public static final MaterialId amethyst = id("amethyst");
+	public static final MaterialId emerald = id("emerald");
 
-	public static final MaterialId bloodgem = id("bloodgem");
-	public static final MaterialId blazinggem = id("blazinggem");
-	public static final MaterialId poisongem = id("poisongem");
-	public static final MaterialId speedgem = id("speedgem");
-	public static final MaterialId cleansegem = id("cleansegem");
-	public static final MaterialId nightvisiongem = id("nightvisiongem");
+	public static final MaterialId blood_gem = id("blood_gem");
+	public static final MaterialId blazing_gem = id("blazing_gem");
+	public static final MaterialId poison_gem = id("poison_gem");
+	public static final MaterialId speed_gem = id("speed_gem");
+	public static final MaterialId cleanse_gem = id("cleanse_gem");
+	public static final MaterialId nightvision_gem = id("nightvision_gem");
+	public static final MaterialId exp_gem = id("exp_gem");
 
 	private static MaterialId id(String name) {
 	    return new MaterialId(TinkersJewelry.MODID, name);

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:experience_bottle"
+  },
+  "cast_consumed": true,
+  "cooling_time": 68,
+  "fluid": {
+    "amount": 100,
+    "tag": "tconstruct:molten_emerald"
+  },
+  "result": "tinkersjewelry:exp_gem"
+}

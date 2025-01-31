@@ -5,9 +5,6 @@ import com.ferri.arnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import com.ferri.arnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -31,7 +28,7 @@ public class ReachGemModifier extends AbstractGemModifier {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.REACHGEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
         double effect = level * amp;
         attributeModifiers.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:reachgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
