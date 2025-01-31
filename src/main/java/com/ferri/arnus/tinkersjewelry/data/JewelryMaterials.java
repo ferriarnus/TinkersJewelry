@@ -14,6 +14,7 @@ public class JewelryMaterials {
 	public static final MaterialId quartz = id("quartz");
 	public static final MaterialId amethyst = id("amethyst");
 	public static final MaterialId emerald = id("emerald");
+	public static final MaterialId prismarine = id("prismarine");
 
 	public static final MaterialId blood_gem = id("blood_gem");
 	public static final MaterialId blazing_gem = id("blazing_gem");
@@ -22,6 +23,7 @@ public class JewelryMaterials {
 	public static final MaterialId cleanse_gem = id("cleanse_gem");
 	public static final MaterialId nightvision_gem = id("nightvision_gem");
 	public static final MaterialId exp_gem = id("exp_gem");
+	public static final MaterialId health_gem = id("health_gem");
 
 	private static MaterialId id(String name) {
 	    return new MaterialId(TinkersJewelry.MODID, name);

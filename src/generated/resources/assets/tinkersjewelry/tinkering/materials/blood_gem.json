@@ -1,5 +1,5 @@
 {
-  "color": "FF880808",
+  "color": "FF851228",
   "generator": {
     "supported_stats": [
       "tinkersjewelry:gem"
@@ -14,27 +14,27 @@
             "grey": 0
           },
           {
-            "color": "FF5D0000",
+            "color": "FF620819",
             "grey": 63
           },
           {
-            "color": "FF750000",
+            "color": "FFA71C1C",
             "grey": 102
           },
           {
-            "color": "FF820000",
+            "color": "FF4F9F9D",
             "grey": 140
           },
           {
-            "color": "FFA00000",
+            "color": "FF7BC0BF",
             "grey": 178
           },
           {
-            "color": "FFB80000",
+            "color": "FFD42B2B",
             "grey": 216
           },
           {
-            "color": "FFE82323",
+            "color": "FFE84848",
             "grey": 255
           }
         ]

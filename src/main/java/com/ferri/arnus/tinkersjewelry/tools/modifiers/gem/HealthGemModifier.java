@@ -28,8 +28,8 @@ public class HealthGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.HEALTH_GEM.getId()) - 1;
-        double effect = (1 + level) * amp;
+        int level = toolStack.getModifierLevel(JewelryModifiers.HEALTH_GEM.getId());
+        double effect = 3 * level * amp;
         attributeModifiers.put(Attributes.MAX_HEALTH, new AttributeModifier(uuid, "tinkersjewelry:healthgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }

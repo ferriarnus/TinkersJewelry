@@ -35,8 +35,8 @@ public class GravityGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.GRAVITY_GEM.getId()) - 1;
-        double effect = -(0.1 + level * 0.05)* amp;
+        int level = toolStack.getModifierLevel(JewelryModifiers.GRAVITY_GEM.getId());
+        double effect = -(0.01 * level * amp);
         attributeModifiers.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(uuid, "tinkersjewelry:gravitygem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }

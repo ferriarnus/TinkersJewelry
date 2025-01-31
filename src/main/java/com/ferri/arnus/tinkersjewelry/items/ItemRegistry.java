@@ -19,6 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 import slimeknights.mantle.item.TooltipItem;
 import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
 import slimeknights.mantle.registration.object.ItemObject;
+import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
@@ -50,10 +51,14 @@ public class ItemRegistry {
 	public static final ItemObject<Item> CLEANSE_GEM = ITEMS.register("cleanse_gem", () -> new TooltipItem(new Item.Properties()));
 	public static final ItemObject<Item> NIGHTVISION_GEM = ITEMS.register("nightvision_gem", () -> new TooltipItem(new Item.Properties()));
 	public static final ItemObject<Item> EXP_GEM = ITEMS.register("exp_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> HEALTH_GEM = ITEMS.register("health_gem", () -> new TooltipItem(new Item.Properties()));
 
 	//Toolparts
 	public static final ItemObject<ToolPartItem> BLANK_BAND = ITEMS.register("blank_band", () -> new ToolPartItem(PARTS_PROPS, BlankBandMaterialStats.ID));
 	public static final ItemObject<ToolPartItem> GEM = ITEMS.register("gem", () -> new ToolPartItem(PARTS_PROPS, GemMaterialStats.ID));
+
+	//Casts
+	public static final CastItemObject BLANK_BAND_CAST = ITEMS.registerCast(BLANK_BAND, PARTS_PROPS);
 
 	//Tools
 	public static final ItemObject<CuriosRingItem> RING = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
@@ -85,6 +90,10 @@ public class ItemRegistry {
 		output.accept(new ItemStack(CLEANSE_GEM.get()));
 		output.accept(new ItemStack(NIGHTVISION_GEM.get()));
 		output.accept(new ItemStack(EXP_GEM.get()));
+		output.accept(new ItemStack(HEALTH_GEM.get()));
+		output.accept(new ItemStack(BLANK_BAND_CAST.get()));
+		output.accept(new ItemStack(BLANK_BAND_CAST.getSand()));
+		output.accept(new ItemStack(BLANK_BAND_CAST.getRedSand()));
 	}
 
 	private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {

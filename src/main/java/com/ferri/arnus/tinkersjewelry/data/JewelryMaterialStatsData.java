@@ -46,6 +46,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(MaterialIds.electrum, new BlankBandMaterialStats(225, 1.5f));
 		addMaterialStats(MaterialIds.platedSlimewood, new BlankBandMaterialStats(595, 0.9f));
 
+		addMaterialStats(MaterialIds.queensSlime, new BlankBandMaterialStats(1650, 1f));
 		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
 
 
@@ -58,6 +59,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(JewelryMaterials.quartz, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.amethyst, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.emerald, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.prismarine, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(JewelryMaterials.poison_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.blazing_gem, GemMaterialStats.INSTANCE);
@@ -65,6 +67,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(JewelryMaterials.cleanse_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.nightvision_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.exp_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.health_gem, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);
@@ -72,6 +75,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(MaterialIds.obsidian, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.enderslime, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.skyslime, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.earthslime, GemMaterialStats.INSTANCE);
 	}
 
 }

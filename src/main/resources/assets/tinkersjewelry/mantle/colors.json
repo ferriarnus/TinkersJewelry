@@ -1,33 +1,34 @@
 {
   "modifier.tinkersjewelry": {
-    "ragegem": "#B30000",
-    "flygem": "#EDEDED",
-    "lifestealgem": "#4D4D4D",
-    "poisongem": "#B30000",
-    "flamegem": "#953300",
-    "armorgem": "#EAA727",
-    "piercinggem": "#D1D37A",
-    "speedgem": "#7F0901",
-    "fortunegem": "#7E6059",
-    "fireresistancegem": "#C35F01",
-    "silkgem": "#F7CDBB",
-    "waterbreathinggem": "#7CB3A4"
+    "rage_gem": "#B30000",
+    "fly_gem": "#EDEDED",
+    "lifesteal_gem": "#4D4D4D",
+    "poison_gem": "#B30000",
+    "flame_gem": "#953300",
+    "armor_gem": "#EAA727",
+    "piercing_gem": "#D1D37A",
+    "speed_gem": "#7F0901",
+    "fortune_gem": "#7E6059",
+    "fireresistance_gem": "#C35F01",
+    "silk_gem": "#F7CDBB",
+    "waterbreathing_gem": "#7CB3A4"
   },
 
   "material.tinkersjewelry": {
     "redstone": "#7F0901",
     "lapis": "#7E6059",
-    "netherstar": "#B30000",
-    "scute": "#B30000",
+    "netherstar": "#dae2e2",
+    "scute": "#297d49",
     "diamond": "#8cf4e2",
     "quartz": "#f7f5f2",
     "amethyst": "#6f4fab",
     "emerald": "#00aa2c",
+    "prismarine": "#559a8a",
 
-    "bloodgem": "#B30000",
-    "blazinggem": "#B30000",
-    "poisongem": "#B30000",
-    "speedgem": "#B30000",
-    "cleansegem": "#B30000"
+    "blood_gem": "#851228",
+    "blazing_gem": "#B30000",
+    "poison_gem": "#055938",
+    "speed_gem": "#B30000",
+    "cleanse_gem": "#e0dce5"
   }
 }

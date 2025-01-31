@@ -32,6 +32,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(JewelryMaterials.quartz, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCING_GEM, 3));
 		addTraits(JewelryMaterials.amethyst, GemMaterialStats.ID, JewelryModifiers.SILK_GEM);
 		addTraits(JewelryMaterials.emerald, GemMaterialStats.ID, JewelryModifiers.TRADE_GEM);
+		addTraits(JewelryMaterials.prismarine, GemMaterialStats.ID, JewelryModifiers.SWIM_GEM);
 
 		addTraits(JewelryMaterials.poison_gem, GemMaterialStats.ID, JewelryModifiers.POISON_GEM);
 		addTraits(JewelryMaterials.blazing_gem, GemMaterialStats.ID, JewelryModifiers.FLAME_GEM);
@@ -39,6 +40,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(JewelryMaterials.cleanse_gem, GemMaterialStats.ID, JewelryModifiers.CLEANSE_GEM);
 		addTraits(JewelryMaterials.nightvision_gem, GemMaterialStats.ID, JewelryModifiers.NIGHTVISION_GEM);
 		addTraits(JewelryMaterials.exp_gem, GemMaterialStats.ID, JewelryModifiers.EXP_GEM);
+		addTraits(JewelryMaterials.health_gem, GemMaterialStats.ID, JewelryModifiers.HEALTH_GEM);
 
 		addTraits(MaterialIds.rock, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.ARMOR_GEM, 1));
 		addTraits(MaterialIds.ichor, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCE_GEM);
@@ -46,6 +48,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(MaterialIds.obsidian, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.PIERCING_GEM, 2));
 		addTraits(MaterialIds.enderslime, GemMaterialStats.ID, JewelryModifiers.REACH_GEM);
 		addTraits(MaterialIds.skyslime, GemMaterialStats.ID, JewelryModifiers.GRAVITY_GEM);
+		addTraits(MaterialIds.earthslime, GemMaterialStats.ID, JewelryModifiers.RESISTANCE_GEM);
 
 		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
@@ -73,6 +76,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider{
 		addTraits(MaterialIds.platedSlimewood, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
 		addTraits(MaterialIds.manyullyn, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.queensSlime, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
 	}
 

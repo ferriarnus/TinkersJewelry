@@ -61,6 +61,11 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
                 .setFluidAndTime(TinkerFluids.moltenEmerald, FluidValues.GEM)
                 .setCast(Items.EXPERIENCE_BOTTLE, true)
                 .save(consumer, location(folder + "moltenemerald/expgem"));
+
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.HEALTH_GEM)
+                .setFluidAndTime(TinkerFluids.beetrootSoup, FluidValues.BOWL)
+                .setCast(Items.APPLE, true)
+                .save(consumer, location(folder + "beetrootsoup/healthgem"));
     }
 
     @Override

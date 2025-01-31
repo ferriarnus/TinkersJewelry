@@ -30,6 +30,9 @@ public class JewelryModifiers {
 	public static final StaticModifier<TradeGemModifier> TRADE_GEM = MODIFIERS.register("trade_gem", TradeGemModifier::new);
 	public static final StaticModifier<ExpGemModifier> EXP_GEM = MODIFIERS.register("exp_gem", ExpGemModifier::new);
 	public static final StaticModifier<GravityGemModifier> GRAVITY_GEM = MODIFIERS.register("gravity_gem", GravityGemModifier::new);
+	public static final StaticModifier<ResistanceGemModifier> RESISTANCE_GEM = MODIFIERS.register("resistance_gem", ResistanceGemModifier::new);
+	public static final StaticModifier<LuckGemModifier> LUCK_GEM = MODIFIERS.register("luck_gem", LuckGemModifier::new);
+	public static final StaticModifier<SwimGemModifier> SWIM_GEM = MODIFIERS.register("swim_gem", SwimGemModifier::new);
 
 	public static void registerModifiers() {
 		MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());

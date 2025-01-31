@@ -1,7 +1,12 @@
 {
-  "item.tinkersjewelry.blood_gem": "Blood Gem",
-  "item.tinkersjewelry.blazing_gem": "Blazing Gem",
-  "item.tinkersjewelry.poison_gem": "Poison Gem",
+  "item.tinkersjewelry.blood_gem": "Eudialyte",
+  "item.tinkersjewelry.blazing_gem": "Fire Opal",
+  "item.tinkersjewelry.poison_gem": "Malachite",
+  "item.tinkersjewelry.speed_gem": "Calcite",
+  "item.tinkersjewelry.cleanse_gem": "Milky Quartz",
+  "item.tinkersjewelry.nightvision_gem": "Merlinite",
+  "item.tinkersjewelry.exp_gem": "Prehnite",
+  "item.tinkersjewelry.health_gem": "Rubellite",
 
   "item.tinkersjewelry.ring.description": "Rings are simple trinkets that grant effects based on the used gem.",
   "item.tinkersjewelry.ring": "Ring",
@@ -15,7 +20,7 @@
   "itemGroup.tinkersjewelry.all": "Tinker's Jewelry",
 
   "stat.tinkersjewelry.gem": "Gem",
-  "stat.tinkersjewelry.ringpart": "Ring Part",
+  "stat.tinkersjewelry.blank_band": "Plain Ring",
   
   "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
   "modifier.tinkersjewelry.rage_gem": "Rage",
@@ -41,14 +46,38 @@
   "modifier.tinkersjewelry.silk_gem.description": "Grants Silk Touch",
   "modifier.tinkersjewelry.silk_gem": "Silk Touch",
 
+  "modifier.tinkersjewelry.fortune_gem.description": "Grants fortune",
+  "modifier.tinkersjewelry.fortune_gem": "Fortune",
+
   "modifier.tinkersjewelry.waterbreathing_gem.description": "Gives Water Breathing",
   "modifier.tinkersjewelry.waterbreathing_gem": "Water Breathing",
+
+  "modifier.tinkersjewelry.nightvision_gem.description": "Gives Nightvision",
+  "modifier.tinkersjewelry.nightvision_gem": "Nightvision",
 
   "modifier.tinkersjewelry.poison_gem.description": "Applies Poison to the target",
   "modifier.tinkersjewelry.poison_gem": "Poison",
 
   "modifier.tinkersjewelry.flame_gem.description": "Lights the target on fire",
   "modifier.tinkersjewelry.flame_gem": "Flame",
+
+  "modifier.tinkersjewelry.cleanse_gem.description": "Removes negative effects",
+  "modifier.tinkersjewelry.cleanse_gem": "Cleanse",
+
+  "modifier.tinkersjewelry.health_gem.description": "Gives bonus Health",
+  "modifier.tinkersjewelry.health_gem": "Health",
+
+  "modifier.tinkersjewelry.reach_gem.description": "Gives bonus entity reach",
+  "modifier.tinkersjewelry.reach_gem": "Reach",
+
+  "modifier.tinkersjewelry.trade_gem.description": "Gives lower prizes while trading with villagers",
+  "modifier.tinkersjewelry.trade_gem": "Trade",
+
+  "modifier.tinkersjewelry.exp_gem.description": "Increases the experience gotten",
+  "modifier.tinkersjewelry.exp_gem": "Experience",
+
+  "modifier.tinkersjewelry.gravity_gem.description": "Reduces Gravity",
+  "modifier.tinkersjewelry.gravity_gem": "Gravity",
   
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
 
@@ -65,5 +94,8 @@
   "material.tinkersjewelry.blazing_gem": "Fire Opal",
   "material.tinkersjewelry.poison_gem": "Malachite",
   "material.tinkersjewelry.speed_gem": "Calcite",
-  "material.tinkersjewelry.cleanse_gem": "Milky Quartz"
+  "material.tinkersjewelry.cleanse_gem": "Milky Quartz",
+  "material.tinkersjewelry.nightvision_gem": "Merlinite",
+  "material.tinkersjewelry.exp_gem": "Prehnite",
+  "material.tinkersjewelry.health_gem": "Rubellite"
 }

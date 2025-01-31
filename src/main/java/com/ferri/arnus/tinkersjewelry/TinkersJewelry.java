@@ -42,6 +42,7 @@ public class TinkersJewelry {
 		
 		ItemRegistry.registerItems();
 		JewelryModifiers.registerModifiers();
+		GemAttributes.register();
 
 		ForgeMod.enableMilkFluid();
 	}
@@ -99,6 +100,7 @@ public class TinkersJewelry {
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.electrum.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.platedSlimewood.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.manyullyn.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.queensSlime.getId());
 		GeneratorPartTextureJsonGenerator.StatOverride overrides = builder.build();
 
 		generator.addProvider(client, new JewelryMaterialRenderInfo(generator.getPackOutput(), newMaterialSprites, existingFileHelper));
