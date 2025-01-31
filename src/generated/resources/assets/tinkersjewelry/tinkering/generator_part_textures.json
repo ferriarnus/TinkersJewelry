@@ -1,4 +1,29 @@
 {
+  "overrides": {
+    "tinkersjewelry:blank_band": [
+      "tconstruct:copper",
+      "tconstruct:iron",
+      "tconstruct:gold",
+      "tconstruct:osmium",
+      "tconstruct:tungsten",
+      "tconstruct:platinum",
+      "tconstruct:silver",
+      "tconstruct:lead",
+      "tconstruct:slimesteel",
+      "tconstruct:amethyst_bronze",
+      "tconstruct:nahuatl",
+      "tconstruct:pig_iron",
+      "tconstruct:rose_gold",
+      "tconstruct:steel",
+      "tconstruct:bronze",
+      "tconstruct:constantan",
+      "tconstruct:invar",
+      "tconstruct:necronium",
+      "tconstruct:electrum",
+      "tconstruct:plated_slimewood",
+      "tconstruct:manyullyn"
+    ]
+  },
   "parts": [
     {
       "path": "tinkersjewelry:item/tool/parts/gem",

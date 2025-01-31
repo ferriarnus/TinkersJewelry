@@ -23,6 +23,7 @@ import slimeknights.tconstruct.library.client.data.material.GeneratorPartTexture
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.tools.data.material.MaterialDataProvider;
+import slimeknights.tconstruct.tools.data.material.MaterialIds;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
@@ -71,12 +72,38 @@ public class TinkersJewelry {
 		generator.addProvider(server, new JewelryToolDefinitionData(generator.getPackOutput()));
 		generator.addProvider(server, new JewelryStationSlotLayout(generator.getPackOutput()));
 
+		TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
 		JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
 		JewelryPartSprite partSprites = new JewelryPartSprite();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+		GeneratorPartTextureJsonGenerator.StatOverride.Builder builder = new GeneratorPartTextureJsonGenerator.StatOverride.Builder();
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.copper.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.iron.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.gold.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.osmium.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.tungsten.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.platinum.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.silver.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.lead.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.slimesteel.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.amethystBronze.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.nahuatl.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.pigIron.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.roseGold.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.steel.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.bronze.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.constantan.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.invar.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.necronium.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.electrum.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.platedSlimewood.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.manyullyn.getId());
+		GeneratorPartTextureJsonGenerator.StatOverride overrides = builder.build();
+
 		generator.addProvider(client, new JewelryMaterialRenderInfo(generator.getPackOutput(), newMaterialSprites, existingFileHelper));
-		generator.addProvider(client, new GeneratorPartTextureJsonGenerator(generator.getPackOutput(), TinkersJewelry.MODID, partSprites));
-		generator.addProvider(client, new MaterialPartTextureGenerator(generator.getPackOutput(), existingFileHelper, partSprites, newMaterialSprites));
+		generator.addProvider(client, new GeneratorPartTextureJsonGenerator(generator.getPackOutput(), TinkersJewelry.MODID, partSprites, overrides));
+		generator.addProvider(client, new MaterialPartTextureGenerator(generator.getPackOutput(), existingFileHelper, partSprites, overrides, materialSprites, newMaterialSprites));
 	}
 	
 }

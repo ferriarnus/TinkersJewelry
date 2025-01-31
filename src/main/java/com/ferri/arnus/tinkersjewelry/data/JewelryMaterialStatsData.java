@@ -21,7 +21,6 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 
 	@Override
 	protected void addMaterialStats() {
-
 		addMaterialStats(MaterialIds.copper, new BlankBandMaterialStats(130, 0.9f));
 
 		addMaterialStats(MaterialIds.iron, new BlankBandMaterialStats(250, 1.2f));

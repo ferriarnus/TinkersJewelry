@@ -24,11 +24,6 @@ public record BlankBandMaterialStats(int durability, float amplification) implem
 			RecordLoadable.create(IRepairableMaterialStats.DURABILITY_FIELD, FloatLoadable.FROM_ZERO.requiredField("amplification", BlankBandMaterialStats::amplification), BlankBandMaterialStats::new));
 	private static final List<Component> DESCRIPTION = ImmutableList.of(ToolStats.DURABILITY.getDescription(), JewelryToolStats.AMPLIFICATION.getDescription());
 
-	public BlankBandMaterialStats(int durability, float amplification) {
-		this.durability = durability;
-		this.amplification = amplification;
-	}
-
 	@Override
 	public MaterialStatType<?> getType() {
 		return TYPE;

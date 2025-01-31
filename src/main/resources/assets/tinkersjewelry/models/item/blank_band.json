@@ -2,6 +2,6 @@
   "loader": "tconstruct:material",
   "parent": "forge:item/default",
   "textures": {
-    "texture": "tinkersjewelry:item/tool/ring/blank_band"
+    "texture": "tinkersjewelry:item/tool/parts/blank_band"
   }
 }

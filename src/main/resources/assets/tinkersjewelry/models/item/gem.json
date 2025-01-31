@@ -2,7 +2,6 @@
   "loader": "tconstruct:material",
   "parent": "forge:item/default",
   "textures": {
-    "texture": "tinkersjewelry:item/tool/ring/gem"
-  },
-  "offset": [-1, 1]
+    "texture": "tinkersjewelry:item/tool/parts/gem"
+  }
 }
