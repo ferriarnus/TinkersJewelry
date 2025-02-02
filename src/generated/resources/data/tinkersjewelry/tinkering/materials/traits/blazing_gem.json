@@ -2,8 +2,12 @@
   "perStat": {
     "tinkersjewelry:gem": [
       {
-        "level": 1,
+        "level": 2,
         "name": "tinkersjewelry:flame_gem"
+      },
+      {
+        "level": 1,
+        "name": "tinkersjewelry:fireresistance_gem"
       }
     ]
   }

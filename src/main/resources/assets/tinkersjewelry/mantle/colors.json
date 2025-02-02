@@ -11,7 +11,21 @@
     "fortune_gem": "#7E6059",
     "fireresistance_gem": "#C35F01",
     "silk_gem": "#F7CDBB",
-    "waterbreathing_gem": "#7CB3A4"
+    "waterbreathing_gem": "#47BF4A",
+    "cleanse_gem": "#880808",
+    "nightvision_gem": "#F7CDBB",
+    "health_gem": "#8cf4e2",
+    "reach_gem": "#d37cff",
+    "trade_gem": "#41f384",
+    "exp_gem": "#F7CDBB",
+    "resistance_gem": "#8AD580",
+    "luck_gem": "#345EC3",
+    "swim_gem": "#3FA442",
+    "conduit_gem": "#F7CDBB",
+    "current_health_damage_gem": "#2759C4",
+    "draw_speed_gem": "#7F0901",
+    "mining_speed_gem": "#4F4A47"
+
   },
 
   "material.tinkersjewelry": {
@@ -24,11 +38,15 @@
     "amethyst": "#6f4fab",
     "emerald": "#00aa2c",
     "prismarine": "#559a8a",
+    "heart_of_the_sea": "#559a8a",
 
     "blood_gem": "#851228",
     "blazing_gem": "#B30000",
     "poison_gem": "#055938",
     "speed_gem": "#B30000",
-    "cleanse_gem": "#e0dce5"
+    "cleanse_gem": "#e0dce5",
+    "nightvision_gem": "#e0dce5",
+    "exp_gem": "#e0dce5",
+    "health_gem": "#e0dce5"
   }
 }

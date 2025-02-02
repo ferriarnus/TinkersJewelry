@@ -1,0 +1,25 @@
+[
+  {
+    "name": "intro",
+    "data": "sections/introduction.json",
+    "icon": {
+      "item": "tconstruct:pattern"
+    }
+  }
+//  {
+//    "name": "blank_band_materials",
+//    "data": "no-load",
+//    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:blank_band", "tier": 1 } },
+//    "icon": {
+//      "item": "minecraft:stone"
+//    }
+//  },
+//  {
+//    "name": "gem_materials",
+//    "data": "no-load",
+//    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:gem", "tier": 1 } },
+//    "icon": {
+//      "item": "minecraft:bamboo"
+//    }
+//  }
+]
