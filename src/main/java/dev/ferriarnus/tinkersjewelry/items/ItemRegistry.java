@@ -63,7 +63,7 @@ public class ItemRegistry {
 	//Tools
 	public static final ItemObject<CuriosRingItem> RING = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
 
-	public static final ItemObject<JewelryBookItem> BOOK  = ITEMS.register("materials_and_you", () -> new JewelryBookItem(new Item.Properties().stacksTo(1)));
+	public static final ItemObject<JewelryBookItem> BOOK  = ITEMS.register("book", () -> new JewelryBookItem(new Item.Properties().stacksTo(1)));
 
 	public static final RegistryObject<CreativeModeTab> tabTools = CREATIVE_TABS.register(
 			"tools", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + TinkersJewelry.MODID + ".all"))

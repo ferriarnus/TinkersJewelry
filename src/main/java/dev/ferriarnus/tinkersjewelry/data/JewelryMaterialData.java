@@ -2,6 +2,7 @@ package dev.ferriarnus.tinkersjewelry.data;
 
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
+import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
 public class JewelryMaterialData extends AbstractMaterialDataProvider{
 
@@ -36,6 +37,9 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.exp_gem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.health_gem, 2, ORDER_SPECIAL, true);
 
+		addMaterial(MaterialIds.obsidian, 3, ORDER_WEAPON,  true);
+		addMaterial(MaterialIds.scorchedStone, 2, ORDER_NETHER, true);
+		addMaterial(MaterialIds.searedStone, 2, ORDER_HARVEST, true);
 	}
 
 }

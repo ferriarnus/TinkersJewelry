@@ -11,6 +11,7 @@ import slimeknights.mantle.client.book.transformer.BookTransformer;
 import slimeknights.tconstruct.library.client.book.sectiontransformer.ModifierTagInjectorTransformer;
 import slimeknights.tconstruct.library.client.book.sectiontransformer.ToolTagInjectorTransformer;
 import slimeknights.tconstruct.library.client.book.sectiontransformer.materials.TierRangeMaterialSectionTransformer;
+import slimeknights.tconstruct.shared.CommonsClientEvents;
 
 public class JewerlyBook {
     private static final ResourceLocation JEWELRY_BOOK_RL = new ResourceLocation(TinkersJewelry.MODID, "jewelry");
@@ -21,6 +22,8 @@ public class JewerlyBook {
     public static void initBook() {
         BookLoader.registerPageType(GemMaterialContent.ID, GemMaterialContent.class);
         BookLoader.registerPageType(BlankBandMaterialContent.ID, BlankBandMaterialContent.class);
+
+        JEWELRY_BOOK.fontRenderer = CommonsClientEvents.unicodeFontRender();
 
         TierRangeMaterialSectionTransformer.registerMaterialType(BLANK_BAND, BlankBandMaterialContent::new, BlankBandMaterialStats.ID);
         TierRangeMaterialSectionTransformer.registerMaterialType(GEM, GemMaterialContent::new, GemMaterialStats.ID);

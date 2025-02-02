@@ -5,21 +5,60 @@
     "icon": {
       "item": "tconstruct:pattern"
     }
+  },
+  {
+    "name": "jewelry",
+    "data": "sections/jewelry.json",
+    "icon": {
+      "item": {
+        "type": "forge:nbt",
+        "item": "tinkersjewelry:ring",
+        "nbt": {
+          "tic_broken": false,
+          "tic_display": true,
+          "Damage": 0,
+          "tic_materials": [
+            "tconstruct:ui_render#gem",
+            "tconstruct:ui_render#blank_band"
+          ]
+        }
+      }
+    },
+    "extraData": {
+      "tconstruct:load_tools": { "tag": "tinkersjewelry:modifiable/small", "path": "tools" }
+    }
+
+  },
+  {
+    "name": "blank_band_materials",
+    "data": "no-load",
+    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:blank_band", "detailed": true }},
+    "icon": {
+      "item": {
+        "type": "forge:nbt",
+        "item": "tinkersjewelry:blank_band",
+        "nbt": {
+          "tic_materials": [
+            "tconstruct:ui_render#blank_band"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "gem_materials",
+    "data": "no-load",
+    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:gem", "detailed": true } },
+    "icon": {
+      "item": {
+        "type": "forge:nbt",
+        "item": "tinkersjewelry:gem",
+        "nbt": {
+          "tic_materials": [
+            "tconstruct:ui_render#gem"
+          ]
+        }
+      }
+    }
   }
-//  {
-//    "name": "blank_band_materials",
-//    "data": "no-load",
-//    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:blank_band", "tier": 1 } },
-//    "icon": {
-//      "item": "minecraft:stone"
-//    }
-//  },
-//  {
-//    "name": "gem_materials",
-//    "data": "no-load",
-//    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:gem", "tier": 1 } },
-//    "icon": {
-//      "item": "minecraft:bamboo"
-//    }
-//  }
 ]

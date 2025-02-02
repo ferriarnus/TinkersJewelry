@@ -21,6 +21,8 @@
   "item.tinkersjewelry.blank_band_cast": "Plain Ring Cast",
   "item.tinkersjewelry.blank_band_sand_cast": "Plain Ring Sand Cast",
   "item.tinkersjewelry.blank_band_red_sand_cast": "Plain Ring Red Sand Cast",
+  "item.tinkersjewelry.book": "Artificing for dummies",
+
 
   "pattern.tinkersjewelry.gem" : "Gem",
   "pattern.tinkersjewelry.blank_band" : "Plain Ring",
@@ -31,84 +33,111 @@
   "stat.tinkersjewelry.blank_band": "Plain Ring",
   
   "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
+  "modifier.tinkersjewelry.rage_gem.flavor": "Gives an attack speed boost",
   "modifier.tinkersjewelry.rage_gem": "Rage",
 
   "modifier.tinkersjewelry.lifesteal_gem.description": "Heals based on damage dealt",
+  "modifier.tinkersjewelry.lifesteal_gem.flavor": "Heals based on damage dealt",
   "modifier.tinkersjewelry.lifesteal_gem": "Lifesteal",
 
   "modifier.tinkersjewelry.fly_gem.description": "Allows creative flight",
+  "modifier.tinkersjewelry.fly_gem.flavor": "Allows creative flight",
   "modifier.tinkersjewelry.fly_gem": "Flight",
 
   "modifier.tinkersjewelry.armor_gem.description": "Adds additional armor",
+  "modifier.tinkersjewelry.armor_gem.flavor": "Adds additional armor",
   "modifier.tinkersjewelry.armor_gem": "Armor",
 
   "modifier.tinkersjewelry.piercing_gem.description": "Ignores part of the target's armor",
+  "modifier.tinkersjewelry.piercing_gem.flavor": "Ignores part of the target's armor",
   "modifier.tinkersjewelry.piercing_gem": "Piercing",
 
   "modifier.tinkersjewelry.speed_gem.description": "Increases movement speed",
+  "modifier.tinkersjewelry.speed_gem.flavor": "Increases movement speed",
   "modifier.tinkersjewelry.speed_gem": "Speed",
 
   "modifier.tinkersjewelry.fireresistance_gem.description": "Gives Fire Resistance",
+  "modifier.tinkersjewelry.fireresistance_gem.flavor": "Gives Fire Resistance",
   "modifier.tinkersjewelry.fireresistance_gem": "Fire Resistance",
 
   "modifier.tinkersjewelry.silk_gem.description": "Grants Silk Touch",
+  "modifier.tinkersjewelry.silk_gem.flavor": "Grants Silk Touch",
   "modifier.tinkersjewelry.silk_gem": "Silk Touch",
 
   "modifier.tinkersjewelry.fortune_gem.description": "Grants fortune",
+  "modifier.tinkersjewelry.fortune_gem.flavor": "Grants fortune",
   "modifier.tinkersjewelry.fortune_gem": "Fortune",
 
   "modifier.tinkersjewelry.waterbreathing_gem.description": "Gives Water Breathing",
+  "modifier.tinkersjewelry.waterbreathing_gem.flabour": "Gives Water Breathing",
   "modifier.tinkersjewelry.waterbreathing_gem": "Water Breathing",
 
   "modifier.tinkersjewelry.nightvision_gem.description": "Gives Nightvision",
+  "modifier.tinkersjewelry.nightvision_gem.flavor": "Gives Nightvision",
   "modifier.tinkersjewelry.nightvision_gem": "Nightvision",
 
   "modifier.tinkersjewelry.poison_gem.description": "Applies Poison to the target",
+  "modifier.tinkersjewelry.poison_gem.flavor": "Applies Poison to the target",
   "modifier.tinkersjewelry.poison_gem": "Poison",
 
   "modifier.tinkersjewelry.flame_gem.description": "Lights the target on fire",
+  "modifier.tinkersjewelry.flame_gem.flavor": "Lights the target on fire",
   "modifier.tinkersjewelry.flame_gem": "Flame",
 
   "modifier.tinkersjewelry.cleanse_gem.description": "Removes negative effects",
+  "modifier.tinkersjewelry.cleanse_gem.flavor": "Removes negative effects",
   "modifier.tinkersjewelry.cleanse_gem": "Cleanse",
 
   "modifier.tinkersjewelry.health_gem.description": "Gives bonus Health",
+  "modifier.tinkersjewelry.health_gem.flavor": "Gives bonus Health",
   "modifier.tinkersjewelry.health_gem": "Health",
 
   "modifier.tinkersjewelry.reach_gem.description": "Gives bonus entity reach",
+  "modifier.tinkersjewelry.reach_gem.flavor": "Gives bonus entity reach",
   "modifier.tinkersjewelry.reach_gem": "Reach",
 
   "modifier.tinkersjewelry.trade_gem.description": "Gives lower prizes while trading with villagers",
+  "modifier.tinkersjewelry.trade_gem.flavor": "Gives lower prizes while trading with villagers",
   "modifier.tinkersjewelry.trade_gem": "Trade",
 
   "modifier.tinkersjewelry.exp_gem.description": "Increases the experience gotten",
+  "modifier.tinkersjewelry.exp_gem.flavour": "Increases the experience gotten",
   "modifier.tinkersjewelry.exp_gem": "Experience",
 
   "modifier.tinkersjewelry.resistance_gem.description": "Give the Resistance effect",
+  "modifier.tinkersjewelry.resistance_gem.flavor": "Give the Resistance effect",
   "modifier.tinkersjewelry.resistance_gem": "Resistance",
 
   "modifier.tinkersjewelry.luck_gem.description": "Increases the wearers luck",
+  "modifier.tinkersjewelry.luck_gem.flavour": "Increases the wearers luck",
   "modifier.tinkersjewelry.luck_gem": "Luck",
 
   "modifier.tinkersjewelry.swim_gem.description": "Increases the wearers swimming speed",
+  "modifier.tinkersjewelry.swim_gem.flavor": "Increases the wearers swimming speed",
   "modifier.tinkersjewelry.swim_gem": "Swim Speed",
 
   "modifier.tinkersjewelry.gravity_gem.description": "Reduces Gravity",
+  "modifier.tinkersjewelry.gravity_gem.flavor": "Reduces Gravity",
   "modifier.tinkersjewelry.gravity_gem": "Gravity",
 
   "modifier.tinkersjewelry.current_health_damage_gem.description": "Applies additional current health damage",
+  "modifier.tinkersjewelry.current_health_damage_gem.flavor": "Applies additional current health damage",
   "modifier.tinkersjewelry.current_health_damage_gem": "Current Health Damage",
 
   "modifier.tinkersjewelry.conduit_gem.description": "Give the Conduit Power effect",
+  "modifier.tinkersjewelry.conduit_gem.flavor": "Give the Conduit Power effect",
   "modifier.tinkersjewelry.conduit_gem": "Conduit Power",
 
   "modifier.tinkersjewelry.draw_speed_gem.description": "Increases the wearers draw speed",
+  "modifier.tinkersjewelry.draw_speed_gem.flavor": "Increases the wearers draw speed",
   "modifier.tinkersjewelry.draw_speed_gem": "Draw Speed",
 
   "modifier.tinkersjewelry.mining_speed_gem.description": "Increases the wearers mining speed",
+  "modifier.tinkersjewelry.mining_speed_gem.flavor": "Increases the wearers mining speed",
   "modifier.tinkersjewelry.mining_speed_gem": "Mining Speed",
 
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
+  "tool_stat.tinkersjewelry.amplification.description": "Increases/decrease the strength of effects",
 
   "material.tinkersjewelry.redstone": "Redstone",
   "material.tinkersjewelry.lapis": "Lapis",
@@ -118,6 +147,7 @@
   "material.tinkersjewelry.quartz": "Quartz",
   "material.tinkersjewelry.amethyst": "Amethyst",
   "material.tinkersjewelry.emerald": "Emerald",
+  "material.tinkersjewelry.prismarine": "Prismarine",
   "material.tinkersjewelry.heart_of_the_sea": "Heart of the Sea",
 
   "material.tinkersjewelry.blood_gem": "Eudialyte",
