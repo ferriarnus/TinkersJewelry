@@ -38,7 +38,7 @@ public record BlankBandMaterialStats(int durability, float amplification) implem
 	public List<Component> getLocalizedInfo() {
 		List<Component> info = Lists.newArrayList();
 		info.add(ToolStats.DURABILITY.formatValue(this.durability));
-		info.add(JewelryToolStats.AMPLIFICATION.formatValue(amplification));
+		info.add(JewelryToolStats.AMPLIFICATION.formatValue(this.amplification));
 		return info;
 	}
 
@@ -50,7 +50,7 @@ public record BlankBandMaterialStats(int durability, float amplification) implem
 	@Override
 	public void apply(ModifierStatsBuilder modifierStatsBuilder, float scale) {
 		ToolStats.DURABILITY.update(modifierStatsBuilder, this.durability * scale);
-		JewelryToolStats.AMPLIFICATION.update(modifierStatsBuilder, this.amplification);
+		JewelryToolStats.AMPLIFICATION.update(modifierStatsBuilder, this.amplification * scale);
 	}
 
 	@Override

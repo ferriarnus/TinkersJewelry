@@ -19,10 +19,7 @@ public record GemMaterialStats() implements IMaterialStats {
 	public static final MaterialStatsId ID = new MaterialStatsId(new ResourceLocation(TinkersJewelry.MODID, "gem"));
 	public static final GemMaterialStats INSTANCE = new GemMaterialStats();
 	public static final MaterialStatType<GemMaterialStats> TYPE = new MaterialStatType<>(ID, INSTANCE, new SingletonLoader<>(INSTANCE));
-	private static final Component NO_STATS = IMaterialStats.makeTooltip(TConstruct.getResource("extra.no_stats"));
-	private static final List<Component> LOCALIZED = Collections.singletonList(NO_STATS);
-	private static final List<Component> DESCRIPTION = Collections.singletonList(Component.empty());
-
+	private static final List<Component> EMPTY = Collections.singletonList(Component.empty());
 
 	@Override
 	public MaterialStatType<?> getType() {
@@ -36,12 +33,12 @@ public record GemMaterialStats() implements IMaterialStats {
 
 	@Override
 	public List<Component> getLocalizedInfo() {
-		return LOCALIZED;
+		return EMPTY;
 	}
 
 	@Override
 	public List<Component> getLocalizedDescriptions() {
-		return DESCRIPTION;
+		return EMPTY;
 	}
 
 	@Override

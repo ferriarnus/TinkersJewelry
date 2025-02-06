@@ -1,7 +1,7 @@
 package dev.ferriarnus.tinkersjewelry;
 
-import dev.ferriarnus.tinkersjewelry.book.JewerlyBook;
 import dev.ferriarnus.tinkersjewelry.data.*;
+import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
@@ -39,11 +39,12 @@ public class TinkersJewelry {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(EventPriority.LOWEST, this::gatherData);
         modEventBus.addListener(this::sendImc);
+
+		JewelryToolStats.register();
 		
 		ItemRegistry.registerItems();
 		JewelryModifiers.registerModifiers();
 		GemAttributes.register();
-		JewerlyBook.initBook();
 
 		ForgeMod.enableMilkFluid();
 	}
@@ -73,6 +74,8 @@ public class TinkersJewelry {
 		generator.addProvider(server, new JewelryMaterialTraitData(generator.getPackOutput(), newMaterials));
 		generator.addProvider(server, new JewelryToolDefinitionData(generator.getPackOutput()));
 		generator.addProvider(server, new JewelryStationSlotLayout(generator.getPackOutput()));
+		generator.addProvider(server, new JewelryModifierProvider(generator.getPackOutput()));
+		generator.addProvider(server, new JewelryModifierRecipe(generator.getPackOutput()));
 
 		TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
 		JewelryMaterialSprite newMaterialSprites = new JewelryMaterialSprite();
@@ -118,6 +121,7 @@ public class TinkersJewelry {
 		builder.add(GemMaterialStats.ID, MaterialIds.venombone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.scorchedStone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.searedStone.getId());
+		builder.add(GemMaterialStats.ID, MaterialIds.enderPearl.getId());
 
 		GeneratorPartTextureJsonGenerator.StatOverride overrides = builder.build();
 

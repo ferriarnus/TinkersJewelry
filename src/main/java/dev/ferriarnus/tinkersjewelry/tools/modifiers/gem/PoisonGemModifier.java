@@ -25,10 +25,10 @@ public class PoisonGemModifier extends AbstractGemModifier{
 
     @Override
     public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
-        if (attacker == null || attacker.hasEffect(MobEffects.POISON)) {
+        if (defender == null || defender.hasEffect(MobEffects.POISON)) {
             return;
         }
-        attacker.addEffect(new MobEffectInstance(MobEffects.POISON, 200));
+        defender.addEffect(new MobEffectInstance(MobEffects.POISON, 200));
         damageTool(stack, 1, attacker);
     }
 

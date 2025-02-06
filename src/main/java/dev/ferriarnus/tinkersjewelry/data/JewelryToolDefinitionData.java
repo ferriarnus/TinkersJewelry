@@ -4,13 +4,14 @@ import dev.ferriarnus.tinkersjewelry.TinkersJewelry;
 import dev.ferriarnus.tinkersjewelry.items.ItemRegistry;
 import dev.ferriarnus.tinkersjewelry.tools.JewelryDefinitions;
 
+import dev.ferriarnus.tinkersjewelry.tools.modules.OverSlimeDebufModule;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
 import slimeknights.tconstruct.library.materials.RandomMaterial;
 import slimeknights.tconstruct.library.tools.definition.module.material.DefaultMaterialsModule;
 import slimeknights.tconstruct.library.tools.definition.module.material.PartStatsModule;
 
-public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvider{
+public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvider {
 
 	public JewelryToolDefinitionData(PackOutput packOutput) {
 		super(packOutput, TinkersJewelry.MODID);
@@ -26,6 +27,7 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 				.part(ItemRegistry.BLANK_BAND)
 				.part(ItemRegistry.GEM).build())
 			.module(defaultTwoParts)
+			.module(OverSlimeDebufModule.INSTANCE)
 			.build();
 		
 	}

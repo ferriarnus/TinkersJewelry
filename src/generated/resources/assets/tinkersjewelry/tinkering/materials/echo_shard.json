@@ -1,0 +1,44 @@
+{
+  "color": "FF0A5060",
+  "generator": {
+    "supported_stats": [
+      "tinkersjewelry:gem"
+    ],
+    "transformer": {
+      "type": "tconstruct:recolor_sprite",
+      "color_mapping": {
+        "type": "tconstruct:grey_to_color",
+        "palette": [
+          {
+            "color": "FF000000",
+            "grey": 0
+          },
+          {
+            "color": "FF111B21",
+            "grey": 63
+          },
+          {
+            "color": "FF052A32",
+            "grey": 102
+          },
+          {
+            "color": "FF034150",
+            "grey": 140
+          },
+          {
+            "color": "FF0A5060",
+            "grey": 178
+          },
+          {
+            "color": "FF0A5060",
+            "grey": 216
+          },
+          {
+            "color": "FF29DFEB",
+            "grey": 255
+          }
+        ]
+      }
+    }
+  }
+}

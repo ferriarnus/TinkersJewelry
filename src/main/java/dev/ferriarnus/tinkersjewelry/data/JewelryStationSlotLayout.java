@@ -5,7 +5,7 @@ import dev.ferriarnus.tinkersjewelry.items.ItemRegistry;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutProvider;
 
-public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider{
+public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider {
 
 	public JewelryStationSlotLayout(PackOutput packOutput) {
 		super(packOutput);

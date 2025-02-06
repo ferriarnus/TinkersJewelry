@@ -1,0 +1,49 @@
+package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
+
+import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
+import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import slimeknights.mantle.client.TooltipKey;
+import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.library.events.teleport.EnderclearanceTeleportEvent;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ToolStack;
+import slimeknights.tconstruct.library.utils.TeleportHelper;
+
+import javax.annotation.Nullable;
+import java.util.List;
+
+public class EnderclearanceGemModifier extends AbstractGemModifier {
+
+    @Override
+    public CuriosDamageTypes getDamageType() {
+        return CuriosDamageTypes.HURT_PLAYER;
+    }
+
+    @Override
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+        if (!source.isIndirect()) {
+            if (attacker instanceof LivingEntity entity) {
+                ToolStack tool = ToolStack.from(stack);
+                int level = tool.getModifierLevel(JewelryModifiers.ENDERCLEARANCE_GEM.getId());
+
+                if (TConstruct.RANDOM.nextFloat() < (float)level * 0.25F) {
+                    TeleportHelper.randomNearbyTeleport(entity, EnderclearanceTeleportEvent.TELEPORT_FACTORY);
+                    super.hurtUser(stack, source, damage, defender, attacker);
+                }
+            }
+        }
+    }
+
+    @Override
+    public void addTooltip(IToolStackView iToolStackView, ModifierEntry modifierEntry, @Nullable Player player, List<Component> list, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+
+    }
+}

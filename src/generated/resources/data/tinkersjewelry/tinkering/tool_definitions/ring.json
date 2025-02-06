@@ -20,6 +20,9 @@
           "tier": 1
         }
       ]
+    },
+    {
+      "type": "tinkersjewelry:overslime_debuf"
     }
   ]
 }

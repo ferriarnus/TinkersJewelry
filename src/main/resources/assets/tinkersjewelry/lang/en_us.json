@@ -13,7 +13,7 @@
   "item.tinkersjewelry.ring": "Ring",
 
   "item.tinkersjewelry.gem.description": "Gems hold the traits",
-  "item.tinkersjewelry.gem": "Gem",
+  "item.tinkersjewelry.gem": "Cut Gem",
 
   "item.tinkersjewelry.blank_band.description": "Rings are simple trinkets that grant effects based on the used gem.",
   "item.tinkersjewelry.blank_band": "Plain Ring",
@@ -21,8 +21,9 @@
   "item.tinkersjewelry.blank_band_cast": "Plain Ring Cast",
   "item.tinkersjewelry.blank_band_sand_cast": "Plain Ring Sand Cast",
   "item.tinkersjewelry.blank_band_red_sand_cast": "Plain Ring Red Sand Cast",
-  "item.tinkersjewelry.book": "Artificing for dummies",
 
+  "item.tinkersjewelry.book": "Artificing for dummies",
+  "item.tinkersjewelry.book.tooltip": "A guide to looking fabulous\nby Ferri",
 
   "pattern.tinkersjewelry.gem" : "Gem",
   "pattern.tinkersjewelry.blank_band" : "Plain Ring",
@@ -136,8 +137,41 @@
   "modifier.tinkersjewelry.mining_speed_gem.flavor": "Increases the wearers mining speed",
   "modifier.tinkersjewelry.mining_speed_gem": "Mining Speed",
 
+  "modifier.tinkersjewelry.enderference_gem.description": "Prevents target from teleporting for a short time",
+  "modifier.tinkersjewelry.enderference_gem.flavor": "Really quite distracting",
+  "modifier.tinkersjewelry.enderference_gem": "Enderference",
+
+  "modifier.tinkersjewelry.enderclearance_gem.description": "Has a chance to teleport attackers away",
+  "modifier.tinkersjewelry.enderclearance_gem.flavor": "Discount on the ender",
+  "modifier.tinkersjewelry.enderclearance_gem": "Enderclearance",
+
+  "modifier.tinkersjewelry.antiheal_gem.description": "Decreases the effectiveness of healing on the enemy",
+  "modifier.tinkersjewelry.antiheal_gem.flavor": "Decreases the effectiveness of healing on the enemy",
+  "modifier.tinkersjewelry.antiheal_gem": "Anti-Heal",
+
+  "modifier.tinkersjewelry.precious.description": "Gives an ability slot",
+  "modifier.tinkersjewelry.precious.flavor": "That looks expensive",
+  "modifier.tinkersjewelry.precious": "Precious",
+
+  "modifier.tinkersjewelry.polish.description": "Gives an upgrade slot",
+  "modifier.tinkersjewelry.polish.flavor": "Shiny",
+  "modifier.tinkersjewelry.polish": "Polished",
+
+  "modifier.tinkersjewelry.undying.description": "When taking lethal damage, survive on 1 hitpoint",
+  "modifier.tinkersjewelry.undying.flavor": "Not today!",
+  "modifier.tinkersjewelry.undying": "Undying",
+
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
   "tool_stat.tinkersjewelry.amplification.description": "Increases/decrease the strength of effects",
+
+  "tinkersjewelry:fortune": "Fortune",
+  "tinkersjewelry:fortune.desc": "Grants an additional level of Fortune to any tool",
+
+  "tinkersjewelry:silk": "Silk Touch",
+  "tinkersjewelry:silk.desc": "Grants an additional level of Silk Touch to any tool",
+
+  "tinkersjewelry:trade": "Reputation",
+  "tinkersjewelry:trade.desc": "Increases your reputation with villagers",
 
   "material.tinkersjewelry.redstone": "Redstone",
   "material.tinkersjewelry.lapis": "Lapis",
@@ -149,6 +183,8 @@
   "material.tinkersjewelry.emerald": "Emerald",
   "material.tinkersjewelry.prismarine": "Prismarine",
   "material.tinkersjewelry.heart_of_the_sea": "Heart of the Sea",
+  "material.tinkersjewelry.ender_eye": "Eye of Ender",
+  "material.tinkersjewelry.echo_shard": "Echo Shard",
 
   "material.tinkersjewelry.blood_gem": "Eudialyte",
   "material.tinkersjewelry.blazing_gem": "Fire Opal",

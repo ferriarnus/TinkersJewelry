@@ -3,7 +3,7 @@
     "name": "intro",
     "data": "sections/introduction.json",
     "icon": {
-      "item": "tconstruct:pattern"
+      "item": "minecraft:diamond"
     }
   },
   {
@@ -18,8 +18,8 @@
           "tic_display": true,
           "Damage": 0,
           "tic_materials": [
-            "tconstruct:ui_render#gem",
-            "tconstruct:ui_render#blank_band"
+            "tinkersjewelry:ui_render#blank_band",
+            "tinkersjewelry:ui_render#gem"
           ]
         }
       }
@@ -38,9 +38,8 @@
         "type": "forge:nbt",
         "item": "tinkersjewelry:blank_band",
         "nbt": {
-          "tic_materials": [
-            "tconstruct:ui_render#blank_band"
-          ]
+          "Material": "tinkersjewelry:ui_render#blank_band",
+          "tic_display": true
         }
       }
     }
@@ -54,9 +53,8 @@
         "type": "forge:nbt",
         "item": "tinkersjewelry:gem",
         "nbt": {
-          "tic_materials": [
-            "tconstruct:ui_render#gem"
-          ]
+          "Material": "tinkersjewelry:ui_render#gem",
+          "tic_display": true
         }
       }
     }

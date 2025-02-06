@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "minecraft:ender_pearl"
+  },
+  "material": "tconstruct:ender_pearl",
+  "needed": 1,
+  "value": 1
+}

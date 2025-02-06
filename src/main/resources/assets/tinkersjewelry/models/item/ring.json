@@ -5,7 +5,6 @@
     "gem": "tinkersjewelry:item/tool/ring/gem",
     "blank_band": "tinkersjewelry:item/tool/ring/blank_band"
   },
-  "modifier_roots":  [ "tconstruct:item/tool/cleaver/modifiers/" ],
   "parts": [
     { "name": "blank_band", "index": 0 },
     { "name": "gem",   "index": 1 , "broken": "gem"}

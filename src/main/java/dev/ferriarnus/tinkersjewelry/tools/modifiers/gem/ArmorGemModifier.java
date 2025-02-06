@@ -27,10 +27,10 @@ public class ArmorGemModifier extends AbstractGemModifier {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
-        int level = toolStack.getModifierLevel(JewelryModifiers.ARMOR_GEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(JewelryModifiers.ARMOR_GEM.getId());
         float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
-        double effect = (1.25D + 0.25 * level) * amp;
-        attributeModifiers.put(Attributes.ARMOR, new AttributeModifier(uuid, "tinkersjewelry:armorgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
+        double effect = ( 2.5D * level) * amp;
+        attributeModifiers.put(Attributes.ARMOR, new AttributeModifier(uuid, "tinkersjewelry:armorgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 

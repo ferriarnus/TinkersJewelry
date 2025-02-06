@@ -4,7 +4,7 @@ import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
-public class JewelryMaterialData extends AbstractMaterialDataProvider{
+public class JewelryMaterialData extends AbstractMaterialDataProvider {
 
 	public JewelryMaterialData(PackOutput packOutput) {
 		super(packOutput);
@@ -27,6 +27,8 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.emerald, 1, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.prismarine, 1, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.heart_of_the_sea, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.ender_eye, 3, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.echo_shard, 3, ORDER_SPECIAL, true);
 
 		addMaterial(JewelryMaterials.blood_gem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.poison_gem, 2, ORDER_SPECIAL, true);
@@ -37,9 +39,9 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider{
 		addMaterial(JewelryMaterials.exp_gem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.health_gem, 2, ORDER_SPECIAL, true);
 
-		addMaterial(MaterialIds.obsidian, 3, ORDER_WEAPON,  true);
-		addMaterial(MaterialIds.scorchedStone, 2, ORDER_NETHER, true);
-		addMaterial(MaterialIds.searedStone, 2, ORDER_HARVEST, true);
+		addMaterial(MaterialIds.obsidian,3, ORDER_WEAPON, true);
+		addMaterial(MaterialIds.enderPearl, 2, ORDER_REPAIR, true);
+
 	}
 
 }

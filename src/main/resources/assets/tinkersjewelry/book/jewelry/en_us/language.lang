@@ -1,5 +1,7 @@
 intro=Introduction
 
+jewelry=Jewelry
+
 blank_band_materials=Plain Ring Materials
 blank_band_materials.subtext=These materials can be placed in the part builder to create tool parts for jewelry.
 gem_materials=Gem Materials

@@ -1,0 +1,26 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "tag": "minecraft:sand"
+    },
+    {
+      "tag": "forge:leather"
+    }
+  ],
+  "level": 1,
+  "result": "tinkersjewelry:polish",
+  "tools": {
+    "item": "tinkersjewelry:ring"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "minecraft:ender_eye"
+  },
+  "material": "tinkersjewelry:ender_eye",
+  "needed": 1,
+  "value": 1
+}

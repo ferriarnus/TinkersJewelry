@@ -16,6 +16,8 @@ public class JewelryMaterials {
 	public static final MaterialId emerald = id("emerald");
 	public static final MaterialId prismarine = id("prismarine");
 	public static final MaterialId heart_of_the_sea = id("heart_of_the_sea");
+	public static final MaterialId ender_eye = id("ender_eye");
+	public static final MaterialId echo_shard = id("echo_shard");
 
 	public static final MaterialId blood_gem = id("blood_gem");
 	public static final MaterialId blazing_gem = id("blazing_gem");

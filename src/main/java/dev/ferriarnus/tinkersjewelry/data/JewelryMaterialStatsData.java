@@ -8,7 +8,7 @@ import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvide
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
-public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
+public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider {
 
 	public JewelryMaterialStatsData(PackOutput packOutput, AbstractMaterialDataProvider materials) {
 		super(packOutput, materials);
@@ -63,6 +63,8 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(JewelryMaterials.emerald, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.prismarine, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.heart_of_the_sea, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.ender_eye, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.echo_shard, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(JewelryMaterials.poison_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.blazing_gem, GemMaterialStats.INSTANCE);
@@ -85,6 +87,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider{
 		addMaterialStats(MaterialIds.venombone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.scorchedStone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.searedStone, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.enderPearl, GemMaterialStats.INSTANCE);
 
 	}
 

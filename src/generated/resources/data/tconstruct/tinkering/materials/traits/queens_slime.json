@@ -1,5 +1,10 @@
 {
   "perStat": {
-    "tinkersjewelry:blank_band": []
+    "tinkersjewelry:blank_band": [
+      {
+        "level": 1,
+        "name": "tinkersjewelry:precious"
+      }
+    ]
   }
 }

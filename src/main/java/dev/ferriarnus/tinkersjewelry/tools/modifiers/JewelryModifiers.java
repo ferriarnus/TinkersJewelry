@@ -4,12 +4,16 @@ import dev.ferriarnus.tinkersjewelry.TinkersJewelry;
 
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.gem.*;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
 public class JewelryModifiers {
 
 	protected static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(TinkersJewelry.MODID);
+
+	public static final ModifierId PRECIOUS = id("precious");
+	public static final ModifierId POLISH = id("polish");
 
 	public static final StaticModifier<RageGemModifier> RAGE_GEM = MODIFIERS.register("rage_gem", RageGemModifier::new);
 	public static final StaticModifier<FlyGemModifier> FLY_GEM = MODIFIERS.register("fly_gem", FlyGemModifier::new);
@@ -37,8 +41,17 @@ public class JewelryModifiers {
 	public static final StaticModifier<CurrentHealthDamageGemModifier> CURRENT_HEALTH_DAMAGE_GEM = MODIFIERS.register("current_health_damage_gem", CurrentHealthDamageGemModifier::new);
 	public static final StaticModifier<DrawSpeedGemModifier> DRAW_SPEED_GEM = MODIFIERS.register("draw_speed_gem", DrawSpeedGemModifier::new);
 	public static final StaticModifier<MiningSpeedGemModifier> MINING_SPEED_GEM = MODIFIERS.register("mining_speed_gem", MiningSpeedGemModifier::new);
+	public static final StaticModifier<EnderferenceGemModifier> ENDERFERENCE_GEM = MODIFIERS.register("enderference_gem", EnderferenceGemModifier::new);
+	public static final StaticModifier<EnderclearanceGemModifier> ENDERCLEARANCE_GEM = MODIFIERS.register("enderclearance_gem", EnderclearanceGemModifier::new);
+	public static final StaticModifier<AntiHealGemModifier> ANTI_HEAL_GEM = MODIFIERS.register("antiheal_gem", AntiHealGemModifier::new);
+
+	public static final StaticModifier<UndyingModifier> UNDYING = MODIFIERS.register("undying", UndyingModifier::new);
 
 	public static void registerModifiers() {
 		MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	}
+
+	private static ModifierId id(String name) {
+		return new ModifierId(TinkersJewelry.MODID, name);
 	}
 }

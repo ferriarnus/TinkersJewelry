@@ -7,16 +7,22 @@ import java.util.UUID;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.gem.AbstractGemModifier;
 import com.google.common.collect.Multimap;
 
+import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
+import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
 import slimeknights.tconstruct.library.tools.item.ModifiableItem;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
@@ -28,7 +34,15 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 	public CuriosRingItem(Properties properties, ToolDefinition toolDefinition) {
 		super(properties, toolDefinition);
 	}
-	
+
+	@Override
+	public List<Component> getStatInformation(IToolStackView tool, @Nullable Player player, List<Component> tooltips, TooltipKey key, TooltipFlag tooltipFlag) {
+		List<Component> list = super.getStatInformation(tool, player, tooltips, key, tooltipFlag);
+		TooltipBuilder builder = new TooltipBuilder(tool, list);
+		builder.add(JewelryToolStats.AMPLIFICATION);
+		return builder.getTooltips();
+	}
+
 	@Override
 	public void curioTick(SlotContext slotContext, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);

@@ -16,7 +16,7 @@ import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
-public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRecipeHelper{
+public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRecipeHelper {
 
 	public JewelryMaterialRecipe(PackOutput output) {
 		super(output);
@@ -41,6 +41,8 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, JewelryMaterials.emerald, Ingredient.of(Items.EMERALD), 1, 1, folder + "gems/emerald");
 		materialRecipe(consumer, JewelryMaterials.prismarine, Ingredient.of(Items.PRISMARINE_SHARD), 1, 1, folder + "gems/prismarine");
 		materialRecipe(consumer, JewelryMaterials.heart_of_the_sea, Ingredient.of(Items.HEART_OF_THE_SEA), 1, 1, folder + "gems/heart_of_the_sea");
+		materialRecipe(consumer, JewelryMaterials.ender_eye, Ingredient.of(Items.ENDER_EYE), 1, 1, folder + "gems/ender_eye");
+		materialRecipe(consumer, JewelryMaterials.echo_shard, Ingredient.of(Items.ECHO_SHARD), 1, 1, folder + "gems/echo_shard");
 
 		materialRecipe(consumer, JewelryMaterials.poison_gem, Ingredient.of(ItemRegistry.POISON_GEM), 1, 1, folder + "gems/poison");
 		materialRecipe(consumer, JewelryMaterials.blazing_gem, Ingredient.of(ItemRegistry.BLAZING_GEM), 1, 1, folder + "gems/blaze");
@@ -63,6 +65,8 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, MaterialIds.venombone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "venombone"))), 1, 1, folder + "gems/venombone");
 		materialRecipe(consumer, MaterialIds.scorchedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "scorched_stone"))), 1, 1, folder + "gems/scorched_stone");
 		materialRecipe(consumer, MaterialIds.searedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "seared_stone"))), 1, 1, folder + "gems/seared_stone");
+		materialRecipe(consumer, MaterialIds.enderPearl, Ingredient.of(Items.ENDER_PEARL), 1, 1, folder + "gems/ender_pearl");
+
 	}
 
 	@Override

@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:totem_of_undying"
+    }
+  ],
+  "level": 1,
+  "result": "tinkersjewelry:undying",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "item": "tinkersjewelry:ring"
+  }
+}
