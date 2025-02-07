@@ -1,0 +1,12 @@
+[
+  {
+    "name": "introduction",
+    "type": "mantle:text",
+    "data": "modifiers/intro.json"
+  },
+  {
+    "name": "introduction",
+    "type": "mantle:text",
+    "data": "modifiers/polished.json"
+  }
+]

@@ -30,6 +30,12 @@
 
   },
   {
+    "name": "modifiers",
+    "icon": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  {
     "name": "blank_band_materials",
     "data": "no-load",
     "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:blank_band", "detailed": true }},
