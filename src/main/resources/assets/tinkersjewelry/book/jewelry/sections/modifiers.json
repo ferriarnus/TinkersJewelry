@@ -1,12 +1,19 @@
 [
   {
     "name": "introduction",
-    "type": "mantle:text",
-    "data": "modifiers/intro.json"
+    "type": "mantle:index",
+    "data": "modifiers/index.json"
   },
   {
-    "name": "introduction",
+    "name": "group_slotless",
     "type": "mantle:text",
-    "data": "modifiers/polished.json"
+    "data": "modifiers/slotless.json",
+    "extraData": { "tconstruct:load_modifiers": { "tag": "tinkersjewelry:slotless/general", "path": "modifiers/slotless", "prefix": "slotless" }}
+  },
+  {
+    "name": "group_abilities",
+    "type": "mantle:text",
+    "data": "modifiers/abilities.json",
+    "extraData": { "tconstruct:load_modifiers": { "tag": "tinkersjewelry:abilities/general", "path": "modifiers/abilities", "prefix": "abilities" }}
   }
 ]

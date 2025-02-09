@@ -2,11 +2,7 @@
   "perStat": {
     "tinkersjewelry:gem": [
       {
-        "level": 1,
-        "name": "tconstruct:overslime"
-      },
-      {
-        "level": 1,
+        "level": 2,
         "name": "tinkersjewelry:resistance_gem"
       }
     ]

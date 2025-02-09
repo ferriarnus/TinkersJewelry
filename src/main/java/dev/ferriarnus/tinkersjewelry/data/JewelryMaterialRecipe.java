@@ -66,6 +66,7 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, MaterialIds.scorchedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "scorched_stone"))), 1, 1, folder + "gems/scorched_stone");
 		materialRecipe(consumer, MaterialIds.searedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "seared_stone"))), 1, 1, folder + "gems/seared_stone");
 		materialRecipe(consumer, MaterialIds.enderPearl, Ingredient.of(Items.ENDER_PEARL), 1, 1, folder + "gems/ender_pearl");
+		materialRecipe(consumer, MaterialIds.whitestone, Ingredient.of(Items.END_STONE), 1, 1, folder + "gems/end_stone");
 
 	}
 

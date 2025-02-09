@@ -88,6 +88,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.scorchedStone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.searedStone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.enderPearl, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.whitestone, GemMaterialStats.INSTANCE);
 
 	}
 

@@ -122,6 +122,7 @@ public class TinkersJewelry {
 		builder.add(GemMaterialStats.ID, MaterialIds.scorchedStone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.searedStone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.enderPearl.getId());
+		builder.add(GemMaterialStats.ID, MaterialIds.whitestone.getId());
 
 		GeneratorPartTextureJsonGenerator.StatOverride overrides = builder.build();
 
