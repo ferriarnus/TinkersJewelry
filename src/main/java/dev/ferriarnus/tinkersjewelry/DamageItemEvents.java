@@ -3,10 +3,13 @@ package dev.ferriarnus.tinkersjewelry;
 import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.items.CuriosRingItem;
 
+import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.shadowsoffire.placebo.events.GetEnchantmentLevelEvent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -29,6 +32,7 @@ import slimeknights.tconstruct.library.tools.capability.EntityModifierCapability
 import slimeknights.tconstruct.library.tools.capability.TinkerDataCapability;
 import slimeknights.tconstruct.library.tools.capability.TinkerDataKeys;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.tools.data.ModifierIds;
@@ -153,6 +157,31 @@ public class DamageItemEvents {
 					drops.add(itemEntity);
 				}
 			}
+		}
+	}
+
+	@SubscribeEvent
+	static void undying(LivingDeathEvent event) {
+		if (event.isCanceled()) {
+			return;
+		}
+		LivingEntity entity = event.getEntity();
+		if (entity.isDeadOrDying()) {
+			CuriosApi.getCuriosHelper().getEquippedCurios(entity).ifPresent(curios -> {
+				for (int i=0; i < curios.getSlots(); i++) {
+					ItemStack stackInSlot = curios.getStackInSlot(i);
+					ToolStack tool = ToolStack.from(stackInSlot);
+					if (!tool.isBroken() && tool.getModifierLevel(JewelryModifiers.UNDYING.getId()) > 0) {
+						entity.setHealth(1.0F);
+						entity.removeAllEffects();
+						entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
+						entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
+						entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
+						ToolDamageUtil.damage(tool, 300, entity, stackInSlot);
+						event.setCanceled(true);
+					}
+				}
+			});
 		}
 	}
 }

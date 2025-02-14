@@ -1,7 +1,7 @@
 {
-  "coverTexture": "tconstruct:book/images/covers/materials_and_you_cover.png",
+  "coverTexture": "tinkersjewelry:book/images/covers/book_cover.png",
   "coverColor": -1,
-  "bookTexture": "tconstruct:book/images/covers/materials_and_you_pages.png",
+  "bookTexture": "tinkersjewelry:book/images/covers/book_pages.png",
   "arrowColor": -1,
   "slotColor": 0xE5C682,
   "drawSectionListText": true,

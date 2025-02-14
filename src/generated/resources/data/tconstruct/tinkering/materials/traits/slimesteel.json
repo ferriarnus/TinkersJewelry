@@ -1,5 +1,14 @@
 {
   "perStat": {
-    "tinkersjewelry:blank_band": []
+    "tinkersjewelry:blank_band": [
+      {
+        "level": 1,
+        "name": "tconstruct:overcast"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      }
+    ]
   }
 }

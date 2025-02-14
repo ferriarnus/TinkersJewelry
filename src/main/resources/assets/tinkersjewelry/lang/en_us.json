@@ -22,7 +22,7 @@
   "item.tinkersjewelry.blank_band_sand_cast": "Plain Ring Sand Cast",
   "item.tinkersjewelry.blank_band_red_sand_cast": "Plain Ring Red Sand Cast",
 
-  "item.tinkersjewelry.book": "Artificing for dummies",
+  "item.tinkersjewelry.book": "Artificing for Dummies",
   "item.tinkersjewelry.book.tooltip": "A guide to looking fabulous\nby Ferri",
 
   "pattern.tinkersjewelry.gem" : "Gem",
@@ -149,6 +149,14 @@
   "modifier.tinkersjewelry.antiheal_gem.flavor": "Decreases the effectiveness of healing on the enemy",
   "modifier.tinkersjewelry.antiheal_gem": "Anti-Heal",
 
+  "modifier.tinkersjewelry.glowing_gem.description": "Marks an enemy with the glowing effect",
+  "modifier.tinkersjewelry.glowing_gem.flavor": "That's leaving a mark",
+  "modifier.tinkersjewelry.glowing_gem": "Marked",
+
+  "modifier.tinkersjewelry.darkness_gem.description": "Casts the darkness effect on the enemy",
+  "modifier.tinkersjewelry.darkness_gem.flavor": "Casts the darkness effect on the enemy",
+  "modifier.tinkersjewelry.darkness_gem": "Darkness",
+
   "modifier.tinkersjewelry.precious.description": "Gives an ability slot",
   "modifier.tinkersjewelry.precious.flavor": "That looks expensive",
   "modifier.tinkersjewelry.precious": "Precious",
@@ -157,6 +165,7 @@
   "modifier.tinkersjewelry.polish.flavor": "Shiny",
   "modifier.tinkersjewelry.polish": "Polished",
 
+  "modifier.tinkersjewelry.undying.requirements": "Requires Soulbound",
   "modifier.tinkersjewelry.undying.description": "When taking lethal damage, survive on 1 hitpoint",
   "modifier.tinkersjewelry.undying.flavor": "Not today!",
   "modifier.tinkersjewelry.undying": "Undying",
@@ -185,6 +194,8 @@
   "material.tinkersjewelry.heart_of_the_sea": "Heart of the Sea",
   "material.tinkersjewelry.ender_eye": "Eye of Ender",
   "material.tinkersjewelry.echo_shard": "Echo Shard",
+  "material.tinkersjewelry.glowstone": "Glowstone",
+  "material.tinkersjewelry.prismarine_crystal": "Prismarine Crystal",
 
   "material.tinkersjewelry.blood_gem": "Eudialyte",
   "material.tinkersjewelry.blazing_gem": "Fire Opal",

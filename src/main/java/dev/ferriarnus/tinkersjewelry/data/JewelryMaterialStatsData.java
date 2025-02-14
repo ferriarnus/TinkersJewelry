@@ -65,6 +65,8 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(JewelryMaterials.heart_of_the_sea, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.ender_eye, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.echo_shard, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.glowstone, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.prismarine_crystal, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(JewelryMaterials.poison_gem, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.blazing_gem, GemMaterialStats.INSTANCE);

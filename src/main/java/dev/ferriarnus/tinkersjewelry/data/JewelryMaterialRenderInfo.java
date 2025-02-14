@@ -37,6 +37,8 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.heart_of_the_sea).color(0x0d485f);
 		buildRenderInfo(JewelryMaterials.ender_eye).color(0x316364);
 		buildRenderInfo(JewelryMaterials.echo_shard).color(0x0a5060);
+		buildRenderInfo(JewelryMaterials.glowstone).color(0xebaa4e);
+		buildRenderInfo(JewelryMaterials.prismarine_crystal).color(0xb4d8ca);
 
 		buildRenderInfo(JewelryMaterials.blood_gem).color(0x851228);
 		buildRenderInfo(JewelryMaterials.poison_gem).color(0x055938);

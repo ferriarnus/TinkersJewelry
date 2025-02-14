@@ -29,6 +29,8 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider {
 		addMaterial(JewelryMaterials.heart_of_the_sea, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.ender_eye, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.echo_shard, 3, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.glowstone, 3, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.prismarine_crystal, 3, ORDER_SPECIAL, true);
 
 		addMaterial(JewelryMaterials.blood_gem, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.poison_gem, 2, ORDER_SPECIAL, true);

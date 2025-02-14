@@ -4,7 +4,9 @@ import dev.ferriarnus.tinkersjewelry.TinkersJewelry;
 
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.gem.*;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.lwjgl.system.linux.Stat;
 import slimeknights.tconstruct.library.modifiers.ModifierId;
+import slimeknights.tconstruct.library.modifiers.util.DynamicModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
@@ -44,8 +46,10 @@ public class JewelryModifiers {
 	public static final StaticModifier<EnderferenceGemModifier> ENDERFERENCE_GEM = MODIFIERS.register("enderference_gem", EnderferenceGemModifier::new);
 	public static final StaticModifier<EnderclearanceGemModifier> ENDERCLEARANCE_GEM = MODIFIERS.register("enderclearance_gem", EnderclearanceGemModifier::new);
 	public static final StaticModifier<AntiHealGemModifier> ANTI_HEAL_GEM = MODIFIERS.register("antiheal_gem", AntiHealGemModifier::new);
+	public static final StaticModifier<GlowingGemModifier> GLOWING_GEM = MODIFIERS.register("glowing_gem", GlowingGemModifier::new);
+	public static final StaticModifier<DarknessGemModifier> DARKNESS_GEM = MODIFIERS.register("darkness_gem", DarknessGemModifier::new);
 
-	public static final StaticModifier<UndyingModifier> UNDYING = MODIFIERS.register("undying", UndyingModifier::new);
+	public static final DynamicModifier UNDYING = MODIFIERS.registerDynamic("undying");
 
 	public static void registerModifiers() {
 		MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());

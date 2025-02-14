@@ -3,6 +3,14 @@
     "tinkersjewelry:blank_band": [
       {
         "level": 1,
+        "name": "tconstruct:overlord"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "level": 1,
         "name": "tinkersjewelry:precious"
       }
     ]

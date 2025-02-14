@@ -13,8 +13,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import slimeknights.mantle.recipe.data.IRecipeHelper;
+import slimeknights.mantle.registration.deferred.ItemDeferredRegister;
 import slimeknights.tconstruct.library.recipe.modifiers.adding.ModifierRecipeBuilder;
 import slimeknights.tconstruct.library.tools.SlotType;
+import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.function.Consumer;
 
@@ -27,8 +29,16 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
+        String upgradeFolder = "tools/modifiers/upgrade/";
+        String abilityFolder = "tools/modifiers/ability/";
         String slotlessFolder = "tools/modifiers/slotless/";
+        String upgradeSalvage = "tools/modifiers/salvage/upgrade/";
         String abilitySalvage = "tools/modifiers/salvage/ability/";
+        String defenseFolder = "tools/modifiers/defense/";
+        String defenseSalvage = "tools/modifiers/salvage/defense/";
+        String compatFolder = "tools/modifiers/compat/";
+        String compatSalvage = "tools/modifiers/salvage/compat/";
+        String worktableFolder = "tools/modifiers/worktable/";
 
         ModifierRecipeBuilder.modifier(JewelryModifiers.POLISH)
                 .setTools(Ingredient.of(ItemRegistry.RING))
@@ -36,17 +46,25 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
                 .addInput(Items.HONEYCOMB)
                 .addInput(Items.GLOWSTONE_DUST)
                 .addInput(ItemTags.SAND)
-                .addInput(Tags.Items.LEATHER)
-                .setMaxLevel(1)
+                .addInput(TinkerModifiers.silkyCloth)
+                .setMaxLevel(1).checkTraitLevel()
                 .save(consumer, prefix(JewelryModifiers.POLISH, slotlessFolder));
 
         ModifierRecipeBuilder.modifier(JewelryModifiers.UNDYING)
                 .setTools(Ingredient.of(ItemRegistry.RING))
                 .addInput(Items.TOTEM_OF_UNDYING)
                 .setSlots(SlotType.ABILITY, 1)
-                .setMaxLevel(1)
+                .setMaxLevel(1).checkTraitLevel()
                 .saveSalvage(consumer, prefix(JewelryModifiers.UNDYING, abilitySalvage))
-                .save(consumer, prefix(JewelryModifiers.UNDYING, slotlessFolder));
+                .save(consumer, prefix(JewelryModifiers.UNDYING, abilityFolder));
+
+        ModifierRecipeBuilder.modifier(JewelryModifiers.GLOWING_GEM)
+                .setTools(Ingredient.of(ItemRegistry.RING))
+                .addInput(Items.GLOWSTONE_DUST, 20)
+                .setSlots(SlotType.ABILITY, 1)
+                .setMaxLevel(1).checkTraitLevel()
+                .saveSalvage(consumer, prefix(JewelryModifiers.GLOWING_GEM, upgradeSalvage))
+                .save(consumer, prefix(JewelryModifiers.GLOWING_GEM, upgradeFolder));
     }
 
     @Override

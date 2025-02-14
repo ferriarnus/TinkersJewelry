@@ -43,6 +43,8 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, JewelryMaterials.heart_of_the_sea, Ingredient.of(Items.HEART_OF_THE_SEA), 1, 1, folder + "gems/heart_of_the_sea");
 		materialRecipe(consumer, JewelryMaterials.ender_eye, Ingredient.of(Items.ENDER_EYE), 1, 1, folder + "gems/ender_eye");
 		materialRecipe(consumer, JewelryMaterials.echo_shard, Ingredient.of(Items.ECHO_SHARD), 1, 1, folder + "gems/echo_shard");
+		materialRecipe(consumer, JewelryMaterials.glowstone, Ingredient.of(Items.GLOWSTONE_DUST), 1, 1, folder + "gems/glowstone");
+		materialRecipe(consumer, JewelryMaterials.prismarine_crystal, Ingredient.of(Items.PRISMARINE_CRYSTALS), 1, 1, folder + "gems/prismarine_crystal");
 
 		materialRecipe(consumer, JewelryMaterials.poison_gem, Ingredient.of(ItemRegistry.POISON_GEM), 1, 1, folder + "gems/poison");
 		materialRecipe(consumer, JewelryMaterials.blazing_gem, Ingredient.of(ItemRegistry.BLAZING_GEM), 1, 1, folder + "gems/blaze");

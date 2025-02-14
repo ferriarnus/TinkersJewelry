@@ -1,6 +1,7 @@
 {
   "type": "tconstruct:modifier",
   "allow_crystal": true,
+  "check_trait_level": true,
   "inputs": [
     {
       "item": "minecraft:charcoal"
@@ -15,7 +16,7 @@
       "tag": "minecraft:sand"
     },
     {
-      "tag": "forge:leather"
+      "item": "tconstruct:silky_cloth"
     }
   ],
   "level": 1,
