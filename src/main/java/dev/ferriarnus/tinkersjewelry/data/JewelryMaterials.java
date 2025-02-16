@@ -40,6 +40,28 @@ public class JewelryMaterials {
 	public static final MaterialId sapphire = id("sapphire");
 	public static final MaterialId cinnabar = id("cinnabar");
 	public static final MaterialId fluorite = id("fluorite");
+	public static final MaterialId topaz = id("topaz");
+	public static final MaterialId rose_quartz = id("rose_quartz");
+	public static final MaterialId apatite = id("apatite");
+	public static final MaterialId jade = id("jade");
+	public static final MaterialId bloodstone = id("bloodstone");
+	public static final MaterialId bismuth = id("bismuth");
+	public static final MaterialId opal = id("opal");
+	public static final MaterialId garnet = id("garnet");
+	public static final MaterialId moonstone = id("moonstone");
+	public static final MaterialId onyx = id("onyx");
+
+
+	public static final MaterialId celestigem = id("celestigem");
+	public static final MaterialId certus_quartz_crystal = id("certus_quartz_crystal");
+	public static final MaterialId charged_certus_quartz_crystal = id("charged_certus_quartz_crystal");
+	public static final MaterialId fluix_crystal = id("fluix_crystal");
+	public static final MaterialId source_gem = id("source_gem");
+	public static final MaterialId xychorium_gem_blue = id("xychorium_gem_blue");
+	public static final MaterialId xychorium_gem_red = id("xychorium_gem_red");
+	public static final MaterialId xychorium_gem_green = id("xychorium_gem_green");
+	public static final MaterialId xychorium_gem_dark = id("xychorium_gem_dark");
+	public static final MaterialId xychorium_gem_light = id("xychorium_gem_light");
 
 	public static final MaterialId hematite = new MaterialId("tinkers_things", "hematite");
 

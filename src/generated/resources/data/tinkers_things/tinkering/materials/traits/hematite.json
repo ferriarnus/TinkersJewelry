@@ -1,5 +1,10 @@
 {
   "perStat": {
-    "tinkersjewelry:plain_ring": []
+    "tinkersjewelry:gem": [
+      {
+        "level": 2,
+        "name": "tinkersjewelry:lifesteal_gem"
+      }
+    ]
   }
 }

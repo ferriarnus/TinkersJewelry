@@ -39,13 +39,13 @@
   {
     "name": "blank_band_materials",
     "data": "no-load",
-    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:blank_band", "detailed": true }},
+    "extraData": { "tconstruct:material_tier": { "type": "tinkersjewelry:plain_ring", "detailed": true }},
     "icon": {
       "item": {
         "type": "forge:nbt",
         "item": "tinkersjewelry:plain_ring",
         "nbt": {
-          "Material": "tinkersjewelry:ui_render#blank_band",
+          "Material": "tinkersjewelry:ui_render#plain_ring",
           "tic_display": true
         }
       }

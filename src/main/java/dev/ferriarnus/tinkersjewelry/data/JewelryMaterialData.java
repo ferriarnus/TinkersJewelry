@@ -47,10 +47,6 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider {
 		addCompatMaterial(JewelryMaterials.sapphire, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.SAPPHIRE_GEM.location().getPath());
 		addCompatMaterial(JewelryMaterials.cinnabar, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.CINNABAR_GEM.location().getPath());
 		addCompatMaterial(JewelryMaterials.fluorite, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.FLUORITE_GEM.location().getPath());
-
-		addMaterial(MaterialIds.obsidian,3, ORDER_WEAPON, true);
-		addMaterial(MaterialIds.enderPearl, 2, ORDER_REPAIR, true);
-
 	}
 
 }

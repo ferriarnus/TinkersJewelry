@@ -80,6 +80,7 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		materialRecipe(consumer, MaterialIds.enderPearl, Ingredient.of(Items.ENDER_PEARL), 1, 1, folder + "gems/ender_pearl");
 		materialRecipe(consumer, MaterialIds.whitestone, Ingredient.of(Items.END_STONE), 1, 1, folder + "gems/end_stone");
 
+		materialRecipe(consumer, JewelryMaterials.hematite, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("tinkers_things", "hematite"))), 1, 1, folder + "gems/hematite");
 	}
 
 	public void optionalMaterialRecipe(Consumer<FinishedRecipe> consumer, MaterialVariantId material, TagKey<Item> tag, int value, int needed, String saveName) {

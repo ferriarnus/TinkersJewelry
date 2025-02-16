@@ -50,8 +50,6 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.hepatizon, new BlankBandMaterialStats(975, 1.3f));
 		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
 
-		addMaterialStats(JewelryMaterials.hematite, new BlankBandMaterialStats(1111, 1.5f));
-
 		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.eudialyte, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.INSTANCE);
@@ -82,6 +80,8 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(JewelryMaterials.sapphire, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.cinnabar, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.fluorite, GemMaterialStats.INSTANCE);
+
+		addMaterialStats(JewelryMaterials.hematite, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);

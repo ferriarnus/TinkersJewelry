@@ -57,6 +57,8 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(JewelryMaterials.cinnabar, GemMaterialStats.ID, JewelryModifiers.FLAME_GEM);
 		addTraits(JewelryMaterials.fluorite, GemMaterialStats.ID, JewelryModifiers.GLOWING_GEM);
 
+		addTraits(JewelryMaterials.hematite, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.LIFESTEAL_GEM, 2));
+
 		addTraits(MaterialIds.rock, GemMaterialStats.ID, JewelryModifiers.ARMOR_GEM);
 		addTraits(MaterialIds.ichor, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.FIRERESISTANCE_GEM);
 		addTraits(MaterialIds.flint, GemMaterialStats.ID, JewelryModifiers.PIERCING_GEM);
@@ -103,8 +105,6 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(MaterialIds.manyullyn, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.hepatizon, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.queensSlime, BlankBandMaterialStats.ID, new ModifierEntry(TinkerModifiers.overlord, 1), new ModifierEntry(TinkerModifiers.overslime, 1), new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
-
-		addTraits(JewelryMaterials.hematite, BlankBandMaterialStats.ID, new ModifierEntry[] {} );
 	}
 
 }
