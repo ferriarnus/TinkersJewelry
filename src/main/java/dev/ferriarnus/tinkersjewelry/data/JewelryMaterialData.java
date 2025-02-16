@@ -33,6 +33,11 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider {
 		addMaterial(JewelryMaterials.prismarine_crystal, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.purpur, 3, ORDER_SPECIAL, true);
 
+		addMaterial(JewelryMaterials.ichor_crystal, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.ender_crystal, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.earth_crystal, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.sky_crystal, 2, ORDER_SPECIAL, true);
+
 		addMaterial(JewelryMaterials.eudialyte, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.malachite, 2, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.fire_opal, 2, ORDER_SPECIAL, true);

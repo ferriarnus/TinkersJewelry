@@ -82,14 +82,14 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(JewelryMaterials.fluorite, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(JewelryMaterials.hematite, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.ichor_crystal, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.ender_crystal, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.sky_crystal, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.earth_crystal, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
-		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.flint, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.obsidian, GemMaterialStats.INSTANCE);
-		addMaterialStats(MaterialIds.enderslime, GemMaterialStats.INSTANCE);
-		addMaterialStats(MaterialIds.skyslime, GemMaterialStats.INSTANCE);
-		addMaterialStats(MaterialIds.earthslime, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.necroticBone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.bone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.blazingBone, GemMaterialStats.INSTANCE);

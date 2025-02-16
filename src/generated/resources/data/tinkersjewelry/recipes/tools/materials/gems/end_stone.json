@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:material",
-  "ingredient": {
-    "item": "minecraft:end_stone"
-  },
-  "material": "tconstruct:whitestone",
-  "needed": 1,
-  "value": 1
-}

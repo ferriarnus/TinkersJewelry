@@ -54,6 +54,11 @@
     "prismarine_crystal": "#b4d8ca",
     "purpur": "#ac7bac",
 
+    "earth_crystal": "#01cd4e",
+    "sky_crystal": "#01cbcd",
+    "ichor_crystal": "#ff970d",
+    "ender_crystal": "#af4cf6",
+
     "eudialyte": "#851228",
     "fire_opal": "#ff8d76",
     "malachite": "#055938",

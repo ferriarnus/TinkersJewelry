@@ -110,12 +110,8 @@ public class TinkersJewelry {
 		builder.add(BlankBandMaterialStats.ID, JewelryMaterials.hematite);
 
 		builder.add(GemMaterialStats.ID, MaterialIds.rock.getId());
-		builder.add(GemMaterialStats.ID, MaterialIds.ichor.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.flint.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.obsidian.getId());
-		builder.add(GemMaterialStats.ID, MaterialIds.enderslime.getId());
-		builder.add(GemMaterialStats.ID, MaterialIds.skyslime.getId());
-		builder.add(GemMaterialStats.ID, MaterialIds.earthslime.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.necroticBone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.bone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.blazingBone.getId());

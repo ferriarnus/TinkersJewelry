@@ -26,6 +26,11 @@ public class JewelryMaterials {
 	public static final MaterialId prismarine_crystal = id("prismarine_crystal");
 	public static final MaterialId purpur = id("purpur");
 
+	public static final MaterialId earth_crystal = id("earth_crystal");
+	public static final MaterialId sky_crystal = id("sky_crystal");
+	public static final MaterialId ender_crystal = id("ender_crystal");
+	public static final MaterialId ichor_crystal = id("ichor_crystal");
+
 	public static final MaterialId eudialyte = id("eudialyte");
 	public static final MaterialId fire_opal = id("fire_opal");
 	public static final MaterialId malachite = id("malachite");

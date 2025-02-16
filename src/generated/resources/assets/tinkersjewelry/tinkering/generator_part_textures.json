@@ -2,12 +2,8 @@
   "overrides": {
     "tinkersjewelry:gem": [
       "tconstruct:rock",
-      "tconstruct:ichor",
       "tconstruct:flint",
       "tconstruct:obsidian",
-      "tconstruct:enderslime",
-      "tconstruct:skyslime",
-      "tconstruct:earthslime",
       "tconstruct:necrotic_bone",
       "tconstruct:bone",
       "tconstruct:blazing_bone",

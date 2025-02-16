@@ -59,7 +59,6 @@ public class ItemRegistry {
 
 	//Casts
 	public static final CastItemObject PLAIN_RING_CAST = ITEMS.registerCast(PLAIN_RING, PARTS_PROPS);
-	public static final CastItemObject CUT_GEM_CAST = ITEMS.registerCast(GEM, PARTS_PROPS);
 
 	//Tools
 	public static final ItemObject<CuriosRingItem> RING = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
@@ -98,9 +97,6 @@ public class ItemRegistry {
 		output.accept(new ItemStack(PLAIN_RING_CAST.get()));
 		output.accept(new ItemStack(PLAIN_RING_CAST.getSand()));
 		output.accept(new ItemStack(PLAIN_RING_CAST.getRedSand()));
-		output.accept(new ItemStack(CUT_GEM_CAST.get()));
-		output.accept(new ItemStack(CUT_GEM_CAST.getSand()));
-		output.accept(new ItemStack(CUT_GEM_CAST.getRedSand()));
 	}
 
 	private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {

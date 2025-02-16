@@ -12,12 +12,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.CompoundIngredient;
 import slimeknights.mantle.recipe.helper.ItemOutput;
 import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
+import slimeknights.tconstruct.library.recipe.ingredient.MaterialIngredient;
 import slimeknights.tconstruct.library.recipe.partbuilder.ItemPartRecipeBuilder;
 import slimeknights.tconstruct.library.tools.part.IMaterialItem;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
@@ -36,6 +39,15 @@ public class JewelryToolsRecipe extends RecipeProvider implements IMaterialRecip
 		toolBuilding(consumer, ItemRegistry.RING, folder);
 		partRecipes(consumer, ItemRegistry.PLAIN_RING.get(), ItemRegistry.PLAIN_RING_CAST, 1, partFolder, castFolder);
 		uncastablePart(consumer, ItemRegistry.GEM.get(), 1, null, partFolder);
+
+		dummyGem(consumer, ItemRegistry.GEM.get(), MaterialIds.enderPearl, 1, partFolder);
+		dummyGem(consumer, ItemRegistry.GEM.get(), MaterialIds.obsidian, 1, partFolder);
+
+		dummyGem(consumer, ItemRegistry.GEM.get(), JewelryMaterials.hematite, 1, partFolder);
+	}
+
+	public void dummyGem(Consumer<FinishedRecipe> consumer, IMaterialItem part, MaterialId materialId, int cost, String partFolder) {
+		ItemPartRecipeBuilder.item(this.id(part), ItemOutput.fromStack(part.withMaterialForDisplay(materialId))).material(materialId, cost).setPatternItem(CompoundIngredient.of(Ingredient.of(TinkerTags.Items.DEFAULT_PATTERNS))).save(consumer, this.location(partFolder + "builder/" + materialId.getPath()));
 	}
 
 	@Override

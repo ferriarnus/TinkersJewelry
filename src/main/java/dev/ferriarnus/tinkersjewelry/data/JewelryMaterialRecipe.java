@@ -64,23 +64,27 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		optionalMaterialRecipe(consumer, JewelryMaterials.cinnabar, JewelryMaterials.Tags.CINNABAR_GEM, 1, 1, folder + "gems/cinnabar");
 		optionalMaterialRecipe(consumer, JewelryMaterials.fluorite, JewelryMaterials.Tags.FLUORITE_GEM, 1, 1, folder + "gems/fluorite");
 
-		materialRecipe(consumer, MaterialIds.rock, Ingredient.of(Tags.Items.STONE), 1, 1, folder + "gems/stone");
-		materialRecipe(consumer, MaterialIds.flint, Ingredient.of(Items.FLINT), 1, 1, folder + "gems/flint");
-		materialRecipe(consumer, MaterialIds.ichor, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");
-		materialRecipe(consumer, MaterialIds.earthslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "earth_slime_crystal"))), 1, 1, folder + "gems/earth_slime_crystal");
-		materialRecipe(consumer, MaterialIds.skyslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "sky_slime_crystal"))), 1, 1, folder + "gems/sky_slime_crystal");
-		materialRecipe(consumer, MaterialIds.enderslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ender_slime_crystal"))), 1, 1, folder + "gems/ender_slime_crystal");
-		materialRecipe(consumer, MaterialIds.obsidian, Ingredient.of(Items.OBSIDIAN), 1, 1, folder + "gems/obsidian");
-		materialRecipe(consumer, MaterialIds.necroticBone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "necrotic_bone"))), 1, 1, folder + "gems/necrotic_bone");
-		materialRecipe(consumer, MaterialIds.bone, Ingredient.of(Items.BONE), 1, 1, folder + "gems/bone");
-		materialRecipe(consumer, MaterialIds.blazingBone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "blazing_bone"))), 1, 1, folder + "gems/blazing_bone");
-		materialRecipe(consumer, MaterialIds.venombone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "venombone"))), 1, 1, folder + "gems/venombone");
-		materialRecipe(consumer, MaterialIds.scorchedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "scorched_stone"))), 1, 1, folder + "gems/scorched_stone");
-		materialRecipe(consumer, MaterialIds.searedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "seared_stone"))), 1, 1, folder + "gems/seared_stone");
-		materialRecipe(consumer, MaterialIds.enderPearl, Ingredient.of(Items.ENDER_PEARL), 1, 1, folder + "gems/ender_pearl");
-		materialRecipe(consumer, MaterialIds.whitestone, Ingredient.of(Items.END_STONE), 1, 1, folder + "gems/end_stone");
+		//materialRecipe(consumer, MaterialIds.rock, Ingredient.of(Tags.Items.STONE), 1, 1, folder + "gems/stone");
+		//materialRecipe(consumer, MaterialIds.flint, Ingredient.of(Items.FLINT), 1, 1, folder + "gems/flint");
+		//materialRecipe(consumer, MaterialIds.earthslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "earth_slime_crystal"))), 1, 1, folder + "gems/earth_slime_crystal");
+		//materialRecipe(consumer, MaterialIds.skyslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "sky_slime_crystal"))), 1, 1, folder + "gems/sky_slime_crystal");
+		//materialRecipe(consumer, MaterialIds.enderslime, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ender_slime_crystal"))), 1, 1, folder + "gems/ender_slime_crystal");
+		//materialRecipe(consumer, MaterialIds.obsidian, Ingredient.of(Items.OBSIDIAN), 1, 1, folder + "gems/obsidian");
+		//materialRecipe(consumer, MaterialIds.necroticBone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "necrotic_bone"))), 1, 1, folder + "gems/necrotic_bone");
+		//materialRecipe(consumer, MaterialIds.bone, Ingredient.of(Items.BONE), 1, 1, folder + "gems/bone");
+		//materialRecipe(consumer, MaterialIds.blazingBone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "blazing_bone"))), 1, 1, folder + "gems/blazing_bone");
+		//materialRecipe(consumer, MaterialIds.venombone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "venombone"))), 1, 1, folder + "gems/venombone");
+		//materialRecipe(consumer, MaterialIds.scorchedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "scorched_stone"))), 1, 1, folder + "gems/scorched_stone");
+		//materialRecipe(consumer, MaterialIds.searedStone, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "seared_stone"))), 1, 1, folder + "gems/seared_stone");
+		//materialRecipe(consumer, MaterialIds.enderPearl, Ingredient.of(Items.ENDER_PEARL), 1, 1, folder + "gems/ender_pearl");
+		//materialRecipe(consumer, MaterialIds.whitestone, Ingredient.of(Items.END_STONE), 1, 1, folder + "gems/end_stone");
 
 		materialRecipe(consumer, JewelryMaterials.hematite, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("tinkers_things", "hematite"))), 1, 1, folder + "gems/hematite");
+		materialRecipe(consumer, JewelryMaterials.ichor_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");
+		materialRecipe(consumer, JewelryMaterials.earth_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "earth_slime_crystal"))), 1, 1, folder + "gems/earth_slime_crystal");
+		materialRecipe(consumer, JewelryMaterials.sky_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "sky_slime_crystal"))), 1, 1, folder + "gems/sky_slime_crystal");
+		materialRecipe(consumer, JewelryMaterials.ender_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ender_slime_crystal"))), 1, 1, folder + "gems/ender_slime_crystal");
+
 	}
 
 	public void optionalMaterialRecipe(Consumer<FinishedRecipe> consumer, MaterialVariantId material, TagKey<Item> tag, int value, int needed, String saveName) {

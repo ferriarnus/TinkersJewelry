@@ -25,12 +25,12 @@
   "item.tinkersjewelry.book.tooltip": "A guide to looking fabulous\nby Ferri",
 
   "pattern.tinkersjewelry.gem" : "Gem",
-  "pattern.tinkersjewelry.blank_band" : "Plain Ring",
+  "pattern.tinkersjewelry.plain_ring" : "Plain Ring",
 
   "itemGroup.tinkersjewelry.all": "Tinker's Jewelry",
 
   "stat.tinkersjewelry.gem": "Gem",
-  "stat.tinkersjewelry.blank_band": "Plain Ring",
+  "stat.tinkersjewelry.plain_ring": "Plain Ring",
   
   "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
   "modifier.tinkersjewelry.rage_gem.flavor": "Gives an attack speed boost",
@@ -200,6 +200,11 @@
   "material.tinkersjewelry.glowstone": "Glowstone",
   "material.tinkersjewelry.prismarine_crystal": "Prismarine Crystal",
   "material.tinkersjewelry.purpur": "Purpur",
+
+  "material.tinkersjewelry.earth_crystal": "Earthslime",
+  "material.tinkersjewelry.sky_crystal": "Skyslime",
+  "material.tinkersjewelry.ichor_crystal": "Ichor",
+  "material.tinkersjewelry.ender_crystal": "Enderslime",
 
   "material.tinkersjewelry.eudialyte": "Eudialyte",
   "material.tinkersjewelry.fire_opal": "Fire Opal",
