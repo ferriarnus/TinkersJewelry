@@ -31,7 +31,7 @@ public class CurrentHealthDamageGemModifier extends AbstractGemModifier {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         int level = toolStack.getModifierLevel(JewelryModifiers.CURRENT_HEALTH_DAMAGE_GEM.getId());
         double effect = (0.1 * level * amp);
         attributeModifiers.put(ALObjects.Attributes.CURRENT_HP_DAMAGE.get(), new AttributeModifier(uuid, "tinkersjewelry:currenthealtdamagegem", effect, AttributeModifier.Operation.ADDITION));

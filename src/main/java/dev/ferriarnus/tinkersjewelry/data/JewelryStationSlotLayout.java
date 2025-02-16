@@ -16,7 +16,7 @@ public class JewelryStationSlotLayout extends AbstractStationSlotLayoutProvider 
 		
 		defineModifiable(ItemRegistry.RING)
 		.sortIndex(SORT_HARVEST)
-		.addInputItem(ItemRegistry.BLANK_BAND, 15   , 60)
+		.addInputItem(ItemRegistry.PLAIN_RING, 15   , 60)
 		.addInputItem(ItemRegistry.GEM,  53, 22)
 		.build();
 		

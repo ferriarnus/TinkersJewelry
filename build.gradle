@@ -159,7 +159,7 @@ dependencies {
     modRuntimeOnly("curse.maven:tinkers-things-json-811436:6105999")
     modRuntimeOnly("curse.maven:json-things-541617:6100175")
 
-
+    modRuntimeOnly("curse.maven:ato-405593:5348605")
 
 }
 

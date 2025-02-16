@@ -33,7 +33,7 @@ public class MiningSpeedGemModifier extends AbstractGemModifier {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         int level = toolStack.getModifierLevel(JewelryModifiers.MINING_SPEED_GEM.getId());
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = 0.25 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.MINING_SPEED.get(), new AttributeModifier(uuid, "tinkersjewelry:miningspeedgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
         return attributeModifiers;

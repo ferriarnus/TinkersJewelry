@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/fluorite"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gems/fluorite"
+  },
+  "material": "tinkersjewelry:fluorite",
+  "needed": 1,
+  "value": 1
+}

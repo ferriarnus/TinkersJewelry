@@ -28,7 +28,7 @@ public class RageGemModifier extends AbstractGemModifier{
 		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
 		ToolStack toolStack = ToolStack.from(stack);
 		int level = toolStack.getModifierLevel(JewelryModifiers.RAGE_GEM.getId()) - 1;
-		float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+		float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
 		double effect = (1.25D + 0.25 * level) * amp;
 		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:ragegem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
 		return attributeModifiers;

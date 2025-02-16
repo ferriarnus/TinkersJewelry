@@ -15,7 +15,7 @@ import slimeknights.tconstruct.shared.CommonsClientEvents;
 
 public class JewerlyBook {
     private static final ResourceLocation JEWELRY_BOOK_RL = new ResourceLocation(TinkersJewelry.MODID, "jewelry");
-    public static final ResourceLocation BLANK_BAND = new ResourceLocation(TinkersJewelry.MODID, "blank_band");
+    public static final ResourceLocation PLAIN_RING = new ResourceLocation(TinkersJewelry.MODID, "plain_ring");
     public static final ResourceLocation GEM = new ResourceLocation(TinkersJewelry.MODID, "gem");
     public static final BookData JEWELRY_BOOK = BookLoader.registerBook(JEWELRY_BOOK_RL, false, false);
 
@@ -25,7 +25,7 @@ public class JewerlyBook {
 
         JEWELRY_BOOK.fontRenderer = CommonsClientEvents.unicodeFontRender();
 
-        TierRangeMaterialSectionTransformer.registerMaterialType(BLANK_BAND, BlankBandMaterialContent::new, BlankBandMaterialStats.ID);
+        TierRangeMaterialSectionTransformer.registerMaterialType(PLAIN_RING, BlankBandMaterialContent::new, BlankBandMaterialStats.ID);
         TierRangeMaterialSectionTransformer.registerMaterialType(GEM, GemMaterialContent::new, GemMaterialStats.ID);
 
         JEWELRY_BOOK.addTransformer(ToolTagInjectorTransformer.INSTANCE);

@@ -23,7 +23,7 @@ public class JewelryToolsRecipe extends RecipeProvider implements IMaterialRecip
 		String castFolder = "smeltery/casts/";
 		String folder = "tools/building/";
 		toolBuilding(consumer, ItemRegistry.RING, folder);
-		partRecipes(consumer, ItemRegistry.BLANK_BAND.get(), ItemRegistry.BLANK_BAND_CAST, 1, partFolder, castFolder);
+		partRecipes(consumer, ItemRegistry.PLAIN_RING.get(), ItemRegistry.PLAIN_RING_CAST, 1, partFolder, castFolder);
 		uncastablePart(consumer, ItemRegistry.GEM.get(), 1, null, partFolder);
 
 	}

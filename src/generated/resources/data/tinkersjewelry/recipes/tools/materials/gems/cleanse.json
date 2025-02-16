@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:cleanse_gem"
+    "item": "tinkersjewelry:milky_quartz"
   },
-  "material": "tinkersjewelry:cleanse_gem",
+  "material": "tinkersjewelry:milky_quartz",
   "needed": 1,
   "value": 1
 }

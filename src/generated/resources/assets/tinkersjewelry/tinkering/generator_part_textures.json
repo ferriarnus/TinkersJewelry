@@ -1,6 +1,24 @@
 {
   "overrides": {
-    "tinkersjewelry:blank_band": [
+    "tinkersjewelry:gem": [
+      "tconstruct:rock",
+      "tconstruct:ichor",
+      "tconstruct:flint",
+      "tconstruct:obsidian",
+      "tconstruct:enderslime",
+      "tconstruct:skyslime",
+      "tconstruct:earthslime",
+      "tconstruct:necrotic_bone",
+      "tconstruct:bone",
+      "tconstruct:blazing_bone",
+      "tconstruct:venombone",
+      "tconstruct:scorched_stone",
+      "tconstruct:seared_stone",
+      "tconstruct:ender_pearl",
+      "tconstruct:whitestone",
+      "tconstruct:necronium"
+    ],
+    "tinkersjewelry:plain_ring": [
       "tconstruct:copper",
       "tconstruct:iron",
       "tconstruct:gold",
@@ -18,30 +36,13 @@
       "tconstruct:bronze",
       "tconstruct:constantan",
       "tconstruct:invar",
-      "tconstruct:necronium",
       "tconstruct:electrum",
       "tconstruct:plated_slimewood",
       "tconstruct:manyullyn",
       "tconstruct:queens_slime",
       "tconstruct:cobalt",
-      "tconstruct:hepatizon"
-    ],
-    "tinkersjewelry:gem": [
-      "tconstruct:rock",
-      "tconstruct:ichor",
-      "tconstruct:flint",
-      "tconstruct:obsidian",
-      "tconstruct:enderslime",
-      "tconstruct:skyslime",
-      "tconstruct:earthslime",
-      "tconstruct:necrotic_bone",
-      "tconstruct:bone",
-      "tconstruct:blazing_bone",
-      "tconstruct:venombone",
-      "tconstruct:scorched_stone",
-      "tconstruct:seared_stone",
-      "tconstruct:ender_pearl",
-      "tconstruct:whitestone"
+      "tconstruct:hepatizon",
+      "tinkers_things:hematite"
     ]
   },
   "parts": [
@@ -50,16 +51,16 @@
       "stat_type": "tinkersjewelry:gem"
     },
     {
-      "path": "tinkersjewelry:item/tool/parts/blank_band",
-      "stat_type": "tinkersjewelry:blank_band"
+      "path": "tinkersjewelry:item/tool/parts/plain_ring",
+      "stat_type": "tinkersjewelry:plain_ring"
     },
     {
       "path": "tinkersjewelry:item/tool/ring/gem",
       "stat_type": "tinkersjewelry:gem"
     },
     {
-      "path": "tinkersjewelry:item/tool/ring/blank_band",
-      "stat_type": "tinkersjewelry:blank_band"
+      "path": "tinkersjewelry:item/tool/ring/plain_ring",
+      "stat_type": "tinkersjewelry:plain_ring"
     }
   ],
   "replace": false

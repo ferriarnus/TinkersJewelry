@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:exp_gem"
+    "item": "tinkersjewelry:prehnite"
   },
-  "material": "tinkersjewelry:exp_gem",
+  "material": "tinkersjewelry:prehnite",
   "needed": 1,
   "value": 1
 }

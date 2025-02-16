@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:health_gem"
+    "item": "tinkersjewelry:rubellite"
   },
-  "material": "tinkersjewelry:health_gem",
+  "material": "tinkersjewelry:rubellite",
   "needed": 1,
   "value": 1
 }

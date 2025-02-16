@@ -39,15 +39,22 @@ public class JewelryMaterialRenderInfo extends AbstractMaterialRenderInfoProvide
 		buildRenderInfo(JewelryMaterials.echo_shard).color(0x0a5060);
 		buildRenderInfo(JewelryMaterials.glowstone).color(0xebaa4e);
 		buildRenderInfo(JewelryMaterials.prismarine_crystal).color(0xb4d8ca);
+		buildRenderInfo(JewelryMaterials.purpur).color(0xac7bac);
 
-		buildRenderInfo(JewelryMaterials.blood_gem).color(0x851228);
-		buildRenderInfo(JewelryMaterials.poison_gem).color(0x055938);
-		buildRenderInfo(JewelryMaterials.blazing_gem).color(0xff8d76);
-		buildRenderInfo(JewelryMaterials.speed_gem).color(0xe29f11);
-		buildRenderInfo(JewelryMaterials.cleanse_gem).color(0xe0dce5);
-		buildRenderInfo(JewelryMaterials.nightvision_gem).color(0x717297);
-		buildRenderInfo(JewelryMaterials.exp_gem).color(0xb2e755);
-		buildRenderInfo(JewelryMaterials.health_gem).color(0xff4d99);
+		buildRenderInfo(JewelryMaterials.eudialyte).color(0x851228);
+		buildRenderInfo(JewelryMaterials.malachite).color(0x055938);
+		buildRenderInfo(JewelryMaterials.fire_opal).color(0xff8d76);
+		buildRenderInfo(JewelryMaterials.calcite).color(0xe29f11);
+		buildRenderInfo(JewelryMaterials.milky_quartz).color(0xe0dce5);
+		buildRenderInfo(JewelryMaterials.merlinite).color(0x717297);
+		buildRenderInfo(JewelryMaterials.prehnite).color(0xb2e755);
+		buildRenderInfo(JewelryMaterials.rubellite).color(0xff4d99);
+
+		buildRenderInfo(JewelryMaterials.ruby).color(0xea1e65);
+		buildRenderInfo(JewelryMaterials.peridot).color(0xd5e431);
+		buildRenderInfo(JewelryMaterials.sapphire).color(0x44a0fc);
+		buildRenderInfo(JewelryMaterials.cinnabar).color(0xd1716e);
+		buildRenderInfo(JewelryMaterials.cinnabar).color(0x6ea6e0);
 	}
 
 }

@@ -31,15 +31,22 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider {
 		addMaterial(JewelryMaterials.echo_shard, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.glowstone, 3, ORDER_SPECIAL, true);
 		addMaterial(JewelryMaterials.prismarine_crystal, 3, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.purpur, 3, ORDER_SPECIAL, true);
 
-		addMaterial(JewelryMaterials.blood_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.poison_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.blazing_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.speed_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.cleanse_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.nightvision_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.exp_gem, 2, ORDER_SPECIAL, true);
-		addMaterial(JewelryMaterials.health_gem, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.eudialyte, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.malachite, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.fire_opal, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.calcite, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.milky_quartz, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.merlinite, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.prehnite, 2, ORDER_SPECIAL, true);
+		addMaterial(JewelryMaterials.rubellite, 2, ORDER_SPECIAL, true);
+
+		addCompatMaterial(JewelryMaterials.ruby, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.RUBY_GEM.location().getPath());
+		addCompatMaterial(JewelryMaterials.peridot, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.PERIDOT_GEM.location().getPath());
+		addCompatMaterial(JewelryMaterials.sapphire, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.SAPPHIRE_GEM.location().getPath());
+		addCompatMaterial(JewelryMaterials.cinnabar, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.CINNABAR_GEM.location().getPath());
+		addCompatMaterial(JewelryMaterials.fluorite, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.FLUORITE_GEM.location().getPath());
 
 		addMaterial(MaterialIds.obsidian,3, ORDER_WEAPON, true);
 		addMaterial(MaterialIds.enderPearl, 2, ORDER_REPAIR, true);

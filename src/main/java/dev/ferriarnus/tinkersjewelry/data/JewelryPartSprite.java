@@ -15,11 +15,11 @@ public class JewelryPartSprite extends AbstractPartSpriteProvider {
 	@Override
 	protected void addAllSpites() {
 		addPart("gem", GemMaterialStats.ID);
-		addPart("blank_band", BlankBandMaterialStats.ID);
+		addPart("plain_ring", BlankBandMaterialStats.ID);
 
 		buildTool("ring")
 		    .addPart("gem", GemMaterialStats.ID)
-			.addPart("blank_band", BlankBandMaterialStats.ID);
+			.addPart("plain_ring", BlankBandMaterialStats.ID);
 		
 	}
 

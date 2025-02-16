@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:poison_gem"
+    "item": "tinkersjewelry:malachite"
   },
-  "material": "tinkersjewelry:poison_gem",
+  "material": "tinkersjewelry:malachite",
   "needed": 1,
   "value": 1
 }

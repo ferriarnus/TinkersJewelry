@@ -26,7 +26,7 @@ public class PiercingGemModifier extends AbstractGemModifier{
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         int level = toolStack.getModifierLevel(JewelryModifiers.PIERCING_GEM.getId()) - 1;
         double effect = (0.1 + level * 0.05)* amp;
         attributeModifiers.put(ALObjects.Attributes.ARMOR_PIERCE.get(), new AttributeModifier(uuid, "tinkersjewelry:fireresistancegem", effect, AttributeModifier.Operation.ADDITION));

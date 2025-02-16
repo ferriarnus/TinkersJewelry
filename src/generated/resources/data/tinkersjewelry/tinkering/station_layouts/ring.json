@@ -6,10 +6,10 @@
   "input_slots": [
     {
       "filter": {
-        "item": "tinkersjewelry:blank_band"
+        "item": "tinkersjewelry:plain_ring"
       },
-      "icon": "tinkersjewelry:blank_band",
-      "translation_key": "item.tinkersjewelry.blank_band",
+      "icon": "tinkersjewelry:plain_ring",
+      "translation_key": "item.tinkersjewelry.plain_ring",
       "x": 15,
       "y": 60
     },

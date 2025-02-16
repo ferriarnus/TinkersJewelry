@@ -43,7 +43,7 @@
     "icon": {
       "item": {
         "type": "forge:nbt",
-        "item": "tinkersjewelry:blank_band",
+        "item": "tinkersjewelry:plain_ring",
         "nbt": {
           "Material": "tinkersjewelry:ui_render#blank_band",
           "tic_display": true

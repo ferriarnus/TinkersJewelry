@@ -48,6 +48,7 @@ public class JewelryModifiers {
 	public static final StaticModifier<AntiHealGemModifier> ANTI_HEAL_GEM = MODIFIERS.register("antiheal_gem", AntiHealGemModifier::new);
 	public static final StaticModifier<GlowingGemModifier> GLOWING_GEM = MODIFIERS.register("glowing_gem", GlowingGemModifier::new);
 	public static final StaticModifier<DarknessGemModifier> DARKNESS_GEM = MODIFIERS.register("darkness_gem", DarknessGemModifier::new);
+	public static final StaticModifier<KnockBackGemModifier> KNOCKBACK_GEM = MODIFIERS.register("knockback_gem", KnockBackGemModifier::new);
 
 	public static final DynamicModifier UNDYING = MODIFIERS.registerDynamic("undying");
 

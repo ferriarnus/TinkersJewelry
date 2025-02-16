@@ -1,7 +1,10 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
 import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
+import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
+import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -12,6 +15,7 @@ import net.minecraft.world.item.TooltipFlag;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -28,7 +32,10 @@ public class PoisonGemModifier extends AbstractGemModifier{
         if (defender == null || defender.hasEffect(MobEffects.POISON)) {
             return;
         }
-        defender.addEffect(new MobEffectInstance(MobEffects.POISON, 200));
+        ToolStack tool = ToolStack.from(stack);
+        float amp = tool.getStats().get(JewelryToolStats.AMPLIFICATION);
+        int level = tool.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
+        defender.addEffect(new MobEffectInstance(MobEffects.POISON, Mth.floor(100 * level * amp)));
         damageTool(stack, 1, attacker);
     }
 

@@ -3,7 +3,7 @@
     {
       "type": "tconstruct:part_stats",
       "parts": [
-        "tinkersjewelry:blank_band",
+        "tinkersjewelry:plain_ring",
         "tinkersjewelry:gem"
       ],
       "primary_part": 0

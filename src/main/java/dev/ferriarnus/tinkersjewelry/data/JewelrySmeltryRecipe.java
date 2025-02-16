@@ -27,42 +27,42 @@ public class JewelrySmeltryRecipe extends RecipeProvider implements ISmelteryRec
 
     public void castingRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "smeltery/casting/";
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLOOD_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.EUDIALYTE)
                 .setFluidAndTime(TinkerFluids.meatSoup, FluidValues.BOWL)
                 .setCast(Items.DIAMOND, true)
                 .save(consumer, location(folder + "blood/bloodgem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.BLAZING_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.FIRE_OPAL)
                 .setFluidAndTime(TinkerFluids.blazingBlood, FluidValues.GEM)
                 .setCast(Items.GLOWSTONE_DUST, true)
                 .save(consumer, location(folder + "blazingblood/blazinggem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.POISON_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.MALACHITE)
                 .setFluidAndTime(TinkerFluids.venom, FluidValues.GEM)
                 .setCast(Items.EMERALD, true)
                 .save(consumer, location(folder + "venom/spidergem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.SPEED_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.CALCITE)
                 .setFluidAndTime(TinkerFluids.honey, FluidValues.GEM)
                 .setCast(Items.SUGAR, true)
                 .save(consumer, location(folder + "honey/speedgem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.CLEANSE_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.MILKY_QUARTZ)
                 .setFluidAndTime(new FluidStack(ForgeMod.MILK.get(), FluidType.BUCKET_VOLUME))
                 .setCast(Items.QUARTZ, true)
                 .save(consumer, location(folder + "milk/cleansegem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.NIGHTVISION_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.MERLINITE)
                 .setFluidAndTime(TinkerFluids.moltenObsidian, FluidValues.GLASS_BLOCK)
                 .setCast(Items.GLOWSTONE_DUST, true)
                 .save(consumer, location(folder + "obsidian/nightvisiongem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.EXP_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.PREHNITE)
                 .setFluidAndTime(TinkerFluids.moltenEmerald, FluidValues.GEM)
                 .setCast(Items.EXPERIENCE_BOTTLE, true)
                 .save(consumer, location(folder + "moltenemerald/expgem"));
 
-        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.HEALTH_GEM)
+        ItemCastingRecipeBuilder.tableRecipe(ItemRegistry.RUBELLITE)
                 .setFluidAndTime(TinkerFluids.beetrootSoup, FluidValues.BOWL)
                 .setCast(Items.APPLE, true)
                 .save(consumer, location(folder + "beetrootsoup/healthgem"));

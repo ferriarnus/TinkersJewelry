@@ -3,10 +3,10 @@
   "parent": "forge:item/default-tool",
   "textures": {
     "gem": "tinkersjewelry:item/tool/ring/gem",
-    "blank_band": "tinkersjewelry:item/tool/ring/blank_band"
+    "plain_ring": "tinkersjewelry:item/tool/ring/plain_ring"
   },
   "parts": [
-    { "name": "blank_band", "index": 0 },
+    { "name": "plain_ring", "index": 0 },
     { "name": "gem",   "index": 1 , "broken": "gem"}
   ]
 }

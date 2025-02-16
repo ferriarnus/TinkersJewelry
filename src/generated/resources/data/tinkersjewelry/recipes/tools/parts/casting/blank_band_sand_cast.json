@@ -1,9 +1,0 @@
-{
-  "type": "tconstruct:table_casting_material",
-  "cast": {
-    "tag": "tinkersjewelry:casts/single_use/blank_band"
-  },
-  "cast_consumed": true,
-  "item_cost": 1,
-  "result": "tinkersjewelry:blank_band"
-}

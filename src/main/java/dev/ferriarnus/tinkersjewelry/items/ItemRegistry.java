@@ -44,21 +44,21 @@ public class ItemRegistry {
 	}
 
 	//Materials
-	public static final ItemObject<Item> BLOOD_GEM = ITEMS.register("blood_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> BLAZING_GEM = ITEMS.register("blazing_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> POISON_GEM = ITEMS.register("poison_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> SPEED_GEM = ITEMS.register("speed_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> CLEANSE_GEM = ITEMS.register("cleanse_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> NIGHTVISION_GEM = ITEMS.register("nightvision_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> EXP_GEM = ITEMS.register("exp_gem", () -> new TooltipItem(new Item.Properties()));
-	public static final ItemObject<Item> HEALTH_GEM = ITEMS.register("health_gem", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> EUDIALYTE = ITEMS.register("eudialyte", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> FIRE_OPAL = ITEMS.register("fire_opal", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> MALACHITE = ITEMS.register("malachite", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> CALCITE = ITEMS.register("calcite", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> MILKY_QUARTZ = ITEMS.register("milky_quartz", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> MERLINITE = ITEMS.register("merlinite", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> PREHNITE = ITEMS.register("prehnite", () -> new TooltipItem(new Item.Properties()));
+	public static final ItemObject<Item> RUBELLITE = ITEMS.register("rubellite", () -> new TooltipItem(new Item.Properties()));
 
 	//Toolparts
-	public static final ItemObject<ToolPartItem> BLANK_BAND = ITEMS.register("blank_band", () -> new ToolPartItem(PARTS_PROPS, BlankBandMaterialStats.ID));
+	public static final ItemObject<ToolPartItem> PLAIN_RING = ITEMS.register("plain_ring", () -> new ToolPartItem(PARTS_PROPS, BlankBandMaterialStats.ID));
 	public static final ItemObject<ToolPartItem> GEM = ITEMS.register("gem", () -> new ToolPartItem(PARTS_PROPS, GemMaterialStats.ID));
 
 	//Casts
-	public static final CastItemObject BLANK_BAND_CAST = ITEMS.registerCast(BLANK_BAND, PARTS_PROPS);
+	public static final CastItemObject PLAIN_RING_CAST = ITEMS.registerCast(PLAIN_RING, PARTS_PROPS);
 
 	//Tools
 	public static final ItemObject<CuriosRingItem> RING = ITEMS.register("ring", () -> new CuriosRingItem(PARTS_PROPS, JewelryDefinitions.RING));
@@ -84,19 +84,19 @@ public class ItemRegistry {
 		Consumer<ItemStack> output = tab::accept;
 		output.accept(new ItemStack(BOOK));
 		acceptTool(output, RING);
-		accept(output, BLANK_BAND);
+		accept(output, PLAIN_RING);
 		accept(output, GEM);
-		output.accept(new ItemStack(BLOOD_GEM.get()));
-		output.accept(new ItemStack(BLAZING_GEM.get()));
-		output.accept(new ItemStack(POISON_GEM.get()));
-		output.accept(new ItemStack(SPEED_GEM.get()));
-		output.accept(new ItemStack(CLEANSE_GEM.get()));
-		output.accept(new ItemStack(NIGHTVISION_GEM.get()));
-		output.accept(new ItemStack(EXP_GEM.get()));
-		output.accept(new ItemStack(HEALTH_GEM.get()));
-		output.accept(new ItemStack(BLANK_BAND_CAST.get()));
-		output.accept(new ItemStack(BLANK_BAND_CAST.getSand()));
-		output.accept(new ItemStack(BLANK_BAND_CAST.getRedSand()));
+		output.accept(new ItemStack(EUDIALYTE.get()));
+		output.accept(new ItemStack(FIRE_OPAL.get()));
+		output.accept(new ItemStack(MALACHITE.get()));
+		output.accept(new ItemStack(CALCITE.get()));
+		output.accept(new ItemStack(MILKY_QUARTZ.get()));
+		output.accept(new ItemStack(MERLINITE.get()));
+		output.accept(new ItemStack(PREHNITE.get()));
+		output.accept(new ItemStack(RUBELLITE.get()));
+		output.accept(new ItemStack(PLAIN_RING_CAST.get()));
+		output.accept(new ItemStack(PLAIN_RING_CAST.getSand()));
+		output.accept(new ItemStack(PLAIN_RING_CAST.getRedSand()));
 	}
 
 	private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {

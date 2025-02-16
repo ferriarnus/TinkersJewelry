@@ -1,9 +1,9 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-    "item": "tinkersjewelry:blazing_gem"
+    "item": "tinkersjewelry:fire_opal"
   },
-  "material": "tinkersjewelry:blazing_gem",
+  "material": "tinkersjewelry:fire_opal",
   "needed": 1,
   "value": 1
 }

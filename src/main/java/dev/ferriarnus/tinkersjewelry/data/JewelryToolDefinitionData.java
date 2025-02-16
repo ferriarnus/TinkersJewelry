@@ -24,7 +24,7 @@ public class JewelryToolDefinitionData extends AbstractToolDefinitionDataProvide
 
 		define(JewelryDefinitions.RING)
 			.module(PartStatsModule.parts()
-				.part(ItemRegistry.BLANK_BAND)
+				.part(ItemRegistry.PLAIN_RING)
 				.part(ItemRegistry.GEM).build())
 			.module(defaultTwoParts)
 			.module(OverSlimeDebufModule.INSTANCE)

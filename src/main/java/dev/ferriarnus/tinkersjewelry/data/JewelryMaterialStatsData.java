@@ -43,7 +43,6 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.bronze, new BlankBandMaterialStats(760, 1.3f));
 		addMaterialStats(MaterialIds.constantan, new BlankBandMaterialStats(675, 1.4f));
 		addMaterialStats(MaterialIds.invar, new BlankBandMaterialStats(630, 1.1f));
-		addMaterialStats(MaterialIds.necronium, new BlankBandMaterialStats(357, 0.9f));
 		addMaterialStats(MaterialIds.electrum, new BlankBandMaterialStats(225, 1.5f));
 		addMaterialStats(MaterialIds.platedSlimewood, new BlankBandMaterialStats(595, 0.9f));
 
@@ -51,9 +50,10 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.hepatizon, new BlankBandMaterialStats(975, 1.3f));
 		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
 
+		addMaterialStats(JewelryMaterials.hematite, new BlankBandMaterialStats(1111, 1.5f));
 
 		addMaterialStats(JewelryMaterials.redstone, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.blood_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.eudialyte, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.lapis, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.netherstar, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.scute, GemMaterialStats.INSTANCE);
@@ -67,14 +67,21 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(JewelryMaterials.echo_shard, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.glowstone, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.prismarine_crystal, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.purpur, GemMaterialStats.INSTANCE);
 
-		addMaterialStats(JewelryMaterials.poison_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.blazing_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.speed_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.cleanse_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.nightvision_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.exp_gem, GemMaterialStats.INSTANCE);
-		addMaterialStats(JewelryMaterials.health_gem, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.malachite, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.fire_opal, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.calcite, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.milky_quartz, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.merlinite, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.prehnite, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.rubellite, GemMaterialStats.INSTANCE);
+
+		addMaterialStats(JewelryMaterials.ruby, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.peridot, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.sapphire, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.cinnabar, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.fluorite, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(MaterialIds.rock, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.ichor, GemMaterialStats.INSTANCE);
@@ -91,6 +98,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.searedStone, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.enderPearl, GemMaterialStats.INSTANCE);
 		addMaterialStats(MaterialIds.whitestone, GemMaterialStats.INSTANCE);
+		addMaterialStats(MaterialIds.necronium, GemMaterialStats.INSTANCE);
 
 	}
 

@@ -1,8 +1,0 @@
-{
-  "type": "tconstruct:item_part_builder",
-  "pattern": "tinkersjewelry:blank_band",
-  "pattern_item": {
-    "tag": "tconstruct:casts/red_sand"
-  },
-  "result": "tinkersjewelry:blank_band_red_sand_cast"
-}

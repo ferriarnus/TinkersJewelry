@@ -100,13 +100,14 @@ public class TinkersJewelry {
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.bronze.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.constantan.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.invar.getId());
-		builder.add(BlankBandMaterialStats.ID, MaterialIds.necronium.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.electrum.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.platedSlimewood.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.manyullyn.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.queensSlime.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.cobalt.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.hepatizon.getId());
+
+		builder.add(BlankBandMaterialStats.ID, JewelryMaterials.hematite);
 
 		builder.add(GemMaterialStats.ID, MaterialIds.rock.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.ichor.getId());
@@ -123,6 +124,7 @@ public class TinkersJewelry {
 		builder.add(GemMaterialStats.ID, MaterialIds.searedStone.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.enderPearl.getId());
 		builder.add(GemMaterialStats.ID, MaterialIds.whitestone.getId());
+		builder.add(GemMaterialStats.ID, MaterialIds.necronium.getId());
 
 		GeneratorPartTextureJsonGenerator.StatOverride overrides = builder.build();
 

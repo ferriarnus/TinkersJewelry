@@ -26,9 +26,9 @@ public class FlameGemModifier extends AbstractGemModifier{
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         int level = toolStack.getModifierLevel(JewelryModifiers.FLAME_GEM.getId());
-        double effect = (3 + 2 * level) * amp;
+        double effect = level * amp;
         attributeModifiers.put(ALObjects.Attributes.FIRE_DAMAGE.get(), new AttributeModifier(uuid, "tinkersjewelry:flame", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }

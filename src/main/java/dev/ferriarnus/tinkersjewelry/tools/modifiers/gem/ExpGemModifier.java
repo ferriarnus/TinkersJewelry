@@ -33,7 +33,7 @@ public class ExpGemModifier extends AbstractGemModifier{
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
         int level = toolStack.getModifierLevel(JewelryModifiers.EXP_GEM.getId());
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = 0.20 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.EXPERIENCE_GAINED.get(), new AttributeModifier(uuid, "tinkersjewelry:expgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;

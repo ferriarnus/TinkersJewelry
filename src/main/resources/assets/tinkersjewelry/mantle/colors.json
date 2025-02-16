@@ -30,6 +30,7 @@
     "enderclearance_gem": "#316364",
     "glowing_gem": "#ebaa4e",
     "darkness_gem": "#4D4D4D",
+    "knockback_gem": "#ac7bac",
 
     "precious": "#FDF55F",
     "polish": "#fdfbee",
@@ -50,15 +51,22 @@
     "ender_eye": "#316364",
     "echo_shard": "#0a5060",
     "glowstone": "#ffbc5e",
-    "prismarine_crystal": "b4d8ca",
+    "prismarine_crystal": "#b4d8ca",
+    "purpur": "#ac7bac",
 
-    "blood_gem": "#851228",
-    "blazing_gem": "#ff8d76",
-    "poison_gem": "#055938",
-    "speed_gem": "#e29f11",
-    "cleanse_gem": "#e0dce5",
-    "nightvision_gem": "#717297",
-    "exp_gem": "#b2e755",
-    "health_gem": "#ff4d99"
+    "eudialyte": "#851228",
+    "fire_opal": "#ff8d76",
+    "malachite": "#055938",
+    "calcite": "#e29f11",
+    "milky_quartz": "#e0dce5",
+    "merlinite": "#717297",
+    "prehnite": "#b2e755",
+    "rubellite": "#ff4d99",
+
+    "ruby": "#ea1e65",
+    "peridot": "#d5e431",
+    "sapphire": "#44a0fc",
+    "cinnabar": "#d1716e",
+    "fluorite": "#6ea6e0"
   }
 }

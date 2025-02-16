@@ -33,7 +33,7 @@ public class BlankBandMaterialContent extends AbstractMaterialContent {
 
     @Override
     protected String getTextKey(MaterialId materialId) {
-        return "blank_band";
+        return "plain_ring";
     }
 
     @Override

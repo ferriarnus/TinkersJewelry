@@ -27,7 +27,7 @@ public class ReachGemModifier extends AbstractGemModifier {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         int level = toolStack.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
         double effect = level * amp;
         attributeModifiers.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:reachgem", effect, AttributeModifier.Operation.ADDITION));

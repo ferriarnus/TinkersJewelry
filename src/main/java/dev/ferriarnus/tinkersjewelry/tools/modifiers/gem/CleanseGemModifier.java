@@ -1,6 +1,8 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
 import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
+import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
+import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -31,10 +33,13 @@ public class CleanseGemModifier extends AbstractGemModifier{
             return;
         }
         List<MobEffectInstance> badEffects = entity.getActiveEffects().stream().filter(e -> !e.getEffect().isBeneficial()).toList();
+        ToolStack toolStack = ToolStack.from(stack);
+        int level = toolStack.getModifierLevel(JewelryModifiers.CLEANSE_GEM.getId());
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         for (MobEffectInstance effect : badEffects) {
             int duration = effect.getDuration();
             entity.removeEffect(effect.getEffect());
-            damageTool(stack, Mth.ceil(duration / 200f), entity);
+            damageTool(stack, Mth.ceil(duration / (300f * level * amp)), entity);
             if (ToolStack.from(stack).isBroken()) {
                 break;
             }
