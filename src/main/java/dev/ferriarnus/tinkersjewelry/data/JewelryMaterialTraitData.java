@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataProvider;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
@@ -79,28 +80,26 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 
 		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.iron, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.iron, BlankBandMaterialStats.ID, JewelryModifiers.MAGNETIC);
 		addTraits(MaterialIds.gold, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
 
-		addTraits(MaterialIds.osmium, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.osmium, BlankBandMaterialStats.ID, ModifierIds.dense);
 		addTraits(MaterialIds.tungsten, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.platinum, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
 		addTraits(MaterialIds.silver, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
-		addTraits(MaterialIds.lead, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.lead, BlankBandMaterialStats.ID, ModifierIds.dense);
 
 		addTraits(MaterialIds.slimesteel, BlankBandMaterialStats.ID, new ModifierEntry(ModifierIds.overcast, 1), new ModifierEntry(TinkerModifiers.overslime, 1));
-		addTraits(MaterialIds.amethystBronze, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1)); //remove trait
-		addTraits(MaterialIds.nahuatl, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.pigIron, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.roseGold, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
+		addTraits(MaterialIds.amethystBronze, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
+		addTraits(MaterialIds.pigIron, BlankBandMaterialStats.ID, TinkerModifiers.tasty );
+		addTraits(MaterialIds.roseGold, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1), new ModifierEntry(ModifierIds.enhanced, 1));
 		addTraits(MaterialIds.cobalt, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
-		addTraits(MaterialIds.steel, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.bronze, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.steel, BlankBandMaterialStats.ID, JewelryModifiers.DUCTILE);
+		addTraits(MaterialIds.bronze, BlankBandMaterialStats.ID, JewelryModifiers.MAINTAINED);
 		addTraits(MaterialIds.constantan, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.invar, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.electrum, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.platedSlimewood, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 
 		addTraits(MaterialIds.manyullyn, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.hepatizon, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait

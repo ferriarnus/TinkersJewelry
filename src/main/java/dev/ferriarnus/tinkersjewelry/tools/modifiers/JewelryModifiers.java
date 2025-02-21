@@ -16,6 +16,8 @@ public class JewelryModifiers {
 
 	public static final ModifierId PRECIOUS = id("precious");
 	public static final ModifierId POLISH = id("polish");
+	public static final ModifierId MAINTAINED = id("maintained");
+	public static final ModifierId DUCTILE = id("ductile");
 
 	public static final StaticModifier<RageGemModifier> RAGE_GEM = MODIFIERS.register("rage_gem", RageGemModifier::new);
 	public static final StaticModifier<FlyGemModifier> FLY_GEM = MODIFIERS.register("fly_gem", FlyGemModifier::new);
@@ -49,6 +51,7 @@ public class JewelryModifiers {
 	public static final StaticModifier<GlowingGemModifier> GLOWING_GEM = MODIFIERS.register("glowing_gem", GlowingGemModifier::new);
 	public static final StaticModifier<DarknessGemModifier> DARKNESS_GEM = MODIFIERS.register("darkness_gem", DarknessGemModifier::new);
 	public static final StaticModifier<KnockBackGemModifier> KNOCKBACK_GEM = MODIFIERS.register("knockback_gem", KnockBackGemModifier::new);
+	public static final StaticModifier<MagneticModifier> MAGNETIC = MODIFIERS.register("magnetic", MagneticModifier::new);
 
 	public static final DynamicModifier UNDYING = MODIFIERS.registerDynamic("undying");
 

@@ -69,7 +69,7 @@ public class JewelryMaterialSprite extends AbstractMaterialSpriteProvider {
 
 		buildMaterial(JewelryMaterials.prismarine_crystal)
 				.statType(GemMaterialStats.ID)
-				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF49645c).addARGB(102, 0xFF72a498).addARGB(140, 0xFF7cb3a4).addARGB(178, 0xFF91c5b7).addARGB(216, 0xFF4d8ca).addARGB(255, 0xFFdfe9dc).build());
+				.colorMapper(GreyToColorMapping.builderFromBlack().addARGB(63, 0xFF49645c).addARGB(102, 0xFF72a498).addARGB(140, 0xFF7cb3a4).addARGB(178, 0xFF91c5b7).addARGB(216, 0xFFb4d8ca).addARGB(255, 0xFFdfe9dc).build());
 
 		buildMaterial(JewelryMaterials.purpur)
 				.statType(GemMaterialStats.ID)

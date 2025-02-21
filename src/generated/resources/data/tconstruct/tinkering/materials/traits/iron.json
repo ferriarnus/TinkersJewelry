@@ -1,5 +1,10 @@
 {
   "perStat": {
-    "tinkersjewelry:plain_ring": []
+    "tinkersjewelry:plain_ring": [
+      {
+        "level": 1,
+        "name": "tinkersjewelry:magnetic"
+      }
+    ]
   }
 }

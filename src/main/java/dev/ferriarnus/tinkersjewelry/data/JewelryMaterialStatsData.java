@@ -34,7 +34,6 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 
 		addMaterialStats(MaterialIds.slimesteel, new BlankBandMaterialStats(1040, 1.2f));
 		addMaterialStats(MaterialIds.amethystBronze, new BlankBandMaterialStats(720, 1.3f));
-		addMaterialStats(MaterialIds.nahuatl, new BlankBandMaterialStats(350, 0.8f));
 		addMaterialStats(MaterialIds.pigIron, new BlankBandMaterialStats(580, 1.2f));
 		addMaterialStats(MaterialIds.roseGold, new BlankBandMaterialStats(175, 1.6f));
 		addMaterialStats(MaterialIds.cobalt, new BlankBandMaterialStats(850, 0.7f));
@@ -44,7 +43,6 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.constantan, new BlankBandMaterialStats(675, 1.4f));
 		addMaterialStats(MaterialIds.invar, new BlankBandMaterialStats(630, 1.1f));
 		addMaterialStats(MaterialIds.electrum, new BlankBandMaterialStats(225, 1.5f));
-		addMaterialStats(MaterialIds.platedSlimewood, new BlankBandMaterialStats(595, 0.9f));
 
 		addMaterialStats(MaterialIds.queensSlime, new BlankBandMaterialStats(1650, 1f));
 		addMaterialStats(MaterialIds.hepatizon, new BlankBandMaterialStats(975, 1.3f));

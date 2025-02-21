@@ -56,7 +56,6 @@ public class JewelryMaterials {
 	public static final MaterialId moonstone = id("moonstone");
 	public static final MaterialId onyx = id("onyx");
 
-
 	public static final MaterialId celestigem = id("celestigem");
 	public static final MaterialId certus_quartz_crystal = id("certus_quartz_crystal");
 	public static final MaterialId charged_certus_quartz_crystal = id("charged_certus_quartz_crystal");
