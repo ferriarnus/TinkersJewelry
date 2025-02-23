@@ -26,7 +26,7 @@ public class FireResistanceGemModifier extends AbstractGemModifier{
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity entity = slotContext.entity();
         if (entity.isOnFire() && !entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
-            entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200));
+            entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false));
             damageTool(stack, 1, entity);
         }
     }

@@ -160,6 +160,10 @@
   "modifier.tinkersjewelry.knockback_gem.flavor": "Grants attack knockback",
   "modifier.tinkersjewelry.knockback_gem": "Knockback",
 
+  "modifier.tinkersjewelry.wither_gem.description": "Applies Wither to the target",
+  "modifier.tinkersjewelry.wither_gem.flavor": "Applies Wither to the target",
+  "modifier.tinkersjewelry.wither_gem": "Wither",
+
   "modifier.tinkersjewelry.precious.description": "Gives an ability slot",
   "modifier.tinkersjewelry.precious.flavor": "That looks expensive",
   "modifier.tinkersjewelry.precious": "Precious",
@@ -172,6 +176,28 @@
   "modifier.tinkersjewelry.undying.description": "When taking lethal damage, survive on 1 hitpoint",
   "modifier.tinkersjewelry.undying.flavor": "Not today!",
   "modifier.tinkersjewelry.undying": "Undying",
+
+  "modifier.tinkersjewelry.magnetic.description": "You attract nearby items?!",
+  "modifier.tinkersjewelry.magnetic.flavor": "Magnetic Personality!",
+  "modifier.tinkersjewelry.magnetic": "Magnetic",
+
+  "modifier.tinkersjewelry.maintained.description": "Jewelry has a higher amplification",
+  "modifier.tinkersjewelry.maintained.flavor": "Stays shiny, Longer!",
+  "modifier.tinkersjewelry.maintained": "Maintained",
+
+  "modifier.tinkersjewelry.ductile.description": "Tool is longer lasting and amplifies more",
+  "modifier.tinkersjewelry.ductile.flavor": "Reshapes well!",
+  "modifier.tinkersjewelry.ductile": "Ductile",
+
+  "modifier.tinkersjewelry.invariant.amplification": "Neutral Amplification",
+  "modifier.tinkersjewelry.invariant.description": "Jewelry amplifies in neutral temperatures",
+  "modifier.tinkersjewelry.invariant.flavor": "Couldn't care less",
+  "modifier.tinkersjewelry.invariant": "Invariant",
+
+  "modifier.tinkersjewelry.temperate.amplification": "Temperate Amplification",
+  "modifier.tinkersjewelry.temperate.description": "Jewelry amplifies in extreme temperatures",
+  "modifier.tinkersjewelry.temperate.flavor": "Extreme!",
+  "modifier.tinkersjewelry.temperate": "Temperate",
 
   "tool_stat.tinkersjewelry.amplification": "Amplification: ",
   "tool_stat.tinkersjewelry.amplification.description": "Increases/decrease the strength of effects",

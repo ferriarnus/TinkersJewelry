@@ -57,13 +57,14 @@ public class JewelryModifierProvider extends AbstractModifierProvider {
                         .customVariable("durability").subtractFlipped()
                         .nonNegative().divideFlipped()
                         .variable(LEVEL).multiply()
-                        .constant(0.1f).multiply()
+                        .constant(1.1f).multiply()
                         .variable(MULTIPLIER).multiply()
                         .variable(VALUE).multiply().build())
                 .tooltipDisplay(BasicModifier.TooltipDisplay.ALWAYS);
 
         buildModifier(JewelryModifiers.DUCTILE)
-                .addModule(StatBoostModule.multiplyBase(JewelryToolStats.AMPLIFICATION).eachLevel(0.07f));
+                .addModule(StatBoostModule.multiplyBase(JewelryToolStats.AMPLIFICATION).eachLevel(0.07f))
+                .addModule(StatBoostModule.multiplyBase(ToolStats.DURABILITY).eachLevel(0.1f));
     }
 
     @Override

@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:compass"
+    }
+  ],
+  "level": 1,
+  "result": "tinkersjewelry:magnetic",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "tag": "tinkersjewelry:modifiable/jewelry"
+  }
+}

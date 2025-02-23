@@ -44,6 +44,7 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(MaterialIds.invar, new BlankBandMaterialStats(630, 1.1f));
 		addMaterialStats(MaterialIds.electrum, new BlankBandMaterialStats(225, 1.5f));
 
+		addMaterialStats(MaterialIds.cinderslime, new BlankBandMaterialStats(1221, 1.2f));
 		addMaterialStats(MaterialIds.queensSlime, new BlankBandMaterialStats(1650, 1f));
 		addMaterialStats(MaterialIds.hepatizon, new BlankBandMaterialStats(975, 1.3f));
 		addMaterialStats(MaterialIds.manyullyn, new BlankBandMaterialStats(1250, 1.2f));
@@ -78,6 +79,12 @@ public class JewelryMaterialStatsData extends AbstractMaterialStatsDataProvider 
 		addMaterialStats(JewelryMaterials.sapphire, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.cinnabar, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.fluorite, GemMaterialStats.INSTANCE);
+
+		addMaterialStats(JewelryMaterials.xychorium_gem_red, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.xychorium_gem_green, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.xychorium_gem_blue, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.xychorium_gem_light, GemMaterialStats.INSTANCE);
+		addMaterialStats(JewelryMaterials.xychorium_gem_dark, GemMaterialStats.INSTANCE);
 
 		addMaterialStats(JewelryMaterials.hematite, GemMaterialStats.INSTANCE);
 		addMaterialStats(JewelryMaterials.ichor_crystal, GemMaterialStats.INSTANCE);

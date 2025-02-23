@@ -26,8 +26,8 @@ public class MagneticModifier extends AbstractGemModifier {
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity entity = slotContext.entity();
-        if (entity.isOnFire() && !entity.hasEffect(TinkerModifiers.magneticEffect.get())) {
-            entity.addEffect(new MobEffectInstance(TinkerModifiers.magneticEffect.get(), 200));
+        if (!entity.hasEffect(TinkerModifiers.magneticEffect.get())) {
+            entity.addEffect(new MobEffectInstance(TinkerModifiers.magneticEffect.get(), 200, 0, false, false));
         }
     }
 

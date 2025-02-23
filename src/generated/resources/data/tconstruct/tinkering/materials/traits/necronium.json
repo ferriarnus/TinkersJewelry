@@ -3,11 +3,7 @@
     "tinkersjewelry:gem": [
       {
         "level": 1,
-        "name": "tinkersjewelry:poison_gem"
-      },
-      {
-        "level": 1,
-        "name": "tinkersjewelry:flame_gem"
+        "name": "tinkersjewelry:wither_gem"
       }
     ]
   }

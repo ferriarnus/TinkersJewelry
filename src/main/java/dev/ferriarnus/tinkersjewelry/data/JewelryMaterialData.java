@@ -52,6 +52,13 @@ public class JewelryMaterialData extends AbstractMaterialDataProvider {
 		addCompatMaterial(JewelryMaterials.sapphire, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.SAPPHIRE_GEM.location().getPath());
 		addCompatMaterial(JewelryMaterials.cinnabar, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.CINNABAR_GEM.location().getPath());
 		addCompatMaterial(JewelryMaterials.fluorite, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.FLUORITE_GEM.location().getPath());
+
+		addCompatMaterial(JewelryMaterials.xychorium_gem_red, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.RED_XYCHORIUM.location().getPath());
+		addCompatMaterial(JewelryMaterials.xychorium_gem_green, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.GREEN_XYCHORIUM.location().getPath());
+		addCompatMaterial(JewelryMaterials.xychorium_gem_blue, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.BLUE_XYCHORIUM.location().getPath());
+		addCompatMaterial(JewelryMaterials.xychorium_gem_light, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.LIGHT_XYCHORIUM.location().getPath());
+		addCompatMaterial(JewelryMaterials.xychorium_gem_dark, 2, ORDER_SPECIAL + ORDER_COMPAT, true, JewelryMaterials.Tags.DARK_XYCHORIUM.location().getPath());
+
 	}
 
 }

@@ -81,6 +81,12 @@ public class JewelryMaterials {
 		public static TagKey<Item> CINNABAR_GEM = tag("gems/cinnabar");
 		public static TagKey<Item> FLUORITE_GEM = tag("gems/fluorite");
 
+		public static TagKey<Item> RED_XYCHORIUM = tag("gems/xychorium_gem_red");
+		public static TagKey<Item> BLUE_XYCHORIUM = tag("gems/xychorium_gem_blue");
+		public static TagKey<Item> GREEN_XYCHORIUM = tag("gems/xychorium_gem_green");
+		public static TagKey<Item> DARK_XYCHORIUM = tag("gems/xychorium_gem_dark");
+		public static TagKey<Item> LIGHT_XYCHORIUM = tag("gems/xychorium_gem_light");
+
 		private static TagKey<Item> tag(String name) {
 			return ItemTags.create(new ResourceLocation("forge", name));
 		}

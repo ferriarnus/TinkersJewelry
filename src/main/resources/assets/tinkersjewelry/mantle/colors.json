@@ -34,7 +34,12 @@
 
     "precious": "#FDF55F",
     "polish": "#fdfbee",
-    "undying": "#d1a75d"
+    "undying": "#d1a75d",
+    "maintained": "#D58F36",
+    "ductile": "#67718C",
+    "magnetic": "#720000",
+    "invariant": "#A3B1A8",
+    "temperate": "#9C5643"
   },
 
   "material.tinkersjewelry": {

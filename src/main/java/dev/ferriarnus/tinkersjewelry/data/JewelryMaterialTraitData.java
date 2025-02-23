@@ -58,6 +58,12 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(JewelryMaterials.cinnabar, GemMaterialStats.ID, JewelryModifiers.FLAME_GEM);
 		addTraits(JewelryMaterials.fluorite, GemMaterialStats.ID, JewelryModifiers.GLOWING_GEM);
 
+		addTraits(JewelryMaterials.xychorium_gem_red, GemMaterialStats.ID, JewelryModifiers.FIRERESISTANCE_GEM);
+		addTraits(JewelryMaterials.xychorium_gem_green, GemMaterialStats.ID, JewelryModifiers.RESISTANCE_GEM);
+		addTraits(JewelryMaterials.xychorium_gem_blue, GemMaterialStats.ID, JewelryModifiers.SWIM_GEM);
+		addTraits(JewelryMaterials.xychorium_gem_light, GemMaterialStats.ID, JewelryModifiers.GLOWING_GEM);
+		addTraits(JewelryMaterials.xychorium_gem_dark, GemMaterialStats.ID, JewelryModifiers.DARKNESS_GEM);
+
 		addTraits(JewelryMaterials.hematite, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.LIFESTEAL_GEM, 2));
 		addTraits(JewelryMaterials.ichor_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.FIRERESISTANCE_GEM);
 		addTraits(JewelryMaterials.ender_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.REACH_GEM);
@@ -76,9 +82,9 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(MaterialIds.searedStone, GemMaterialStats.ID, JewelryModifiers.MINING_SPEED_GEM);
 		addTraits(MaterialIds.enderPearl, GemMaterialStats.ID, JewelryModifiers.ENDERFERENCE_GEM);
 		addTraits(MaterialIds.whitestone, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.RESISTANCE_GEM, 2));
-		addTraits(MaterialIds.necronium, GemMaterialStats.ID, JewelryModifiers.POISON_GEM, JewelryModifiers.FLAME_GEM );
+		addTraits(MaterialIds.necronium, GemMaterialStats.ID, JewelryModifiers.WITHER_GEM);
 
-		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.copper, BlankBandMaterialStats.ID, JewelryModifiers.DUCTILE );
 
 		addTraits(MaterialIds.iron, BlankBandMaterialStats.ID, JewelryModifiers.MAGNETIC);
 		addTraits(MaterialIds.gold, BlankBandMaterialStats.ID, new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
@@ -97,13 +103,14 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 
 		addTraits(MaterialIds.steel, BlankBandMaterialStats.ID, JewelryModifiers.DUCTILE);
 		addTraits(MaterialIds.bronze, BlankBandMaterialStats.ID, JewelryModifiers.MAINTAINED);
-		addTraits(MaterialIds.constantan, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.invar, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.electrum, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
+		addTraits(MaterialIds.constantan, BlankBandMaterialStats.ID, JewelryModifiers.TEMPERATE );
+		addTraits(MaterialIds.invar, BlankBandMaterialStats.ID, JewelryModifiers.INVARIANT );
+		addTraits(MaterialIds.electrum, BlankBandMaterialStats.ID, JewelryModifiers.PRECIOUS);
 
 		addTraits(MaterialIds.manyullyn, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
 		addTraits(MaterialIds.hepatizon, BlankBandMaterialStats.ID, new ModifierEntry[] {} ); //remove trait
-		addTraits(MaterialIds.queensSlime, BlankBandMaterialStats.ID, new ModifierEntry(TinkerModifiers.overlord, 1), new ModifierEntry(TinkerModifiers.overslime, 1), new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
+		addTraits(MaterialIds.cinderslime, BlankBandMaterialStats.ID, new ModifierEntry(ModifierIds.overburn, 1), new ModifierEntry(TinkerModifiers.overslime, 1), new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
+		addTraits(MaterialIds.queensSlime, BlankBandMaterialStats.ID, new ModifierEntry(ModifierIds.overlord, 1), new ModifierEntry(TinkerModifiers.overslime, 1), new ModifierEntry(JewelryModifiers.PRECIOUS, 1));
 	}
 
 }

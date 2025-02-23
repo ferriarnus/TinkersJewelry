@@ -41,7 +41,7 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
         String worktableFolder = "tools/modifiers/worktable/";
 
         ModifierRecipeBuilder.modifier(JewelryModifiers.POLISH)
-                .setTools(Ingredient.of(ItemRegistry.RING))
+                .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
                 .addInput(Items.CHARCOAL)
                 .addInput(Items.HONEYCOMB)
                 .addInput(Items.GLOWSTONE_DUST)
@@ -51,7 +51,7 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
                 .save(consumer, prefix(JewelryModifiers.POLISH, slotlessFolder));
 
         ModifierRecipeBuilder.modifier(JewelryModifiers.UNDYING)
-                .setTools(Ingredient.of(ItemRegistry.RING))
+                .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
                 .addInput(Items.TOTEM_OF_UNDYING)
                 .setSlots(SlotType.ABILITY, 1)
                 .setMaxLevel(1).checkTraitLevel()
@@ -59,12 +59,19 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
                 .save(consumer, prefix(JewelryModifiers.UNDYING, abilityFolder));
 
         ModifierRecipeBuilder.modifier(JewelryModifiers.GLOWING_GEM)
-                .setTools(Ingredient.of(ItemRegistry.RING))
+                .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
                 .addInput(Items.GLOWSTONE_DUST, 20)
                 .setSlots(SlotType.ABILITY, 1)
                 .setMaxLevel(1).checkTraitLevel()
                 .saveSalvage(consumer, prefix(JewelryModifiers.GLOWING_GEM, upgradeSalvage))
                 .save(consumer, prefix(JewelryModifiers.GLOWING_GEM, upgradeFolder));
+
+        ModifierRecipeBuilder.modifier(JewelryModifiers.MAGNETIC)
+                .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
+                .addInput(Items.COMPASS)
+                .setSlots(SlotType.UPGRADE, 1)
+                .setMaxLevel(1).checkTraitLevel()
+                .save(consumer, prefix(JewelryModifiers.MAGNETIC, upgradeFolder));
     }
 
     @Override

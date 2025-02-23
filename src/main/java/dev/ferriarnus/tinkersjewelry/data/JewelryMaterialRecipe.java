@@ -64,6 +64,12 @@ public class JewelryMaterialRecipe extends RecipeProvider implements IMaterialRe
 		optionalMaterialRecipe(consumer, JewelryMaterials.cinnabar, JewelryMaterials.Tags.CINNABAR_GEM, 1, 1, folder + "gems/cinnabar");
 		optionalMaterialRecipe(consumer, JewelryMaterials.fluorite, JewelryMaterials.Tags.FLUORITE_GEM, 1, 1, folder + "gems/fluorite");
 
+		optionalMaterialRecipe(consumer, JewelryMaterials.xychorium_gem_red, JewelryMaterials.Tags.RED_XYCHORIUM, 1, 1, folder + "gems/xychorium_gem_red");
+		optionalMaterialRecipe(consumer, JewelryMaterials.xychorium_gem_green, JewelryMaterials.Tags.GREEN_XYCHORIUM, 1, 1, folder + "gems/xychorium_gem_green");
+		optionalMaterialRecipe(consumer, JewelryMaterials.xychorium_gem_blue, JewelryMaterials.Tags.BLUE_XYCHORIUM, 1, 1, folder + "gems/xychorium_gem_blue");
+		optionalMaterialRecipe(consumer, JewelryMaterials.xychorium_gem_light, JewelryMaterials.Tags.LIGHT_XYCHORIUM, 1, 1, folder + "gems/xychorium_gem_light");
+		optionalMaterialRecipe(consumer, JewelryMaterials.xychorium_gem_dark, JewelryMaterials.Tags.DARK_XYCHORIUM, 1, 1, folder + "gems/xychorium_gem_dark");
+
 		materialRecipe(consumer, JewelryMaterials.hematite, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation("tinkers_things", "hematite"))), 1, 1, folder + "gems/hematite");
 		materialRecipe(consumer, JewelryMaterials.ichor_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "ichor_slime_crystal"))), 1, 1, folder + "gems/ichor_slime_crystal");
 		materialRecipe(consumer, JewelryMaterials.earth_crystal, Ingredient.of(ForgeRegistries.ITEMS.getValue(new ResourceLocation(TConstruct.MOD_ID, "earth_slime_crystal"))), 1, 1, folder + "gems/earth_slime_crystal");

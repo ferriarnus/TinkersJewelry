@@ -2,6 +2,10 @@ package dev.ferriarnus.tinkersjewelry;
 
 import dev.ferriarnus.tinkersjewelry.data.*;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
@@ -33,7 +37,9 @@ public class TinkersJewelry {
 	// Directly reference a slf4j logger
 	private static final Logger LOGGER = LogUtils.getLogger();
 	public static final String MODID = "tinkersjewelry";
-	
+	public static final TagKey<Item> JEWELRY = ItemTags.create(new ResourceLocation(MODID, "modifiable/jewelry"));
+
+
 	public TinkersJewelry() { 
 		
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -103,6 +109,7 @@ public class TinkersJewelry {
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.electrum.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.platedSlimewood.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.manyullyn.getId());
+		builder.add(BlankBandMaterialStats.ID, MaterialIds.cinderslime.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.queensSlime.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.cobalt.getId());
 		builder.add(BlankBandMaterialStats.ID, MaterialIds.hepatizon.getId());

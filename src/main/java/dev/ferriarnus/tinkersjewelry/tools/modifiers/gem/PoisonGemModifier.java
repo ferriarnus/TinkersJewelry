@@ -34,7 +34,7 @@ public class PoisonGemModifier extends AbstractGemModifier{
         }
         ToolStack tool = ToolStack.from(stack);
         float amp = tool.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = tool.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
+        int level = tool.getModifierLevel(JewelryModifiers.POISON_GEM.getId());
         defender.addEffect(new MobEffectInstance(MobEffects.POISON, Mth.floor(100 * level * amp)));
         damageTool(stack, 1, attacker);
     }

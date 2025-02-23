@@ -18,7 +18,7 @@
           "tic_display": true,
           "Damage": 0,
           "tic_materials": [
-            "tinkersjewelry:ui_render#blank_band",
+            "tinkersjewelry:ui_render#plain_ring",
             "tinkersjewelry:ui_render#gem"
           ]
         }
@@ -27,7 +27,6 @@
     "extraData": {
       "tconstruct:load_tools": { "tag": "tinkersjewelry:modifiable/small", "path": "tools" }
     }
-
   },
   {
     "name": "modifiers",

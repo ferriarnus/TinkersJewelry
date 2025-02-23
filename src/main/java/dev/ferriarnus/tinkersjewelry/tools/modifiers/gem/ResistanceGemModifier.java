@@ -33,7 +33,7 @@ public class ResistanceGemModifier extends AbstractGemModifier {
             ToolStack tool = ToolStack.from(stack);
             int level = tool.getModifierLevel(JewelryModifiers.RESISTANCE_GEM.getId());
             float amp = tool.getStats().get(JewelryToolStats.AMPLIFICATION);
-            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, Math.round(amp * level)));
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, Math.round(amp * level), false, false));
         }
     }
 

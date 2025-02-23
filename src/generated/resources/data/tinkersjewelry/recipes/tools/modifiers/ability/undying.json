@@ -13,6 +13,6 @@
     "abilities": 1
   },
   "tools": {
-    "item": "tinkersjewelry:ring"
+    "tag": "tinkersjewelry:modifiable/jewelry"
   }
 }
