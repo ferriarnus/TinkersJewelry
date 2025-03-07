@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
@@ -23,11 +22,6 @@ import java.util.List;
 public class EnderclearanceGemModifier extends AbstractGemModifier {
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_PLAYER;
-    }
-
-    @Override
     public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
         if (!source.isIndirect()) {
             if (attacker instanceof LivingEntity entity) {
@@ -36,7 +30,7 @@ public class EnderclearanceGemModifier extends AbstractGemModifier {
 
                 if (TConstruct.RANDOM.nextFloat() < (float)level * 0.25F) {
                     TeleportHelper.randomNearbyTeleport(entity, EnderclearanceTeleportEvent.TELEPORT_FACTORY);
-                    super.hurtUser(stack, source, damage, defender, attacker);
+                    damageTool(stack, 1, defender);
                 }
             }
         }

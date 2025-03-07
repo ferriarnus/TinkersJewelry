@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import com.google.common.collect.Multimap;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
@@ -28,8 +27,10 @@ public class FlyGemModifier extends AbstractGemModifier {
     }
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.NONE;
+    public void curioTick(SlotContext slotContext, ItemStack stack) {
+        if (slotContext.entity() instanceof Player player && player.getAbilities().flying && player.level().getGameTime() % 20 == 10) {
+            damageTool(stack, 1, player);
+        }
     }
 
     @Override

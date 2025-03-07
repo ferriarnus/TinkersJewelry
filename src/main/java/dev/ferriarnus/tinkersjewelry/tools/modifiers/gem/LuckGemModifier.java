@@ -1,10 +1,11 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -22,11 +23,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class LuckGemModifier extends AbstractGemModifier{
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.BLOCK_BREAK;
-    }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {

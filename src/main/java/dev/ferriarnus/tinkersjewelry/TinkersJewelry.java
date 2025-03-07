@@ -1,13 +1,16 @@
 package dev.ferriarnus.tinkersjewelry;
 
 import dev.ferriarnus.tinkersjewelry.data.*;
+import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosModifierHooks;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.slf4j.Logger;
 
 import dev.ferriarnus.tinkersjewelry.items.ItemRegistry;
@@ -45,6 +48,7 @@ public class TinkersJewelry {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(EventPriority.LOWEST, this::gatherData);
         modEventBus.addListener(this::sendImc);
+		MinecraftForge.EVENT_BUS.addListener(this::commonSetup);
 
 		JewelryToolStats.register();
 		
@@ -65,6 +69,10 @@ public class TinkersJewelry {
 		
 		MaterialRegistry.getInstance().registerStatType(BlankBandMaterialStats.TYPE);
 		MaterialRegistry.getInstance().registerStatType(GemMaterialStats.TYPE);
+	}
+
+	public void commonSetup(FMLCommonSetupEvent event) {
+		CuriosModifierHooks.init();
 	}
 	
 	public void gatherData(final GatherDataEvent event) {

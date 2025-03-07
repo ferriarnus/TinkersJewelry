@@ -1,10 +1,11 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
 import com.google.common.collect.Multimap;
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -35,8 +36,8 @@ public class KnockBackGemModifier extends AbstractGemModifier {
     }
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_PLAYER;
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+        damageTool(stack, 1, attacker);
     }
 
     @Override

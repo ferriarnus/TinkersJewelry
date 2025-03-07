@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.network.chat.Component;
@@ -20,11 +19,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class ResistanceGemModifier extends AbstractGemModifier {
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_PLAYER;
-    }
 
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

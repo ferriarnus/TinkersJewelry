@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import com.google.common.collect.HashMultimap;
+import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosEquipHook;
+import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosModifierHooks;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.gem.AbstractGemModifier;
 import com.google.common.collect.Multimap;
 
@@ -49,11 +52,8 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.curioTick(slotContext, stack);
-			}
+		for (ModifierEntry entry: tool.getModifierList()) {
+			entry.getHook(CuriosModifierHooks.TICK).curioTick(slotContext, stack);
 		}
 	}
 	
@@ -63,22 +63,16 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.onEquip(slotContext, prevStack, stack);
-			}
+		for (ModifierEntry entry: tool.getModifierList()) {
+			entry.getHook(CuriosModifierHooks.EQUIP).onEquip(slotContext, prevStack, stack);
 		}
 	}
 
 	@Override
 	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.onUnequip(slotContext, newStack, stack);
-			}
+		for (ModifierEntry entry: tool.getModifierList()) {
+			entry.getHook(CuriosModifierHooks.EQUIP).onUnequip(slotContext, newStack, stack);
 		}
 	}
 
@@ -88,13 +82,12 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return true;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.canUnequip(slotContext, stack);
+		for (ModifierEntry entry: tool.getModifierList()) {
+			if (!entry.getHook(CuriosModifierHooks.EQUIP).canUnequip(slotContext, stack)) {
+				return false;
 			}
 		}
-		return ICurioItem.super.canEquip(slotContext, stack);
+		return true;
 	}
 	
 	@Override
@@ -103,13 +96,12 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return false;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.canEquip(slotContext, stack);
+		for (ModifierEntry entry: tool.getModifierList()) {
+			if (!entry.getHook(CuriosModifierHooks.EQUIP).canEquip(slotContext, stack)) {
+				return false;
 			}
 		}
-		return ICurioItem.super.canEquip(slotContext, stack);
+		return true;
 	}
 
 	@Override
@@ -118,88 +110,33 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return false;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.canEquipFromUse(slotContext, stack);
+		for (ModifierEntry entry: tool.getModifierList()) {
+			if (!entry.getHook(CuriosModifierHooks.EQUIP).canEquipFromUse(slotContext, stack)) {
+				return false;
 			}
 		}
-		return ICurioItem.super.canEquipFromUse(slotContext, stack);
+		return true;
 	}
 
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
 		ToolStack tool = ToolStack.from(stack);
+		Multimap<Attribute, AttributeModifier> multimap = HashMultimap.create();
 		if (tool.isBroken()) {
-			return ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
+			return multimap;
 		}
 		List<ModifierEntry> modifiers = tool.getModifierList();
 		if (tool.isBroken()) {
-			return ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
+			return multimap;
 		}
 		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.getAttributeModifiers(slotContext, uuid, stack);
-			}
+			multimap.putAll(entry.getHook(CuriosModifierHooks.ATTRIBUTE).getAttributeModifiers(slotContext, uuid, stack));
 		}
-		return ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
+		return multimap;
 	}
 	
 	@Override
 	public List<Component> getSlotsTooltip(List<Component> tooltips, ItemStack stack) {
 		return Collections.emptyList();
-	}
-	
-	public CuriosDamageTypes getDamageType(ItemStack stack) {
-		ToolStack tool = ToolStack.from(stack);
-		if (tool.isBroken()) {
-			return CuriosDamageTypes.NONE;
-		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				return gem.getDamageType();
-			}
-		}
-		return CuriosDamageTypes.NONE;
-	}
-
-	public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
-		ToolStack tool = ToolStack.from(stack);
-		if (tool.isBroken()) {
-			return;
-		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.hurtUser(stack, source, damage, defender, attacker);
-			}
-		}
-	}
-
-	public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
-		ToolStack tool = ToolStack.from(stack);
-		if (tool.isBroken()) {
-			return;
-		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.hurtEnemy(stack, source, damage, defender, attacker);
-			}
-		}
-	}
-
-	public void damageTool(ItemStack stack, int amount, @Nullable LivingEntity entity) {
-		ToolStack tool = ToolStack.from(stack);
-		if (tool.isBroken()) {
-			return;
-		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
-		for (ModifierEntry entry : modifiers) {
-			if (entry.getModifier() instanceof AbstractGemModifier gem) {
-				gem.damageTool(stack, amount, entity);
-			}
-		}
 	}
 }

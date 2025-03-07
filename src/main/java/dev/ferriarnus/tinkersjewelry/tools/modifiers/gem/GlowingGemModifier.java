@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,11 +16,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class GlowingGemModifier extends AbstractGemModifier {
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_ENTITY;
-    }
 
     @Override
     public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {

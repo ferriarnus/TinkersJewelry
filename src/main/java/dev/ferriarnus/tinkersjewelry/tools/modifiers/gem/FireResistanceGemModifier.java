@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -16,11 +15,6 @@ import top.theillusivec4.curios.api.SlotContext;
 import java.util.List;
 
 public class FireResistanceGemModifier extends AbstractGemModifier{
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.NONE;
-    }
 
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

@@ -1,10 +1,12 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -24,11 +26,6 @@ import java.util.UUID;
 public class SwimGemModifier extends AbstractGemModifier {
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.NONE;
-    }
-
-    @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
@@ -37,6 +34,11 @@ public class SwimGemModifier extends AbstractGemModifier {
         double effect = level*amp;
         attributeModifiers.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(uuid, "tinkersjewelry:swim", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
+    }
+
+    @Override
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+        damageTool(stack, 1, defender);
     }
 
     @Override

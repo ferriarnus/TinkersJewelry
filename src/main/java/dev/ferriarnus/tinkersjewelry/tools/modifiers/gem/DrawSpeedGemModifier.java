@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
@@ -25,10 +24,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class DrawSpeedGemModifier extends AbstractGemModifier{
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_ENTITY;
-    }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
@@ -44,7 +39,7 @@ public class DrawSpeedGemModifier extends AbstractGemModifier{
     @Override
     public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
         if (source.getDirectEntity() instanceof AbstractArrow) {
-            super.hurtEnemy(stack, source, damage, defender, attacker);
+            damageTool(stack, 1, attacker);
         }
     }
 

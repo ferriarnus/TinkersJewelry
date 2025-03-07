@@ -1,20 +1,17 @@
 package dev.ferriarnus.tinkersjewelry;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.items.CuriosRingItem;
 
+import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosModifierHooks;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
-import dev.shadowsoffire.placebo.events.GetEnchantmentLevelEvent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameRules;
 import net.minecraftforge.common.util.FakePlayer;
@@ -26,16 +23,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.items.IItemHandlerModifiable;
-import slimeknights.tconstruct.library.modifiers.Modifier;
-import slimeknights.tconstruct.library.modifiers.modules.technical.ArmorLevelModule;
-import slimeknights.tconstruct.library.tools.capability.EntityModifierCapability;
-import slimeknights.tconstruct.library.tools.capability.TinkerDataCapability;
-import slimeknights.tconstruct.library.tools.capability.TinkerDataKeys;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
-import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
-import slimeknights.tconstruct.tools.data.ModifierIds;
 import top.theillusivec4.curios.api.CuriosApi;
 
 import java.util.ArrayList;
@@ -56,8 +47,14 @@ public class DamageItemEvents {
 		CuriosApi.getCuriosHelper().getEquippedCurios(event.getPlayer()).ifPresent(curios -> {
 			for (int i=0; i < curios.getSlots(); i++) {
 				ItemStack stackInSlot = curios.getStackInSlot(i);
-				if (stackInSlot.getItem() instanceof CuriosRingItem item && item.getDamageType(stackInSlot) == CuriosDamageTypes.BLOCK_BREAK) {
-					item.damageTool(stackInSlot, 1, event.getPlayer());
+				if (stackInSlot.getItem() instanceof CuriosRingItem) {
+					ToolStack toolStack = ToolStack.from(stackInSlot);
+					if (toolStack.isBroken()) {
+						return;
+					}
+					for (ModifierEntry entry : toolStack.getModifierList()) {
+						entry.getHook(CuriosModifierHooks.BLOCK_BREAK).breakBlock(event.getPlayer(), stackInSlot, event.getPos(), event.getState());
+					}
 				}
 			}
 		});
@@ -70,8 +67,14 @@ public class DamageItemEvents {
 		CuriosApi.getCuriosHelper().getEquippedCurios(event.getEntity()).ifPresent(curios -> {
 			for (int i=0; i < curios.getSlots(); i++) {
 				ItemStack stackInSlot = curios.getStackInSlot(i);
-				if (stackInSlot.getItem() instanceof CuriosRingItem item && item.getDamageType(stackInSlot) == CuriosDamageTypes.HURT_PLAYER) {
-					item.hurtUser(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), event.getSource().getEntity());
+				if (stackInSlot.getItem() instanceof CuriosRingItem) {
+					ToolStack toolStack = ToolStack.from(stackInSlot);
+					if (toolStack.isBroken()) {
+						return;
+					}
+					for (ModifierEntry entry : toolStack.getModifierList()) {
+						entry.getHook(CuriosModifierHooks.HURT_USER_HOOK).hurtUser(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), event.getSource().getEntity());
+					}
 				}
 			}
 		});
@@ -80,8 +83,14 @@ public class DamageItemEvents {
 			CuriosApi.getCuriosHelper().getEquippedCurios(entity).ifPresent(curios -> {
 				for (int i=0; i < curios.getSlots(); i++) {
 					ItemStack stackInSlot = curios.getStackInSlot(i);
-					if (stackInSlot.getItem() instanceof CuriosRingItem item && item.getDamageType(stackInSlot) == CuriosDamageTypes.HURT_ENTITY) {
-						item.hurtEnemy(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), entity);
+					if (stackInSlot.getItem() instanceof CuriosRingItem) {
+						ToolStack toolStack = ToolStack.from(stackInSlot);
+						if (toolStack.isBroken()) {
+							return;
+						}
+						for (ModifierEntry entry : toolStack.getModifierList()) {
+							entry.getHook(CuriosModifierHooks.HURT_ENEMY_HOOK).hurtEnemy(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), entity);
+						}
 					}
 				}
 			});

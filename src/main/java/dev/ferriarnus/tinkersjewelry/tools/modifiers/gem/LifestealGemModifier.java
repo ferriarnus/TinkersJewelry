@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
@@ -39,11 +38,6 @@ public class LifestealGemModifier extends AbstractGemModifier{
     @Override
     public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
         damageTool(stack, 1, attacker);
-    }
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_ENTITY;
     }
 
     @Override

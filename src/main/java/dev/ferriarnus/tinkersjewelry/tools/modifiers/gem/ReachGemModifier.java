@@ -1,10 +1,11 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -30,13 +31,14 @@ public class ReachGemModifier extends AbstractGemModifier {
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         int level = toolStack.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
         double effect = level * amp;
-        attributeModifiers.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:reachgem", effect, AttributeModifier.Operation.ADDITION));
+        attributeModifiers.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:entity_reachgem", effect, AttributeModifier.Operation.ADDITION));
+        attributeModifiers.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:block_reachgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.BLOCK_BREAK;
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+        damageTool(stack, 1, attacker);
     }
 
     @Override

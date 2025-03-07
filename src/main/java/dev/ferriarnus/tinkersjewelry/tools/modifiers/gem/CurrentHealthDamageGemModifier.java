@@ -1,11 +1,12 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -22,10 +23,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class CurrentHealthDamageGemModifier extends AbstractGemModifier {
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.HURT_ENTITY;
-    }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
@@ -36,6 +33,11 @@ public class CurrentHealthDamageGemModifier extends AbstractGemModifier {
         double effect = (0.1 * level * amp);
         attributeModifiers.put(ALObjects.Attributes.CURRENT_HP_DAMAGE.get(), new AttributeModifier(uuid, "tinkersjewelry:currenthealtdamagegem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
+    }
+
+    @Override
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+        damageTool(stack, 1, attacker);
     }
 
     @Override

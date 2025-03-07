@@ -1,11 +1,12 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -24,11 +25,6 @@ import java.util.UUID;
 public class ExpGemModifier extends AbstractGemModifier{
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.BLOCK_BREAK;
-    }
-
-    @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
@@ -37,6 +33,13 @@ public class ExpGemModifier extends AbstractGemModifier{
         double effect = 0.20 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.EXPERIENCE_GAINED.get(), new AttributeModifier(uuid, "tinkersjewelry:expgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
+    }
+
+    @Override
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+        if (defender != null && defender.isDeadOrDying()) {
+            damageTool(stack, 1, attacker);
+        }
     }
 
     @Override

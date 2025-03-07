@@ -1,16 +1,17 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
 import dev.ferriarnus.tinkersjewelry.GemAttributes;
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.block.state.BlockState;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
@@ -24,11 +25,6 @@ import java.util.UUID;
 public class FortuneGemModifier extends AbstractGemModifier{
 
     @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.BLOCK_BREAK;
-    }
-
-    @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
         ToolStack toolStack = ToolStack.from(stack);
@@ -37,6 +33,11 @@ public class FortuneGemModifier extends AbstractGemModifier{
         double effect = level * amp;
         attributeModifiers.put(GemAttributes.FORTUNE.get(), new AttributeModifier(uuid, "tinkersjewelry:fortunegem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
+    }
+
+    @Override
+    public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state) {
+        damageTool(stackInSlot, 1, player);
     }
 
     @Override

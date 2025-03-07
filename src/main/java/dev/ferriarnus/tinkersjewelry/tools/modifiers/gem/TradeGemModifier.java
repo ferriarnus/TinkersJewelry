@@ -1,7 +1,6 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
 import dev.ferriarnus.tinkersjewelry.GemAttributes;
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
@@ -22,11 +21,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class TradeGemModifier extends AbstractGemModifier{
-
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.NONE;
-    }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {

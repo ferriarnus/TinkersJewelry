@@ -1,6 +1,5 @@
 package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -17,10 +16,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class ConduitGemModifier extends AbstractGemModifier {
-    @Override
-    public CuriosDamageTypes getDamageType() {
-        return CuriosDamageTypes.NONE;
-    }
 
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

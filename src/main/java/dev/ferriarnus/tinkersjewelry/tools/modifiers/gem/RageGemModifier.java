@@ -3,7 +3,6 @@ package dev.ferriarnus.tinkersjewelry.tools.modifiers.gem;
 import java.util.List;
 import java.util.UUID;
 
-import dev.ferriarnus.tinkersjewelry.items.CuriosDamageTypes;
 import dev.ferriarnus.tinkersjewelry.tools.modifiers.JewelryModifiers;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import com.google.common.collect.Multimap;
@@ -33,13 +32,7 @@ public class RageGemModifier extends AbstractGemModifier{
 		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:ragegem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
 		return attributeModifiers;
 	}
-	
-	@Override
-	public CuriosDamageTypes getDamageType() {
-		return CuriosDamageTypes.HURT_ENTITY;
-	}
 
-	@Override
 	public void addTooltip(IToolStackView iToolStackView, ModifierEntry modifierEntry, @javax.annotation.Nullable Player player, List<Component> list, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
 //		float amp = tool.getMultiplier(JewelryToolStats.AMPLIFICATION);
 //		double effect = (1.25D + 0.25 * level) * amp;
