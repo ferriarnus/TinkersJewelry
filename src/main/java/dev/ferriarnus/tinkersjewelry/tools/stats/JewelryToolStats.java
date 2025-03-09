@@ -2,9 +2,12 @@ package dev.ferriarnus.tinkersjewelry.tools.stats;
 
 import dev.ferriarnus.tinkersjewelry.TinkersJewelry;
 
+import slimeknights.tconstruct.library.json.variable.tool.ToolVariable;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStatId;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
+
+import static slimeknights.tconstruct.library.json.variable.tool.ToolVariable.simple;
 
 public class JewelryToolStats {
 

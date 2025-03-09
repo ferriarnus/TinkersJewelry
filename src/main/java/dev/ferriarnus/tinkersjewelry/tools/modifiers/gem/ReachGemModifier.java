@@ -25,11 +25,11 @@ import java.util.UUID;
 public class ReachGemModifier extends AbstractGemModifier {
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.REACH_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         double effect = level * amp;
         attributeModifiers.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:entity_reachgem", effect, AttributeModifier.Operation.ADDITION));
         attributeModifiers.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(uuid, "tinkersjewelry:block_reachgem", effect, AttributeModifier.Operation.ADDITION));
@@ -37,7 +37,7 @@ public class ReachGemModifier extends AbstractGemModifier {
     }
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, attacker);
     }
 

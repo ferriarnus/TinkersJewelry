@@ -26,18 +26,18 @@ import java.util.UUID;
 public class SpeedGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.SPEED_GEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(modifier.getId()) - 1;
         double effect = (1.2 + level * 0.3 ) * amp;
         attributeModifiers.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(uuid, "tinkersjewelry:speedgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
         return attributeModifiers;
     }
 
     @Override
-    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, defender);
     }
 

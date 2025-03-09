@@ -18,7 +18,7 @@ import java.util.List;
 public class ConduitGemModifier extends AbstractGemModifier {
 
     @Override
-    public void curioTick(SlotContext slotContext, ItemStack stack) {
+    public void curioTick(SlotContext slotContext, ItemStack stack, ModifierEntry entry) {
         LivingEntity entity = slotContext.entity();
         if (entity.isUnderWater() && !entity.hasEffect(MobEffects.CONDUIT_POWER)) {
             entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 200, 0, false, false));

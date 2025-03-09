@@ -26,10 +26,10 @@ import java.util.UUID;
 public class DrawSpeedGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
-        int level = toolStack.getModifierLevel(JewelryModifiers.DRAW_SPEED_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = 0.25 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.DRAW_SPEED.get(), new AttributeModifier(uuid, "tinkersjewelry:drawspeedgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
@@ -37,7 +37,7 @@ public class DrawSpeedGemModifier extends AbstractGemModifier{
     }
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         if (source.getDirectEntity() instanceof AbstractArrow) {
             damageTool(stack, 1, attacker);
         }

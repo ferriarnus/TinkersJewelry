@@ -23,11 +23,11 @@ import java.util.UUID;
 public class TradeGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.TRADE_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         double effect = 7 * level * amp;
         attributeModifiers.put(GemAttributes.TRADE.get(), new AttributeModifier(uuid, "tinkersjewelry:trade", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;

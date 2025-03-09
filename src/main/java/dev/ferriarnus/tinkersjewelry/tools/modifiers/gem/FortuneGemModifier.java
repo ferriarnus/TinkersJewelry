@@ -25,18 +25,18 @@ import java.util.UUID;
 public class FortuneGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.FORTUNE_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         double effect = level * amp;
         attributeModifiers.put(GemAttributes.FORTUNE.get(), new AttributeModifier(uuid, "tinkersjewelry:fortunegem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
     @Override
-    public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state) {
+    public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state, ModifierEntry modifier) {
         damageTool(stackInSlot, 1, player);
     }
 

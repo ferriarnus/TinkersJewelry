@@ -25,18 +25,18 @@ import java.util.UUID;
 public class LifestealGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.LIFESTEAL_GEM.getId()) - 1;
+        int level = toolStack.getModifierLevel(modifier.getId()) - 1;
         double effect = (0.1 + level * 0.05) * amp;
         attributeModifiers.put(ALObjects.Attributes.LIFE_STEAL.get(), new AttributeModifier(uuid, "tinkersjewelry:lifestealgem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, attacker);
     }
 

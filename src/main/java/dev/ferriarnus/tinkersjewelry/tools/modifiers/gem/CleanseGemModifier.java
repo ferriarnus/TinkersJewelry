@@ -21,7 +21,7 @@ import java.util.List;
 public class CleanseGemModifier extends AbstractGemModifier{
 
     @Override
-    public void curioTick(SlotContext slotContext, ItemStack stack) {
+    public void curioTick(SlotContext slotContext, ItemStack stack, ModifierEntry entry) {
         LivingEntity entity = slotContext.entity();
         if (entity == null) {
             return;

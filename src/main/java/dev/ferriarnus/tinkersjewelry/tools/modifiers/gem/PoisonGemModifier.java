@@ -22,13 +22,13 @@ import java.util.List;
 public class PoisonGemModifier extends AbstractGemModifier{
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         if (defender == null || defender.hasEffect(MobEffects.POISON)) {
             return;
         }
         ToolStack tool = ToolStack.from(stack);
         float amp = tool.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = tool.getModifierLevel(JewelryModifiers.POISON_GEM.getId());
+        int level = tool.getModifierLevel(JewelryModifiers.POISON_GEM);
         defender.addEffect(new MobEffectInstance(MobEffects.POISON, Mth.floor(100 * level * amp)));
         damageTool(stack, 1, attacker);
     }

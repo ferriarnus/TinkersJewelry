@@ -22,13 +22,13 @@ import java.util.List;
 public class WitherGemModifier extends AbstractGemModifier{
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         if (defender == null || defender.hasEffect(MobEffects.WITHER)) {
             return;
         }
         ToolStack tool = ToolStack.from(stack);
         float amp = tool.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = tool.getModifierLevel(JewelryModifiers.WITHER_GEM.getId());
+        int level = tool.getModifierLevel(modifier.getId());
         defender.addEffect(new MobEffectInstance(MobEffects.WITHER, Mth.floor(50 * level * amp)));
         damageTool(stack, 1, attacker);
     }

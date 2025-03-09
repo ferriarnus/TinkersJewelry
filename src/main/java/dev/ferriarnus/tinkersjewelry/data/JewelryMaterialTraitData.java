@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataProvider;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
@@ -38,7 +37,7 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(JewelryMaterials.prismarine, GemMaterialStats.ID, JewelryModifiers.SWIM_GEM);
 		addTraits(JewelryMaterials.heart_of_the_sea, GemMaterialStats.ID, JewelryModifiers.CONDUIT_GEM);
 		addTraits(JewelryMaterials.ender_eye, GemMaterialStats.ID, JewelryModifiers.ENDERCLEARANCE_GEM);
-		addTraits(JewelryMaterials.echo_shard, GemMaterialStats.ID, JewelryModifiers.DARKNESS_GEM.getId(), ModifierIds.soulbound);
+		addTraits(JewelryMaterials.echo_shard, GemMaterialStats.ID, JewelryModifiers.DARKNESS_GEM, ModifierIds.soulbound);
 		addTraits(JewelryMaterials.glowstone, GemMaterialStats.ID, JewelryModifiers.GLOWING_GEM);
 		addTraits(JewelryMaterials.prismarine_crystal, GemMaterialStats.ID, JewelryModifiers.GLOWING_GEM);
 		addTraits(JewelryMaterials.purpur, GemMaterialStats.ID, JewelryModifiers.KNOCKBACK_GEM);
@@ -65,10 +64,10 @@ public class JewelryMaterialTraitData extends AbstractMaterialTraitDataProvider 
 		addTraits(JewelryMaterials.xychorium_gem_dark, GemMaterialStats.ID, JewelryModifiers.DARKNESS_GEM);
 
 		addTraits(JewelryMaterials.hematite, GemMaterialStats.ID, new ModifierEntry(JewelryModifiers.LIFESTEAL_GEM, 2));
-		addTraits(JewelryMaterials.ichor_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.FIRERESISTANCE_GEM);
-		addTraits(JewelryMaterials.ender_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.REACH_GEM);
-		addTraits(JewelryMaterials.sky_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.GRAVITY_GEM);
-		addTraits(JewelryMaterials.earth_crystal, GemMaterialStats.ID, TinkerModifiers.overslime, JewelryModifiers.RESISTANCE_GEM);
+		addTraits(JewelryMaterials.ichor_crystal, GemMaterialStats.ID, TinkerModifiers.overslime.getId(), JewelryModifiers.FIRERESISTANCE_GEM);
+		addTraits(JewelryMaterials.ender_crystal, GemMaterialStats.ID, TinkerModifiers.overslime.getId(), JewelryModifiers.REACH_GEM);
+		addTraits(JewelryMaterials.sky_crystal, GemMaterialStats.ID, TinkerModifiers.overslime.getId(), JewelryModifiers.GRAVITY_GEM);
+		addTraits(JewelryMaterials.earth_crystal, GemMaterialStats.ID, TinkerModifiers.overslime.getId(), JewelryModifiers.RESISTANCE_GEM);
 
 		addTraits(MaterialIds.rock, GemMaterialStats.ID, JewelryModifiers.ARMOR_GEM);
 		addTraits(MaterialIds.flint, GemMaterialStats.ID, JewelryModifiers.PIERCING_GEM);

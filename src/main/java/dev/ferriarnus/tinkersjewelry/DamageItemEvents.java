@@ -53,7 +53,7 @@ public class DamageItemEvents {
 						return;
 					}
 					for (ModifierEntry entry : toolStack.getModifierList()) {
-						entry.getHook(CuriosModifierHooks.BLOCK_BREAK).breakBlock(event.getPlayer(), stackInSlot, event.getPos(), event.getState());
+						entry.getHook(CuriosModifierHooks.BLOCK_BREAK).breakBlock(event.getPlayer(), stackInSlot, event.getPos(), event.getState(), entry);
 					}
 				}
 			}
@@ -73,7 +73,7 @@ public class DamageItemEvents {
 						return;
 					}
 					for (ModifierEntry entry : toolStack.getModifierList()) {
-						entry.getHook(CuriosModifierHooks.HURT_USER_HOOK).hurtUser(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), event.getSource().getEntity());
+						entry.getHook(CuriosModifierHooks.HURT_USER_HOOK).hurtUser(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), event.getSource().getEntity(), entry);
 					}
 				}
 			}
@@ -89,7 +89,7 @@ public class DamageItemEvents {
 							return;
 						}
 						for (ModifierEntry entry : toolStack.getModifierList()) {
-							entry.getHook(CuriosModifierHooks.HURT_ENEMY_HOOK).hurtEnemy(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), entity);
+							entry.getHook(CuriosModifierHooks.HURT_ENEMY_HOOK).hurtEnemy(stackInSlot, event.getSource(), event.getAmount(), event.getEntity(), entity, entry);
 						}
 					}
 				}

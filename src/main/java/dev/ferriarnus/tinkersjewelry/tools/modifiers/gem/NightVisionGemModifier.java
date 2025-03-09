@@ -17,7 +17,7 @@ import java.util.List;
 public class NightVisionGemModifier extends AbstractGemModifier{
 
     @Override
-    public void curioTick(SlotContext slotContext, ItemStack stack) {
+    public void curioTick(SlotContext slotContext, ItemStack stack, ModifierEntry entry) {
         LivingEntity entity = slotContext.entity();
         if (!entity.hasEffect(MobEffects.NIGHT_VISION) || entity.getEffect(MobEffects.NIGHT_VISION).getDuration() < 220) {
             entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));

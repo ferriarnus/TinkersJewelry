@@ -18,7 +18,7 @@ import java.util.List;
 public class DarknessGemModifier extends AbstractGemModifier {
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         if (defender == null || defender.hasEffect(MobEffects.DARKNESS)) {
             return;
         }

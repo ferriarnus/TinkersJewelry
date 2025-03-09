@@ -26,10 +26,10 @@ import java.util.UUID;
 public class ArmorGemModifier extends AbstractGemModifier {
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
-        int level = toolStack.getModifierLevel(JewelryModifiers.ARMOR_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = ( 2.5D * level) * amp;
         attributeModifiers.put(Attributes.ARMOR, new AttributeModifier(uuid, "tinkersjewelry:armorgem", effect, AttributeModifier.Operation.ADDITION));
@@ -37,7 +37,7 @@ public class ArmorGemModifier extends AbstractGemModifier {
     }
 
     @Override
-    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, defender);
     }
 

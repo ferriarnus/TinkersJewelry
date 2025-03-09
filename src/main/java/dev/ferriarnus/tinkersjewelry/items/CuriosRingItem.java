@@ -53,7 +53,7 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 			return;
 		}
 		for (ModifierEntry entry: tool.getModifierList()) {
-			entry.getHook(CuriosModifierHooks.TICK).curioTick(slotContext, stack);
+			entry.getHook(CuriosModifierHooks.TICK).curioTick(slotContext, stack, entry);
 		}
 	}
 	
@@ -125,12 +125,11 @@ public class CuriosRingItem extends ModifiableItem implements ICurioItem{
 		if (tool.isBroken()) {
 			return multimap;
 		}
-		List<ModifierEntry> modifiers = tool.getModifierList();
 		if (tool.isBroken()) {
 			return multimap;
 		}
-		for (ModifierEntry entry : modifiers) {
-			multimap.putAll(entry.getHook(CuriosModifierHooks.ATTRIBUTE).getAttributeModifiers(slotContext, uuid, stack));
+		for (ModifierEntry entry : tool.getModifierList()) {
+			multimap.putAll(entry.getHook(CuriosModifierHooks.ATTRIBUTE).getAttributeModifiers(slotContext, uuid, stack, entry));
 		}
 		return multimap;
 	}

@@ -22,7 +22,7 @@ import java.util.List;
 public class EnderclearanceGemModifier extends AbstractGemModifier {
 
     @Override
-    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker, ModifierEntry modifier) {
         if (!source.isIndirect()) {
             if (attacker instanceof LivingEntity entity) {
                 ToolStack tool = ToolStack.from(stack);

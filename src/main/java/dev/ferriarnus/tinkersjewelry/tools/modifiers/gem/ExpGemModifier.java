@@ -25,10 +25,10 @@ import java.util.UUID;
 public class ExpGemModifier extends AbstractGemModifier{
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
-        int level = toolStack.getModifierLevel(JewelryModifiers.EXP_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = 0.20 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.EXPERIENCE_GAINED.get(), new AttributeModifier(uuid, "tinkersjewelry:expgem", effect, AttributeModifier.Operation.ADDITION));
@@ -36,7 +36,7 @@ public class ExpGemModifier extends AbstractGemModifier{
     }
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         if (defender != null && defender.isDeadOrDying()) {
             damageTool(stack, 1, attacker);
         }

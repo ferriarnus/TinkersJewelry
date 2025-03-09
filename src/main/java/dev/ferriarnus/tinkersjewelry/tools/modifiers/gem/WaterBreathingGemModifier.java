@@ -18,7 +18,7 @@ import java.util.List;
 public class WaterBreathingGemModifier extends AbstractGemModifier{
 
     @Override
-    public void curioTick(SlotContext slotContext, ItemStack stack) {
+    public void curioTick(SlotContext slotContext, ItemStack stack, ModifierEntry entry) {
         LivingEntity entity = slotContext.entity();
         if (entity.isUnderWater() && !entity.hasEffect(MobEffects.WATER_BREATHING)) {
             entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false));

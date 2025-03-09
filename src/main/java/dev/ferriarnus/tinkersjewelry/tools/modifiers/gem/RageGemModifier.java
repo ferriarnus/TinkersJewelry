@@ -22,11 +22,10 @@ import top.theillusivec4.curios.api.SlotContext;
 public class RageGemModifier extends AbstractGemModifier{
 
 	@Override
-	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid,
-			ItemStack stack) {
-		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+		Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
 		ToolStack toolStack = ToolStack.from(stack);
-		int level = toolStack.getModifierLevel(JewelryModifiers.RAGE_GEM.getId()) - 1;
+		int level = toolStack.getModifierLevel(modifier.getId()) - 1;
 		float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
 		double effect = (1.25D + 0.25 * level) * amp;
 		attributeModifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "tinkersjewelry:ragegem", effect, AttributeModifier.Operation.MULTIPLY_BASE));

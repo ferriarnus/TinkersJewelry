@@ -25,10 +25,10 @@ import java.util.UUID;
 public class MiningSpeedGemModifier extends AbstractGemModifier {
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
-        int level = toolStack.getModifierLevel(JewelryModifiers.MINING_SPEED_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = 0.25 * level * amp;
         attributeModifiers.put(ALObjects.Attributes.MINING_SPEED.get(), new AttributeModifier(uuid, "tinkersjewelry:miningspeedgem", effect, AttributeModifier.Operation.MULTIPLY_BASE));
@@ -36,7 +36,7 @@ public class MiningSpeedGemModifier extends AbstractGemModifier {
     }
 
     @Override
-    public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state) {
+    public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state, ModifierEntry modifier) {
         damageTool(stackInSlot, 1, player);
     }
 

@@ -6,7 +6,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import dev.ferriarnus.tinkersjewelry.tools.hooks.AttributeModifierHook;
-import dev.ferriarnus.tinkersjewelry.tools.hooks.BlockBreak;
+import dev.ferriarnus.tinkersjewelry.tools.hooks.BlockBreakHook;
 import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosEquipHook;
 import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosModifierHooks;
 import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosTickHook;
@@ -24,6 +24,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
@@ -32,30 +33,30 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import javax.annotation.Nullable;
 
-public abstract class AbstractGemModifier extends Modifier implements TooltipModifierHook, CuriosEquipHook, CuriosTickHook, AttributeModifierHook, HurtUserHook, HurtEnemyHook, BlockBreak {
+public abstract class AbstractGemModifier extends Modifier implements TooltipModifierHook, CuriosEquipHook, CuriosTickHook, AttributeModifierHook, HurtUserHook, HurtEnemyHook, BlockBreakHook {
 
 	@Override
-	public void curioTick(SlotContext slotContext, ItemStack stack) {
+	public void curioTick(SlotContext slotContext, ItemStack stack, ModifierEntry entry) {
 		
 	}
 
 	@Override
-	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
+	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
 		return HashMultimap.create();
 	}
 
 	@Override
-	public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+	public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker, ModifierEntry modifier) {
 
 	}
 
 	@Override
-	public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+	public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
 
 	}
 
 	@Override
-	public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state) {
+	public void breakBlock(Player player, ItemStack stackInSlot, BlockPos pos, BlockState state, ModifierEntry modifier) {
 
 	}
 

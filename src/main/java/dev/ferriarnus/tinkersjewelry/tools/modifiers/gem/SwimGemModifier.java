@@ -26,18 +26,18 @@ import java.util.UUID;
 public class SwimGemModifier extends AbstractGemModifier {
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.SWIM_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         double effect = level*amp;
         attributeModifiers.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(uuid, "tinkersjewelry:swim", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
     @Override
-    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker) {
+    public void hurtUser(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable Entity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, defender);
     }
 

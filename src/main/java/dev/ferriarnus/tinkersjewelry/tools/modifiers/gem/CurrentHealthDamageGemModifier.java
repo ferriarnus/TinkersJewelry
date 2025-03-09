@@ -25,18 +25,18 @@ import java.util.UUID;
 public class CurrentHealthDamageGemModifier extends AbstractGemModifier {
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack, ModifierEntry modifier) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
-        int level = toolStack.getModifierLevel(JewelryModifiers.CURRENT_HEALTH_DAMAGE_GEM.getId());
+        int level = toolStack.getModifierLevel(modifier.getId());
         double effect = (0.1 * level * amp);
         attributeModifiers.put(ALObjects.Attributes.CURRENT_HP_DAMAGE.get(), new AttributeModifier(uuid, "tinkersjewelry:currenthealtdamagegem", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
     }
 
     @Override
-    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker) {
+    public void hurtEnemy(ItemStack stack, DamageSource source, double damage, @Nullable LivingEntity defender, @Nullable LivingEntity attacker, ModifierEntry modifier) {
         damageTool(stack, 1, attacker);
     }
 
