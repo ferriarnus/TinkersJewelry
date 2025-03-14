@@ -25,6 +25,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
@@ -81,5 +82,7 @@ public abstract class AbstractGemModifier extends Modifier implements TooltipMod
 		hookBuilder.addHook(this, CuriosModifierHooks.HURT_USER_HOOK);
 		hookBuilder.addHook(this, CuriosModifierHooks.HURT_ENEMY_HOOK);
 		hookBuilder.addHook(this, CuriosModifierHooks.BLOCK_BREAK);
+
+		hookBuilder.addHook(this, ModifierHooks.TOOLTIP);
 	}
 }

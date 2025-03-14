@@ -74,7 +74,7 @@ public class TemperateModifier extends Modifier implements ConditionalStatModifi
             } else {
                 bonus *= 1;
             }
-            float value = Mth.abs(bonus) * tool.getMultiplier(JewelryToolStats.AMPLIFICATION) * MAX_AMPLIFICATION;
+            float value = Mth.abs(bonus) * tool.getStats().get(JewelryToolStats.AMPLIFICATION) * MAX_AMPLIFICATION;
             TooltipModifierHook.addStatBoost(tool, this, JewelryToolStats.AMPLIFICATION, TinkersJewelry.JEWELRY, value, tooltip);
         }
     }

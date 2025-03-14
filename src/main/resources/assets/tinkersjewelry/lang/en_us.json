@@ -40,9 +40,10 @@
   "modifier.tinkersjewelry.lifesteal_gem.flavor": "Heals based on damage dealt",
   "modifier.tinkersjewelry.lifesteal_gem": "Lifesteal",
 
-  "modifier.tinkersjewelry.fly_gem.description": "Allows creative flight",
-  "modifier.tinkersjewelry.fly_gem.flavor": "Allows creative flight",
+  "modifier.tinkersjewelry.fly_gem.description": "Allows creative flight for a few seconds",
+  "modifier.tinkersjewelry.fly_gem.flavor": "Allows creative flight for a few seconds",
   "modifier.tinkersjewelry.fly_gem": "Flight",
+  "description.tinkersjewelry.flight": "%s seconds flight",
 
   "modifier.tinkersjewelry.armor_gem.description": "Adds additional armor",
   "modifier.tinkersjewelry.armor_gem.flavor": "Adds additional armor",

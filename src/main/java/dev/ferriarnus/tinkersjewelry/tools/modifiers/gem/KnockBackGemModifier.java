@@ -29,7 +29,7 @@ public class KnockBackGemModifier extends AbstractGemModifier {
         Multimap<Attribute, AttributeModifier> attributeModifiers = super.getAttributeModifiers(slotContext, uuid, stack, modifier);
         ToolStack toolStack = ToolStack.from(stack);
         int level = toolStack.getModifierLevel(modifier.getId());
-        float amp = toolStack.getMultiplier(JewelryToolStats.AMPLIFICATION);
+        float amp = toolStack.getStats().get(JewelryToolStats.AMPLIFICATION);
         double effect = (0.5 + (0.1 * level)) * amp;
         attributeModifiers.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(uuid, "tinkersjewelry:knockback", effect, AttributeModifier.Operation.ADDITION));
         return attributeModifiers;
