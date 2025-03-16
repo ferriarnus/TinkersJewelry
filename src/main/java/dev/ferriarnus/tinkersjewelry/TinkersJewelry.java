@@ -1,6 +1,8 @@
 package dev.ferriarnus.tinkersjewelry;
 
 import dev.ferriarnus.tinkersjewelry.data.*;
+import dev.ferriarnus.tinkersjewelry.menu.JewelryMenus;
+import dev.ferriarnus.tinkersjewelry.network.JewelryNetwork;
 import dev.ferriarnus.tinkersjewelry.tools.hooks.CuriosModifierHooks;
 import dev.ferriarnus.tinkersjewelry.tools.stats.JewelryToolStats;
 import net.minecraft.resources.ResourceLocation;
@@ -52,9 +54,12 @@ public class TinkersJewelry {
 
 		JewelryToolStats.register();
 		
-		ItemRegistry.registerItems();
-		JewelryModifiers.registerModifiers();
+		ItemRegistry.register();
+		JewelryModifiers.register();
 		GemAttributes.register();
+		JewelryMenus.register();
+
+		JewelryNetwork.setup();
 
 		ForgeMod.enableMilkFluid();
 	}

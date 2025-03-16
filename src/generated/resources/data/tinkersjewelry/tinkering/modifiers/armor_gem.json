@@ -6,10 +6,12 @@
       "attribute": "minecraft:generic.armor",
       "formula": [
         "$level",
-        2.5,
+        0.5,
         "*",
         "$amplification",
-        "*"
+        "*",
+        1.5,
+        "+"
       ],
       "operation": "addition",
       "unique": "tinkersjewelry.modifier.armor_gem",

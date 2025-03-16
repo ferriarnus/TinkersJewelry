@@ -3,24 +3,18 @@
   "modules": [
     {
       "type": "tinkersjewelry:attribute_modifier",
-      "attribute": "forge:swim_speed",
+      "attribute": "tinkersjewelry:subspace",
       "formula": [
-        "$level",
-        "$amplification",
-        "*"
+        "$level"
       ],
       "operation": "addition",
-      "unique": "tinkersjewelry.modifier.swim_gem",
+      "unique": "tinkersjewelry.modifier.subspace",
       "variables": {
         "amplification": {
           "type": "tconstruct:tool_stat",
           "stat": "tinkersjewelry:amplification"
         }
       }
-    },
-    {
-      "type": "tinkersjewelry:hurt_user",
-      "flat": 1.0
     }
   ],
   "tooltip_display": "always"

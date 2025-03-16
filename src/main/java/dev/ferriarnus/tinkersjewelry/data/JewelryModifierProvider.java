@@ -72,8 +72,9 @@ public class JewelryModifierProvider extends AbstractModifierProvider {
                         .uniqueFrom(JewelryModifiers.ARMOR_GEM)
                         .customVariable("amplification", new ToolStatVariable(JewelryToolStats.AMPLIFICATION))
                         .formula()
-                        .variable(LEVEL).constant(2.5f).multiply()
-                        .customVariable("amplification").multiply().build())
+                        .variable(LEVEL).constant(0.5f).multiply()
+                        .customVariable("amplification").multiply()
+                        .constant(1.5f).add().build())
                 .addModule(HurtUserModule.builder()
                         .flat(1))
                 .tooltipDisplay(BasicModifier.TooltipDisplay.ALWAYS);
@@ -388,6 +389,14 @@ public class JewelryModifierProvider extends AbstractModifierProvider {
         buildModifier(JewelryModifiers.DUCTILE)
                 .addModule(StatBoostModule.multiplyBase(JewelryToolStats.AMPLIFICATION).eachLevel(0.07f))
                 .addModule(StatBoostModule.multiplyBase(ToolStats.DURABILITY).eachLevel(0.1f));
+
+        buildModifier(JewelryModifiers.SUBSPACE)
+                .addModule(AttributeModifierModule.builder(GemAttributes.SUBSPACE.get(), AttributeModifier.Operation.ADDITION)
+                        .uniqueFrom(JewelryModifiers.SUBSPACE)
+                        .customVariable("amplification", new ToolStatVariable(JewelryToolStats.AMPLIFICATION))
+                        .formula()
+                        .variable(LEVEL).build())
+                .tooltipDisplay(BasicModifier.TooltipDisplay.ALWAYS);
     }
 
     @Override

@@ -58,6 +58,14 @@ public class JewelryModifierRecipe extends RecipeProvider implements IConditionB
                 .saveSalvage(consumer, prefix(JewelryModifiers.UNDYING, abilitySalvage))
                 .save(consumer, prefix(JewelryModifiers.UNDYING, abilityFolder));
 
+        ModifierRecipeBuilder.modifier(JewelryModifiers.SUBSPACE)
+                .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
+                .addInput(Items.ENDER_CHEST)
+                .setSlots(SlotType.ABILITY, 1)
+                .setMaxLevel(1).checkTraitLevel()
+                .saveSalvage(consumer, prefix(JewelryModifiers.SUBSPACE, abilitySalvage))
+                .save(consumer, prefix(JewelryModifiers.SUBSPACE, abilityFolder));
+
         ModifierRecipeBuilder.modifier(JewelryModifiers.GLOWING_GEM)
                 .setTools(Ingredient.of(TinkersJewelry.JEWELRY))
                 .addInput(Items.GLOWSTONE_DUST, 20)

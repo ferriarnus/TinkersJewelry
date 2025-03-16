@@ -31,6 +31,9 @@
 
   "stat.tinkersjewelry.gem": "Gem",
   "stat.tinkersjewelry.plain_ring": "Plain Ring",
+
+  "key.categories.tinkersjewelry": "Tinkers' Jewelry",
+  "key.tinkersjewelry.subspace": "Subspace",
   
   "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
   "modifier.tinkersjewelry.rage_gem.flavor": "Gives an attack speed boost",
@@ -178,6 +181,10 @@
   "modifier.tinkersjewelry.undying.flavor": "Not today!",
   "modifier.tinkersjewelry.undying": "Undying",
 
+  "modifier.tinkersjewelry.subspace.description": "Adds 9 slots to your subspace inventory",
+  "modifier.tinkersjewelry.subspace.flavor": "Where does it go?",
+  "modifier.tinkersjewelry.subspace": "Subspace",
+
   "modifier.tinkersjewelry.magnetic.description": "You attract nearby items?!",
   "modifier.tinkersjewelry.magnetic.flavor": "Magnetic Personality!",
   "modifier.tinkersjewelry.magnetic": "Magnetic",
@@ -211,6 +218,9 @@
 
   "tinkersjewelry:trade": "Reputation",
   "tinkersjewelry:trade.desc": "Increases your reputation with villagers",
+
+  "tinkersjewelry:subspace": "Subspace",
+  "tinkersjewelry:subspace.desc": "Grants a subspace inventory",
 
   "material.tinkersjewelry.redstone": "Redstone",
   "material.tinkersjewelry.lapis": "Lapis",

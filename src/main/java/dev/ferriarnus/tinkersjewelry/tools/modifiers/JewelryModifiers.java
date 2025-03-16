@@ -18,6 +18,7 @@ public class JewelryModifiers {
 	public static final ModifierId MAGNETIC = id("magnetic");
 	public static final ModifierId MAINTAINED = id("maintained");
 	public static final ModifierId DUCTILE = id("ductile");
+	public static final ModifierId SUBSPACE = id("subspace");
 
 	public static final ModifierId ANTI_HEAL_GEM = id("antiheal_gem");
 	public static final ModifierId ARMOR_GEM = id("armor_gem");
@@ -59,7 +60,7 @@ public class JewelryModifiers {
 
 	public static final DynamicModifier UNDYING = MODIFIERS.registerDynamic("undying");
 
-	public static void registerModifiers() {
+	public static void register() {
 		MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 

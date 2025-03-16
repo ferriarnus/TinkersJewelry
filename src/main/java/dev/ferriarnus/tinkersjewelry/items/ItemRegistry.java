@@ -38,7 +38,7 @@ public class ItemRegistry {
 	private static final ItemDeferredRegisterExtension ITEMS = new ItemDeferredRegisterExtension(TinkersJewelry.MODID);
 	
 	
-	public static void registerItems() {
+	public static void register() {
 		CREATIVE_TABS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
