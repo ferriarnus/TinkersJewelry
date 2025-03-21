@@ -24,7 +24,7 @@ public class SubSpacePacket implements IThreadsafePacket {
         ServerPlayer serverPlayer = context.getSender();
         NetworkHooks.openScreen(serverPlayer, new SimpleMenuProvider(
                 (id, inventory, p) -> new SubSpaceMenu(id, inventory),
-                Component.literal("")),
+                Component.translatable("gui.tinkersjewelry.subspace")),
                 (buf) -> {});
     }
 

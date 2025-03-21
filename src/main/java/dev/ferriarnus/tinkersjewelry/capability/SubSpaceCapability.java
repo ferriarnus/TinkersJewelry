@@ -1,9 +1,11 @@
 package dev.ferriarnus.tinkersjewelry.capability;
 
+import dev.ferriarnus.tinkersjewelry.GemAttributes;
 import dev.ferriarnus.tinkersjewelry.TinkersJewelry;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.*;
@@ -15,27 +17,10 @@ public class SubSpaceCapability implements INBTSerializable<CompoundTag> {
 
     public static final Capability<SubSpaceCapability> INSTANCE = CapabilityManager.get(new CapabilityToken<>() {});
 
-    private final Player player;
     private final ItemStackHandler inventory;
 
-    public SubSpaceCapability(Player player) {
-        this.player = player;
-        this.inventory = new ItemStackHandler(60) {
-            @Override
-            public int getSlots() {
-                return super.getSlots();
-            }
-
-            @Override
-            public ItemStack extractItem(int slot, int amount, boolean simulate) {
-                return super.extractItem(slot, amount, simulate);
-            }
-
-            @Override
-            public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
-                return super.insertItem(slot, stack, simulate);
-            }
-        };
+    public SubSpaceCapability() {
+        this.inventory = new ItemStackHandler(6*9);
     }
 
     @Override
@@ -55,12 +40,11 @@ public class SubSpaceCapability implements INBTSerializable<CompoundTag> {
     public static class Provider implements ICapabilitySerializable<CompoundTag>, INBTSerializable<CompoundTag> {
 
         public static final ResourceLocation IDENTIFIER = new ResourceLocation(TinkersJewelry.MODID, "subspace");
-        private final SubSpaceCapability instance;
-        private final LazyOptional<SubSpaceCapability> optional;
+        private final SubSpaceCapability instance = new SubSpaceCapability();
+        private final LazyOptional<SubSpaceCapability> optional = LazyOptional.of(() -> instance);
 
-        public Provider(Player player) {
-            instance = new SubSpaceCapability(player);
-            optional = LazyOptional.of(() -> instance);
+        public Provider() {
+
         }
 
         @Override

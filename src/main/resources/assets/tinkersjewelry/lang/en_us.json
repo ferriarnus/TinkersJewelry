@@ -34,6 +34,8 @@
 
   "key.categories.tinkersjewelry": "Tinkers' Jewelry",
   "key.tinkersjewelry.subspace": "Subspace",
+
+  "gui.tinkersjewelry.subspace": "Subspace",
   
   "modifier.tinkersjewelry.rage_gem.description": "Gives an attack speed boost",
   "modifier.tinkersjewelry.rage_gem.flavor": "Gives an attack speed boost",

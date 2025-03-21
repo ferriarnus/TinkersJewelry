@@ -30,6 +30,7 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
+import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import top.theillusivec4.curios.api.CuriosApi;
 
@@ -51,7 +52,7 @@ public class DamageItemEvents {
 		CuriosApi.getCuriosHelper().getEquippedCurios(event.getPlayer()).ifPresent(curios -> {
 			for (int i=0; i < curios.getSlots(); i++) {
 				ItemStack stackInSlot = curios.getStackInSlot(i);
-				if (stackInSlot.getItem() instanceof CuriosRingItem) {
+				if (stackInSlot.getItem() instanceof ModifiableItem) {
 					ToolStack toolStack = ToolStack.from(stackInSlot);
 					if (toolStack.isBroken()) {
 						return;
@@ -71,7 +72,7 @@ public class DamageItemEvents {
 		CuriosApi.getCuriosHelper().getEquippedCurios(event.getEntity()).ifPresent(curios -> {
 			for (int i=0; i < curios.getSlots(); i++) {
 				ItemStack stackInSlot = curios.getStackInSlot(i);
-				if (stackInSlot.getItem() instanceof CuriosRingItem) {
+				if (stackInSlot.getItem() instanceof ModifiableItem) {
 					ToolStack toolStack = ToolStack.from(stackInSlot);
 					if (toolStack.isBroken()) {
 						return;
@@ -87,7 +88,7 @@ public class DamageItemEvents {
 			CuriosApi.getCuriosHelper().getEquippedCurios(entity).ifPresent(curios -> {
 				for (int i=0; i < curios.getSlots(); i++) {
 					ItemStack stackInSlot = curios.getStackInSlot(i);
-					if (stackInSlot.getItem() instanceof CuriosRingItem) {
+					if (stackInSlot.getItem() instanceof ModifiableItem) {
 						ToolStack toolStack = ToolStack.from(stackInSlot);
 						if (toolStack.isBroken()) {
 							return;
@@ -183,15 +184,17 @@ public class DamageItemEvents {
 			CuriosApi.getCuriosHelper().getEquippedCurios(entity).ifPresent(curios -> {
 				for (int i=0; i < curios.getSlots(); i++) {
 					ItemStack stackInSlot = curios.getStackInSlot(i);
-					ToolStack tool = ToolStack.from(stackInSlot);
-					if (!tool.isBroken() && tool.getModifierLevel(JewelryModifiers.UNDYING.getId()) > 0) {
-						entity.setHealth(1.0F);
-						entity.removeAllEffects();
-						entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
-						entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
-						entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
-						ToolDamageUtil.damage(tool, 300, entity, stackInSlot);
-						event.setCanceled(true);
+					if (stackInSlot.getItem() instanceof ModifiableItem) {
+						ToolStack tool = ToolStack.from(stackInSlot);
+						if (!tool.isBroken() && tool.getModifierLevel(JewelryModifiers.UNDYING.getId()) > 0) {
+							entity.setHealth(1.0F);
+							entity.removeAllEffects();
+							entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
+							entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
+							entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
+							ToolDamageUtil.damage(tool, 300, entity, stackInSlot);
+							event.setCanceled(true);
+						}
 					}
 				}
 			});
